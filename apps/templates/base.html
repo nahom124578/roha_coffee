@@ -1,0 +1,704 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta property="og:title" content="Ethio Binamer Trading PLC">
+    <meta property="og:description" content="Ethio Binamer Trading PLC">
+    <meta property="og:image" content="{{ request.build_absolute_uri }}{% static 'assets/img/roha-explore-banner.png' %}">
+    <meta property="og:url" content="https://ethiobinamerplc.com/">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}" />
+    <link rel="icon" type="image/png" href="{% static 'assets/img/main-logo.png' %}" />
+    <title>Ethio Binamer</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.min.css" />
+    <!-- Nucleo Icons -->
+    <link href="{% static 'assets/css/nucleo-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/nucleo-svg.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="{% static 'assets/css/nucleo-svg.css' %}" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="{% static 'assets/css/argon-dashboard.css' %}" rel="stylesheet" />
+  </head>
+  <style>
+    table tbody tr {
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    table tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .alert-container {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .alert .close {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      padding: 0.5rem;
+    }
+    
+    .alert .close span {
+      display: inline-block;
+      transform: scale(1.2);
+    }
+  </style>
+  <body class="g-sidenav-show">
+    {% block base %}
+
+    {% endblock %}
+    <!-- Core JS Files -->
+    <script src="{% static 'assets/js/core/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/core/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/smooth-scrollbar.min.js' %}"></script>
+    <!-- Kanban scripts -->
+    <script src="{% static 'assets/js/plugins/dragula/dragula.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jkanban/jkanban.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/chartjs.min.js' %}"></script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="{% static 'assets/js/argon-dashboard.min.js' %}"></script>
+    <!-- Kanban scripts -->
+    <script src="{% static 'assets/js/plugins/choices.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/photoswipe.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/photoswipe-ui-default.min.js' %}"></script>
+    <!-- Github buttons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
+    <!-- Core JS Files -->
+    <script src="{% static 'assets/js/plugins/dropzone.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/quill.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/multistep-form.js' %}"></script>
+
+    <script src="{% static 'assets/js/plugins/datatables.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('table tbody tr').click(function () {
+          var url = $(this).data('url')
+          if (url) {
+            window.location.href = url
+          } else {
+            var target = $(this).data('target')
+            $(target).modal('show')
+          }
+        })
+      })
+    </script>
+    <script>
+      // Automatically close the alerts after 5 seconds
+      setTimeout(function () {
+        var alertElements = document.querySelectorAll('.alert')
+        alertElements.forEach(function (alert) {
+          alert.classList.remove('show') // Hide the alert
+        })
+      }, 5000)
+      
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get all the close buttons within alerts
+        var closeButtons = document.querySelectorAll('.alert .close')
+      
+        // Add click event to each close button
+        closeButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            // Find the parent alert (li) and remove it
+            var alert = this.closest('.alert')
+            alert.classList.remove('show') // Optionally add fade-out animation
+            setTimeout(function () {
+              alert.remove() // Remove the alert after fading out
+            }, 300) // Adjust time for fade out duration
+          })
+        })
+      })
+    </script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      })
+    </script>
+    <script>
+  if (document.getElementById('choices-gender')) {
+    var gender = document.getElementById('choices-gender');
+    const example = new Choices(gender);
+  }
+
+  if (document.getElementById('choices-language')) {
+    var language = document.getElementById('choices-language');
+    const example = new Choices(language);
+  }
+
+  if (document.getElementById('choices-skills')) {
+    var skills = document.getElementById('choices-skills');
+    const example = new Choices(skills, {
+      delimiter: ',',
+      editItems: true,
+      maxItemCount: 5,
+      removeItemButton: true,
+      addItems: true
+    });
+  }
+
+  if (document.getElementById('choices-year')) {
+    var year = document.getElementById('choices-year');
+    setTimeout(function() {
+      const example = new Choices(year);
+    }, 1);
+
+    for (y = 1900; y <= 2020; y++) {
+      var optn = document.createElement("OPTION");
+      optn.text = y;
+      optn.value = y;
+
+      if (y == 2020) {
+        optn.selected = true;
+      }
+
+      year.options.add(optn);
+    }
+  }
+
+  if (document.getElementById('choices-day')) {
+    var day = document.getElementById('choices-day');
+    setTimeout(function() {
+      const example = new Choices(day);
+    }, 1);
+
+
+    for (y = 1; y <= 31; y++) {
+      var optn = document.createElement("OPTION");
+      optn.text = y;
+      optn.value = y;
+
+      if (y == 1) {
+        optn.selected = true;
+      }
+
+      day.options.add(optn);
+    }
+
+  }
+
+  if (document.getElementById('choices-month')) {
+    var month = document.getElementById('choices-month');
+    setTimeout(function() {
+      const example = new Choices(month);
+    }, 1);
+
+    var d = new Date();
+    var monthArray = new Array();
+    monthArray[0] = "January";
+    monthArray[1] = "February";
+    monthArray[2] = "March";
+    monthArray[3] = "April";
+    monthArray[4] = "May";
+    monthArray[5] = "June";
+    monthArray[6] = "July";
+    monthArray[7] = "August";
+    monthArray[8] = "September";
+    monthArray[9] = "October";
+    monthArray[10] = "November";
+    monthArray[11] = "December";
+    for (m = 0; m <= 11; m++) {
+      var optn = document.createElement("OPTION");
+      optn.text = monthArray[m];
+      // server side month start from one
+      optn.value = (m + 1);
+      // if june selected
+      if (m == 1) {
+        optn.selected = true;
+      }
+      month.options.add(optn);
+    }
+  }
+
+  function visible() {
+    var elem = document.getElementById('profileVisibility');
+    if (elem) {
+      if (elem.innerHTML == "Switch to visible") {
+        elem.innerHTML = "Switch to invisible"
+      } else {
+        elem.innerHTML = "Switch to visible"
+      }
+    }
+  }
+
+  var openFile = function(event) {
+    var input = event.target;
+
+    // Instantiate FileReader
+    var reader = new FileReader();
+    reader.onload = function() {
+      imageFile = reader.result;
+
+      document.getElementById("imageChange").innerHTML = '<img width="200" src="' + imageFile + '" class="rounded-circle w-100 shadow" />';
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+</scrip>
+<script>
+  var win = navigator.platform.indexOf('Win') > -1;
+  if (win && document.querySelector('#sidenav-scrollbar')) {
+    var options = {
+      damping: '0.5'
+    }
+    Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+  }
+</script>
+    <script>
+    const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
+      searchable: true,
+      fixedHeight: false,
+      perPageSelect: false
+    });
+
+    document.querySelectorAll(".export").forEach(function(el) {
+      el.addEventListener("click", function(e) {
+        var type = el.dataset.type;
+
+        var data = {
+          type: type,
+          filename: "soft-ui-" + type,
+        };
+
+        if (type === "csv") {
+          data.columnDelimiter = "|";
+        }
+
+        dataTableSearch.export(data);
+      });
+    });
+  </script>
+    <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+
+    <script>
+   var win = navigator.platform.indexOf('Win') > -1;
+   if (win && document.querySelector('#sidenav-scrollbar')) {
+     var options = {
+       damping: '0.5'
+     }
+     Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+   }
+ </script>
+    <script>
+  if (document.getElementById('edit-deschiption-edit')) {
+    var quill = new Quill('#edit-deschiption-edit', {
+      theme: 'snow' // Specify theme in configuration
+    });
+  };
+
+  if (document.getElementById('choices-category-edit')) {
+    var element = document.getElementById('choices-category-edit');
+    const example = new Choices(element, {
+      searchEnabled: false
+    });
+  };
+
+  if (document.getElementById('choices-color-edit')) {
+    var element = document.getElementById('choices-color-edit');
+    const example = new Choices(element, {
+      searchEnabled: false
+    });
+  };
+
+  if (document.getElementById('choices-currency-edit')) {
+    var element = document.getElementById('choices-currency-edit');
+    const example = new Choices(element, {
+      searchEnabled: false
+    });
+  };
+
+  if (document.getElementById('choices-tags-edit')) {
+    var tags = document.getElementById('choices-tags-edit');
+    const examples = new Choices(tags, {
+      removeItemButton: true
+    });
+
+    examples.setChoices(
+      [{
+          value: 'One',
+          label: 'Expired',
+          disabled: true
+        },
+        {
+          value: 'Two',
+          label: 'Out of Stock',
+          selected: true
+        }
+      ],
+      'value',
+      'label',
+      false,
+    );
+  }
+</script>
+    <script>
+    if (document.getElementById('choices-quantity')) {
+      var element = document.getElementById('choices-quantity');
+      const example = new Choices(element, {
+        searchEnabled: false,
+        itemSelectText: ''
+      });
+    };
+
+    if (document.getElementById('choices-material')) {
+      var element = document.getElementById('choices-material');
+      const example = new Choices(element, {
+        searchEnabled: false,
+        itemSelectText: ''
+      });
+    };
+
+    if (document.getElementById('choices-colors')) {
+      var element = document.getElementById('choices-colors');
+      const example = new Choices(element, {
+        searchEnabled: false,
+        itemSelectText: ''
+      });
+    };
+
+    // Gallery Carousel
+    if (document.getElementById('products-carousel')) {
+      var myCarousel = document.querySelector('#products-carousel')
+      var carousel = new bootstrap.Carousel(myCarousel)
+    }
+
+
+    // Products gallery
+
+    var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+      // parse slide data (url, title, size ...) from DOM elements
+      // (children of gallerySelector)
+      var parseThumbnailElements = function(el) {
+        var thumbElements = el.childNodes,
+          numNodes = thumbElements.length,
+          items = [],
+          figureEl,
+          linkEl,
+          size,
+          item;
+
+        for (var i = 0; i < numNodes; i++) {
+
+          figureEl = thumbElements[i]; // <figure> element
+          // include only element nodes
+          if (figureEl.nodeType !== 1) {
+            continue;
+          }
+
+          linkEl = figureEl.children[0]; // <a> element
+
+          size = linkEl.getAttribute('data-size').split('x');
+
+          // create slide object
+          item = {
+            src: linkEl.getAttribute('href'),
+            w: parseInt(size[0], 10),
+            h: parseInt(size[1], 10)
+          };
+
+          if (figureEl.children.length > 1) {
+            // <figcaption> content
+            item.title = figureEl.children[1].innerHTML;
+          }
+
+          if (linkEl.children.length > 0) {
+            // <img> thumbnail element, retrieving thumbnail url
+            item.msrc = linkEl.children[0].getAttribute('src');
+          }
+
+          item.el = figureEl; // save link to element for getThumbBoundsFn
+          items.push(item);
+        }
+
+        return items;
+      };
+
+      // find nearest parent element
+      var closest = function closest(el, fn) {
+        return el && (fn(el) ? el : closest(el.parentNode, fn));
+      };
+
+      // triggers when user clicks on thumbnail
+      var onThumbnailsClick = function(e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+        var eTarget = e.target || e.srcElement;
+
+        // find root element of slide
+        var clickedListItem = closest(eTarget, function(el) {
+          return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+        });
+
+        if (!clickedListItem) {
+          return;
+        }
+
+        // find index of clicked item by looping through all child nodes
+        // alternatively, you may define index via data- attribute
+        var clickedGallery = clickedListItem.parentNode,
+          childNodes = clickedListItem.parentNode.childNodes,
+          numChildNodes = childNodes.length,
+          nodeIndex = 0,
+          index;
+
+        for (var i = 0; i < numChildNodes; i++) {
+          if (childNodes[i].nodeType !== 1) {
+            continue;
+          }
+
+          if (childNodes[i] === clickedListItem) {
+            index = nodeIndex;
+            break;
+          }
+          nodeIndex++;
+        }
+
+
+
+        if (index >= 0) {
+          // open PhotoSwipe if valid index found
+          openPhotoSwipe(index, clickedGallery);
+        }
+        return false;
+      };
+
+      // parse picture index and gallery index from URL (#&pid=1&gid=2)
+      var photoswipeParseHash = function() {
+        var hash = window.location.hash.substring(1),
+          params = {};
+
+        if (hash.length < 5) {
+          return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+          if (!vars[i]) {
+            continue;
+          }
+          var pair = vars[i].split('=');
+          if (pair.length < 2) {
+            continue;
+          }
+          params[pair[0]] = pair[1];
+        }
+
+        if (params.gid) {
+          params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+      };
+
+      var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+        var pswpElement = document.querySelectorAll('.pswp')[0],
+          gallery,
+          options,
+          items;
+
+        items = parseThumbnailElements(galleryElement);
+
+        // define options (if needed)
+        options = {
+
+          // define gallery index (for URL)
+          galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+          getThumbBoundsFn: function(index) {
+            // See Options -> getThumbBoundsFn section of documentation for more info
+            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+              pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+              rect = thumbnail.getBoundingClientRect();
+
+            return {
+              x: rect.left,
+              y: rect.top + pageYScroll,
+              w: rect.width
+            };
+          }
+
+        };
+
+        // PhotoSwipe opened from URL
+        if (fromURL) {
+          if (options.galleryPIDs) {
+            // parse real index when custom PIDs are used
+            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+            for (var j = 0; j < items.length; j++) {
+              if (items[j].pid == index) {
+                options.index = j;
+                break;
+              }
+            }
+          } else {
+            // in URL indexes start from 1
+            options.index = parseInt(index, 10) - 1;
+          }
+        } else {
+          options.index = parseInt(index, 10);
+        }
+
+        // exit if index not found
+        if (isNaN(options.index)) {
+          return;
+        }
+
+        if (disableAnimation) {
+          options.showAnimationDuration = 0;
+        }
+
+        // Pass data to PhotoSwipe and initialize it
+        gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+      };
+
+      // loop through all gallery elements and bind events
+      var galleryElements = document.querySelectorAll(gallerySelector);
+
+      for (var i = 0, l = galleryElements.length; i < l; i++) {
+        galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+        galleryElements[i].onclick = onThumbnailsClick;
+      }
+
+      // Parse URL and open gallery if it contains #&pid=3&gid=1
+      var hashData = photoswipeParseHash();
+      if (hashData.pid && hashData.gid) {
+        openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+      }
+    };
+
+    // execute above function
+    initPhotoSwipeFromDOM('.my-gallery');
+  </script>
+    <!-- Kanban scripts -->
+    <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+
+    <script>
+  if (document.getElementById('edit-deschiption')) {
+    var quill = new Quill('#edit-deschiption', {
+      theme: 'snow' // Specify theme in configuration
+    });
+  };
+
+  if (document.getElementById('choices-category')) {
+    var element = document.getElementById('choices-category');
+    const example = new Choices(element, {
+      searchEnabled: false
+    });
+  };
+
+  if (document.getElementById('choices-sizes')) {
+    var element = document.getElementById('choices-sizes');
+    const example = new Choices(element, {
+      searchEnabled: false
+    });
+  };
+
+  if (document.getElementById('choices-currency')) {
+    var element = document.getElementById('choices-currency');
+    const example = new Choices(element, {
+      searchEnabled: false
+    });
+  };
+
+  if (document.getElementById('choices-tags')) {
+    var tags = document.getElementById('choices-tags');
+    const examples = new Choices(tags, {
+      removeItemButton: true
+    });
+
+    examples.setChoices(
+      [{
+          value: 'One',
+          label: 'Expired',
+          disabled: true
+        },
+        {
+          value: 'Two',
+          label: 'Out of Stock',
+          selected: true
+        }
+      ],
+      'value',
+      'label',
+      false,
+    );
+  }
+</script>
+    <!-- Kanban scripts -->
+    <script>
+  var win = navigator.platform.indexOf('Win') > -1;
+  if (win && document.querySelector('#sidenav-scrollbar')) {
+    var options = {
+      damping: '0.5'
+    }
+    Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+  }
+</script>
+
+    <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+    <script>
+    function validateForm(form) {
+        if (!form.checkValidity()) {
+            alert('Please fill out all required fields before submitting.');
+            return false;
+        }
+        return true;
+    }
+</script>
+  </body>
+</html>

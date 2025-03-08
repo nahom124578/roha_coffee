@@ -1,0 +1,319 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<section class="import-section position-relative" 
+    style="
+    margin-bottom: 60px;
+    background-image: url('{% static 'assets/img/rentals-loaders-banner.png' %}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;">
+    
+    <!-- Apply a filter to blur and lighten the background -->
+    <div class="overlay" style=" position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4); /* Lighten the background */
+      backdrop-filter: blur(3px); /* Blur effect */"></div>
+    
+    <div class="container import-content" style="position: relative; z-index: 1;">
+      <h5 style="color:#1D1D35">EXPLORE</h5>
+      <h1 style="color:#1D1D35; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">
+        OUR IMPORTS
+      </h1>
+      
+      <p style="color:#343434; margin-bottom: 40px;">
+        Our commitment to sustainability and fair trade principles guarantees that our products support
+        the livelihoods of those involved in the supply chain while enriching the global marketplace.
+      </p>
+      
+      <!-- Button Group -->
+      <div class="d-flex flex-wrap justify-content-center" style="max-width: 600px; margin: 0 auto;">
+       <a href="{% url 'trucks_page' %}">
+        <button class="btn btn-tag btn-active" style="background-color: #008000;
+        color: white;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        transition: all 0.3s ease;">
+        Iveco Trucks
+      </button>
+
+       </a>
+       <a href="{% url 'hybrid_vehicles_page' %}">
+        <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Hybrid Vehicles
+      </button>
+    
+       </a>
+       <a href="{% url 'electric_vehicles_page' %}">
+        <button class="btn btn-tag" style="color:#1D6F3F;
+          border: 1px solid #008000;
+          border-radius: 25px;
+          padding: 10px 20px;
+          margin: 10px;
+          font-size: 1rem;
+          min-width: 150px;
+          background-color: transparent;
+          transition: all 0.3s ease;">
+          Electric Vehicles
+        </button>
+
+       </a>
+       <a href="{% url 'construction_page' %}">
+        <button class="btn btn-tag" style="color:#1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Construction Machinery
+      </button>
+
+       </a>
+       <a href="{% url 'sanitarty_fixture_page' %}">
+        <button class="btn btn-tag" style="color:#1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Sanitary Fixtures
+      </button>
+
+       </a>
+       <a href="{% url 'edible_oil_page' %}">
+        <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Edible Oil
+      </button>
+
+       </a>
+       <a href="{% url 'iron_bar_page' %}">
+        <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Iron Bars
+      </button>
+
+       </a>
+       <a href="{% url 'tires_page' %}">
+        <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Tires
+      </button>
+
+       </a>
+     </div>
+    </div>
+  </section>
+  <section class="container my-5">
+    <!-- Row 1: Text and Image horizontally aligned -->
+    <div class="row align-items-center mb-5">
+      <!-- Text Section -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center order-lg-1 order-2">
+        <h1 class="section-title" style="color: #1D6F3F; font-size: 2.5rem; font-weight: bold;">
+          Iveco Trucks
+        </h1>
+        <p class="section-text" style="font-size: 1.1rem; color: #1D1D35; line-height: 1.6;">
+          We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.
+        </p>
+      </div>
+      <!-- Image Section -->
+      <div class="col-lg-6 order-lg-2 order-1">
+        <img src="{% static 'assets/img/iveco.png' %}" alt="Iveco Truck Image" class="img-fluid rounded" style="max-width: 100%; height: auto; padding-left: 20px;">
+      </div>
+    </div>
+  
+    <!-- Row 2: Image and Text horizontally aligned -->
+    <div class="row align-items-center">
+      <!-- Image Section -->
+      <div class="col-lg-6 order-lg-1 order-2">
+        <img src="{% static 'assets/img/iveco2.png' %}" alt="Iveco Truck Image 2" class="img-fluid rounded" style="max-width: 100%; height: auto; padding-right: 20px;">
+      </div>
+      <!-- Text Section -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center order-lg-2 order-1">
+        <p class="section-text" style="font-size: 1.1rem; color: #1D1D35; line-height: 1.6;">
+          We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="hero-section position-relative" style=" 
+  margin-bottom: 60px;
+  background-image: url('{% static 'assets/img/image9.png' %}');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  color: #fff;
+  position: relative; ">
+    <div class="overlay" style=" position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);"></div>
+    <div class="container hero-content" style=" position: relative;
+      z-index: 1;">
+      <div class="row">
+        <!-- Text Content -->
+        <div class="col-md-8">
+          <h1 style="font-size: 3rem;
+          font-weight: bold;
+          color: #1D1D35;">BRIDGING ROADS
+ACROSS THE GLOBE</h1>
+        </div>
+        <!-- Description and Button -->
+        <div class="col-md-4 text-md-end">
+          <p style="font-size: 1.1rem;
+          color: #1D1D35;
+          margin-bottom: 20px;">
+            With cutting-edge technology and unparalleled service, we ensure every mile is a step towards progress, connecting people and businesses like never before. Join us on the journey to tomorrow, today.
+          </p>
+          <a href="{% url "trucks_stock_page" %}" class="btn btn-view-stock" style="  background-color: #1D6F3F;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 25px;
+          border: none;
+          font-size: 1rem;">View Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel section -->
+  <section class="container my-5" style="margin-bottom: 50px;">
+    <h2 class="section-title" style="text-align: center;">Explore By Category</h2>
+    
+    <div id="svgCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active bg-dark">
+              <div class="row g-0 justify-content-center align-items-center text-center">
+                <div class="col-3 category-item">
+                  <a href="{% url 'trucks_explore_by_category_page' %}" style="text-decoration: none;">
+                    <img src="{% static 'assets/img/iveco-trucks-illustartions-01.svg' %}" alt="Category Image 1" class="category-image" style="width: 100%; filter: brightness(0) invert(1);">
+                    <p class="text-white text-light fs-5 fs-md-4 fs-lg-3" style="font-size:25px;">Trippers</p>
+                  </a>
+                </div>
+                <div class="col-3 category-item">
+                  <a href="{% url 'trucks_explore_by_category_page' %}" style="text-decoration: none;">
+                    <img src="{% static 'assets/img/iveco-trucks-illustartions-02.svg' %}" alt="Category Image 1" class="category-image" style="width: 100%; filter: brightness(0) invert(1);">
+                    <p class="text-white text-light fs-5 fs-md-4 fs-lg-3" style="font-size:25px;">Box Trucks</p>
+                  </a>
+                </div>
+                <div class="col-3 category-item">
+                  <a href="{% url 'trucks_explore_by_category_page' %}" style="text-decoration: none;">
+                    <img src="{% static 'assets/img/iveco-trucks-illustartions-03.svg' %}" alt="Category Image 1" class="category-image" style="width: 100%; filter: brightness(0) invert(1);">
+                    <p class="text-white text-light fs-5 fs-md-4 fs-lg-3" style="font-size:25px;">Tank Trucks</p>
+                  </a>
+                </div>
+                <div class="col-3 category-item">
+                  <a href="{% url 'trucks_explore_by_category_page' %}" style="text-decoration: none;">
+                    <img src="{% static 'assets/img/iveco-trucks-illustartions-04.svg' %}" alt="Category Image 1" class="category-image" style="width: 100%; filter: brightness(0) invert(1);">
+                    <p class="text-white text-light fs-5 fs-md-4 fs-lg-3" style="font-size:25px;">Crane Trucks</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+        
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev" 
+            style="position: absolute; top: 50%; transform: translateY(-50%); font-size: 2rem; color: #1D1D35; background: transparent; border: none; left: -135px; z-index: 1;">
+            <span class="bi bi-arrow-left-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next" 
+            style="position: absolute; top: 50%; transform: translateY(-50%); font-size: 2rem; color: #1D1D35; background: transparent; border: none; right: -135px; z-index: 1;">
+            <span class="bi bi-arrow-right-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<style>
+  .category-item {
+    transition: background-color 0.3s ease;
+  }
+
+  .category-item:hover {
+    background-color: var(--bs-secondary);
+    transition: background-color 0.3s ease;
+  }
+
+  .category-item a {
+    display: block;
+    padding: 15px 0;
+  }
+</style>
+
+<!-- Stats Section -->
+<div class="container text-center" style="margin-top: 100px; margin-bottom: 60px;"> <!-- Increased margin-top -->
+    <div class="row">
+        <div class="col">
+            <i class="bi bi-person-badge" style="font-size: 3rem; color: #6B8E23;"></i>
+            <p>2000+<br>EMPLOYEES</p>
+        </div>
+        <div class="col">
+            <i class="bi bi-people" style="font-size: 3rem; color: #6B8E23;"></i>
+            <p>120+<br>CLIENTS</p>
+        </div>
+        <div class="col">
+            <i class="bi bi-briefcase-fill" style="font-size: 3rem; color: #6B8E23;"></i>
+            <p>75+<br>BUSINESSES</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

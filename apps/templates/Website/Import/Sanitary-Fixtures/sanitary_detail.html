@@ -1,0 +1,157 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<section class="page-header m-3 position-relative" style="height: 35vh; overflow: hidden;">  
+    <!-- Background image -->
+    <div style="background-image: url('{% static 'assets/img/sanitana.png' %}'); background-size: cover; background-position: center center; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;"></div>
+    
+    <!-- Overlay -->
+    <div style="background-color: rgba(238, 253, 242, 0.7); position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0;"></div>  
+
+    <!-- Heading -->
+    <div class="container text-center position-relative" style="z-index: 1;">  
+        <h1 class="display-4 text-dark fw-bold" style="padding: 10px 20px; border-radius: 5px;">SANITARY FIXTURES</h1>  
+    </div>  
+</section>
+
+
+
+<div class="container my-5" style="padding-top: 20px;">
+    <div class="row">
+        <div class="container my-5" style="flex: 1;">
+            <div class="image-carousel">
+                <img src="{% static 'assets/img/neoro-toilet.png' %}" alt="Neoro n50 wall-mounted toilet set" class="product-image" style="max-width: 100%; height: 500px;">
+            </div>
+        </div>
+        <div class="row" style="flex: 1;">
+            <h2>Neoro n50 wall-mounted toilet set</h2>
+            <p>Lithuania, Kirtimu street 17A, Vilnius</p>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="row" style="flex: 1;">
+                        <strong>Features</strong>
+                    </div> 
+                    <div class="row" style="flex: 2;">
+                        <p>SilentPowerFlush technology, Clean coating, and more... <a href="#" style="color: #1D6F3F;">MORE</a></p>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="row" style="flex: 1;">
+                        <strong>Size</strong>
+                    </div> 
+                    <div class="row" style="flex: 2;">
+                        <p>Standard size for wall-mounted installation</p>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="row" style="flex: 1;">
+                        <strong>Production Date</strong>
+                    </div> 
+                    <div class="row" style="flex: 2;">
+                        <p>November 10, 2024</p>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="row" style="flex: 1;">
+                        <strong>Warranty</strong>
+                    </div> 
+                    <div class="row" style="flex: 2;">
+                        <p>5 years</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5" style="padding-top: 20px;">  
+    <div class="row align-items-center">  
+        <div class="col-md-8 position-relative">  
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">  
+                <div class="carousel-inner">  
+                    <div class="carousel-item active">  
+                        <div class="row">  
+                            <div class="col-4">  
+                                <div class="card">  
+                                    <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Image 1">  
+                                </div>  
+                            </div>  
+                            <div class="col-4">  
+                                <div class="card">  
+                                    <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Image 2">  
+                                </div>  
+                            </div>  
+                            <div class="col-4">  
+                                <div class="card">  
+                                    <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Image 3">  
+                                </div>  
+                            </div>  
+                        </div>  
+                    </div>  
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev" style="position: absolute; top: 50%; transform: translateY(-50%); font-size: 3rem; color: #fff; background: transparent; border: none; left: -60px;">  
+                    <span class="bi bi-chevron-left" aria-hidden="true"></span>  
+                    <span class="visually-hidden">Previous</span>  
+                </button>  
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next" style="position: absolute; top: 50%; transform: translateY(-50%); font-size: 3rem; color: #fff; background: transparent; border: none; right: -60px;">  
+                    <span class="bi bi-chevron-right" aria-hidden="true"></span>  
+                    <span class="visually-hidden">Next</span>  
+                </button>  
+            </div>  
+        </div>  
+        <div class="col-md-4 d-flex flex-column align-items-start">  
+            <button class="btn btn-outline-success mb-3 w-100">Ask For Price</button>  
+            <button class="btn btn-success w-100">Contact Now</button>  
+        </div>  
+    </div>  
+</div>
+
+<div class="container my-5" style="padding: 20px;">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Contact The Seller</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name or Company Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Your Phone Number</label>
+                    <input type="tel" class="form-control" id="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Send Message</button>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card p-3" style="background-color: #EEFDF2;">
+                <h4 style="text-align: center;">Need Assistance?</h4>
+                <div style="display: flex; align-items: center;">
+                    <div>
+                        <p style="color: #1D1D35;">Our company's Sales Advisor is ready to answer your questions in your own language</p>
+                        <p style="color: #1D6F3F;"><strong>Gelila Million</strong><br>+251 911 122334</p>
+                    </div>
+                    <img src="{% static 'assets/img/gellila.png' %}" alt="Sales Advisor" class="img-fluid mb-3" style="max-width: 150px; margin-right: 20px; border-radius: 5px;">
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-outline-success" style="width: 100%;">Call</button>
+                    <button class="btn btn-outline-success" style="width: 100%;">Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

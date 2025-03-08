@@ -1,0 +1,85 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-gray-100 bg-gray shadow-none z-index-sticky sticky-top text-dark" data-scroll="false">
+  <div class="container-fluid px-4">
+    <div class="row w-100 align-items-center d-flex justify-content-between">
+
+      <!-- Logo on the left -->
+      <div class="col-auto d-flex justify-content-start">
+        <a href="{% url 'roha' %}">
+          <img src="{% static 'assets/img/main-logo.png' %}" alt="Logo" width="75" height="75">
+        </a>
+      </div>
+
+      <!-- Toggle button for smaller screens (black icon) on the far right -->
+      <div class="col-auto d-lg-none">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml,%3csvg xmlns%3d%27http://www.w3.org/2000/svg%27 viewBox%3d%270 0 30 30%27%3e%3cpath stroke%3d%27rgba%280%2c 0%2c 0%2c 1%29%27 stroke-width%3d%272%27 d%3d%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e');"></span>
+        </button>
+      </div>
+
+      <!-- Collapsible Navbar (centered links and search bar) -->
+      <div class="col-lg-6 col-md-6 col-sm-12 collapse navbar-collapse justify-content-center align-items-center mx-auto text-dark" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 text-dark w-100 justify-content-center">
+          <li class="nav-item mx-2 text-dark">
+            <a class="nav-link text-dark" href="{% url 'landing_page' %}">Home</a>
+          </li>
+
+          <!-- Regular dropdown for larger screens -->
+          <li class="nav-item dropdown mx-2 text-dark d-none d-lg-block">
+            <a class="nav-link dropdown-toggle text-dark" href="{% url 'about_page' %}" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu bg-primary text-white" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="{% url 'about_page' %}">Our Profile</a></li>
+              <li><a class="dropdown-item" href="{% url 'vision_page' %}">Our Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="{% url 'blog_page' %}">Our Blog</a></li>
+              <li><a class="dropdown-item" href="{% url 'gallery_page' %}">Our Gallery</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropright dropdown for smaller screens -->
+          <li class="nav-item dropend mx-2 text-dark d-lg-none">
+            <a class="nav-link dropdown-toggle text-dark" href="{% url 'about_page' %}" id="aboutDropdownSm" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end bg-primary text-white" aria-labelledby="aboutDropdownSm">
+              <li><a class="dropdown-item" href="{% url 'about_page' %}">Our Profile</a></li>
+              <li><a class="dropdown-item" href="{% url 'vision_page' %}">Our Mission & Vision</a></li>
+              <li><a class="dropdown-item" href="{% url 'blog_page' %}">Our Blog</a></li>
+              <li><a class="dropdown-item" href="{% url 'gallery_page' %}">Our Gallery</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item mx-2">
+            <a class="nav-link text-dark" href="{% url 'contact_page' %}">Contact Us</a>
+          </li>
+
+          <!-- Full-width search bar for smaller screens within the dropdown -->
+          <li class="col-sm-12 nav-item mt-3 d-lg-none d-sm-flex w-100">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search products">
+              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Search bar for larger screens (outside dropdown) -->
+      <div class="col-lg-3 col-md-3 d-none d-lg-flex justify-content-end">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search products">
+          <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .dropdown-menu .dropdown-item{
+    color: #fff;
+  }
+  .dropdown-menu .dropdown-item:hover{
+    color: #212529;
+  }
+</style>

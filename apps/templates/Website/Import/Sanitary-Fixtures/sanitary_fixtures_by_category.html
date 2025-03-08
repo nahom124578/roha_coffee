@@ -1,0 +1,343 @@
+
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+ 
+<style>
+    .dropdown-content {
+        display: none;
+        padding-left: 20px;
+        display: block;
+    }
+ 
+    .dropdown-toggle {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .dropdown-toggle::before {
+        
+        margin-left: 8px;
+    }
+</style>
+
+<section class="import-section position-relative" 
+style="
+margin-bottom: 60px;
+background-image: url('{% static 'assets/img/sanitana.png' %}');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 100px 0;
+color: #fff;
+text-align: center;
+position: relative;">
+
+<div class="overlay" style=" position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.5); /* Lighten the background */
+backdrop-filter: blur(3px); /* Blur effect */"></div>
+
+<div class="container import-content" style="position: relative; z-index: 1;">
+    <h1 style="color:#1D1D35">SANITANA ALL PRODUCTS</h1>
+</div>
+
+</section>
+
+<div style="display: flex; justify-content: center; padding: 20px;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 20px;">
+        <!-- Hooks & Hangers -->
+        <div style="width: 200px; height: 200px; text-align: center; border: 2px solid #00b140; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="{% static 'assets/img/hooks.png' %}" alt="Hooks & Hangers" style="width: 100px; height: 100px; object-fit: contain;">
+            <p style="margin-top: 10px;">Hooks & Hangers</p>
+        </div>
+        
+        <!-- Toilet (selected) -->
+        <div style="width: 200px; height: 200px; text-align: center; background-color: #006400; color: white; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="{% static 'assets/img/toilet.png' %}" alt="Toilet" style="width: 100px; height: 100px; object-fit: contain;">
+            <p style="margin-top: 10px;">Toilet</p>
+        </div>
+
+        <!-- Bathtubs -->
+        <div style="width: 200px; height: 200px; text-align: center; border: 2px solid #00b140; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="{% static 'assets/img/bathtub.png' %}" alt="Bathtubs" style="width: 100px; height: 100px; object-fit: contain;">
+            <p style="margin-top: 10px;">Bathtubs</p>
+        </div>
+
+        <!-- Faucets -->
+        <div style="width: 200px; height: 200px; text-align: center; border: 2px solid #00b140; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="{% static 'assets/img/faucet.png' %}" alt="Faucets" style="width: 100px; height: 100px; object-fit: contain;">
+            <p style="margin-top: 10px;">Faucets</p>
+        </div>
+
+        <!-- Vanity -->
+        <div style="width: 200px; height: 200px; text-align: center; border: 2px solid #00b140; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="{% static 'assets/img/vanity.png' %}" alt="Vanity" style="width: 100px; height: 100px; object-fit: contain;">
+            <p style="margin-top: 10px;">Vanity</p>
+        </div>
+
+        <!-- Basins -->
+        <div style="width: 200px; height: 200px; text-align: center; border: 2px solid #00b140; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="{% static 'assets/img/basin.png' %}" alt="Basins" style="width: 100px; height: 100px; object-fit: contain;">
+            <p style="margin-top: 10px;">Basins</p>
+        </div>
+
+        <!-- Kitchen Sink -->
+        <div style="width: 200px; height: 200px; text-align: center; border: 2px solid #00b140; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="{% static 'assets/img/sink.png' %}" alt="Kitchen Sink" style="width: 100px; height: 100px; object-fit: contain;">
+            <p style="margin-top: 10px;">Kitchen Sink</p>
+        </div>
+
+        <!-- Mixers -->
+        <div style="width: 200px; height: 200px; text-align: center; border: 2px solid #00b140; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <img src="{% static 'assets/img/mixers.png' %}" alt="Mixers" style="width: 100px; height: 100px; object-fit: contain;">
+            <p style="margin-top: 10px;">Mixers</p>
+        </div>
+    </div>
+</div>
+
+
+<div >
+    <h4 style="text-align: center;">All Our Toilets</h4>
+</div>
+<div class="container my-5">
+    <div class="row d-flex">
+        <!-- Filter Sidebar -->
+        <div class="col-md-3 filter-container">
+            <h5 class="fw-bold">Filter By Keyword</h5>
+            <div class="input-group mb-3 position-relative">  
+                <input type="text" class="form-control" placeholder="Search By">  
+                <button class="btn btn-secondary dropdown-toggle position-absolute end-0 top-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">  
+                    <i class="bi bi-chevron-down"></i>  
+                </button>  
+                <ul class="dropdown-menu dropdown-menu-end">  
+                    <li><a class="dropdown-item" href="#">Name</a></li>  
+                    <li><a class="dropdown-item" href="#">Price</a></li>  
+                    <li><a class="dropdown-item" href="#">Color</a></li>  
+                   
+                </ul>  
+            </div>
+           
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                   Special Features
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter1">
+                        <label class="form-check-label" for="liter1">Long</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter2">
+                        <label class="form-check-label" for="liter2">Raised and Long</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter3">
+                        <label class="form-check-label" for="liter3">Tall</label>
+                        <span class="float-end">10</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter5">
+                        <label class="form-check-label" for="liter5">Short</label>
+                        <span class="float-end">6</span>
+                    </div>
+                
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-success">Show More Features</a>
+                    </div>
+                </div>
+            </div>
+
+
+<div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Shipping Time
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="olive">
+                        <label class="form-check-label" for="olive">Immediately Available</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="mustard">
+                        <label class="form-check-label" for="mustard">Approx. 1 Week</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="coconut">
+                        <label class="form-check-label" for="coconut">Approx. 2 Week</label>
+                        <span class="float-end">10</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sesame">
+                        <label class="form-check-label" for="sesame">Approx. 3 Week</label>
+                        <span class="float-end">6</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="groundnut">
+                        <label class="form-check-label" for="groundnut">Approx. 1 Month</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-success">Show More Time</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                   Material Plate
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="germany">
+                        <label class="form-check-label" for="germany">Glass</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">Plastic</label>
+                        <span class="float-end">12</span>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Additional Filters -->
+            
+          
+            
+            <div class="text-center mt-4">  
+                <button id="clearAllButton" class="btn btn-danger w-100" style="background-color: #1D6F3F;">Clear All</button>
+
+
+</div>  
+        </div>
+
+        <!-- Product Listing -->
+        <div class="col-md-9">
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neoro n50 wall-mounted toilet set</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>n50 wall-mounted toilet set with innovative SilentPowerFlush flushing technology & Clean coating,...</p>
+                            <a href="{% url "sanitarty_fixture_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more products -->
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neoro n50 wall-mounted toilet set</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>n50 wall-mounted toilet set with innovative SilentPowerFlush flushing technology & Clean coating,...</p>
+                            <a href="{% url "sanitarty_fixture_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neoro n50 wall-mounted toilet set</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>n50 wall-mounted toilet set with innovative SilentPowerFlush flushing technology & Clean coating,...</p>
+                            <a href="{% url "sanitarty_fixture_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more products -->
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neoro n50 wall-mounted toilet set</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>n50 wall-mounted toilet set with innovative SilentPowerFlush flushing technology & Clean coating,...</p>
+                            <a href="{% url "sanitarty_fixture_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neoro n50 wall-mounted toilet set</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>n50 wall-mounted toilet set with innovative SilentPowerFlush flushing technology & Clean coating,...</p>
+                            <a href="{% url "sanitarty_fixture_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more products -->
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neoro n50 wall-mounted toilet set</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>n50 wall-mounted toilet set with innovative SilentPowerFlush flushing technology & Clean coating,...</p>
+                            <a href="{% url "sanitarty_fixture_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neoro n50 wall-mounted toilet set</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>n50 wall-mounted toilet set with innovative SilentPowerFlush flushing technology & Clean coating,...</p>
+                            <a href="{% url "sanitarty_fixture_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more products -->
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/neoro-toilet.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neoro n50 wall-mounted toilet set</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>n50 wall-mounted toilet set with innovative SilentPowerFlush flushing technology & Clean coating,...</p>
+                            <a href="{% url "sanitarty_fixture_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+</div>
+
+
+
+
+{% endblock %}

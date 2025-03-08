@@ -1,0 +1,639 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+<!-- Export Section -->
+<section class="import-section position-relative" style="
+    margin-bottom: 60px;
+    background-image: url('{% static 'assets/img/gallery-4.png' %}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    height:70vh;
+    ">
+
+    <!-- Apply a filter to blur and lighten the background -->
+    <div class="overlay" style=" position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(238, 253, 242, 0.7); /* Lighten the background */
+      backdrop-filter: blur(3px); /* Blur effect */"></div>
+
+    <div class="container export-content my-5" style="position: relative; z-index: 1;">
+        <h5 style="color:#1D1D35">EXPLORE</h5>
+        <h1 style="color:#1D1D35; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">
+            OUR EXPORTS
+        </h1>
+
+        <p style="color:#343434; margin-bottom: 40px;">
+            With a commitment to sustainability and fair trade practices, we support over a million local farmers,<br />
+            ensuring that our products not only meet the highest standards of quality but also contribute to the
+            well-<br />being of our communities.
+        </p>
+
+        <!-- Button Group -->
+        <div class="d-flex flex-wrap justify-content-center" style="max-width: 600px; margin: 0 auto;">
+            <a href="{% url 'coffee_detail_page' %}">
+                <button class="btn btn-tag btn-active" style="background-color: #008000;
+        color: white;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        transition: all 0.3s ease;">
+                    Coffee
+                </button>
+
+            </a>
+            <a href="{% url 'sesame_page' %}">
+                <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+                    Sesame
+                </button>
+
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Export Content Section -->
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Image Section -->
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <img src="{% static 'assets/img/roha-main-logo.png' %}" alt="Main Logo" class="img-fluid">
+            </div>
+
+            <!-- Text Section -->
+            <div class="col-lg-8 col-md-8 col-sm-12 text-center text-lg-start">
+                <h1>Welcome to Roha Coffee: <br>
+                    Premium Ethiopian Arabica Coffee</h1>
+            </div>
+        </div>
+        <div class="row bg-light mb-3">
+            <div class="col-12 text-center mx-auto p-5 my-5">
+                At Roha Coffee, we are passionate about sharing the exceptional flavors of Ethiopian coffee with the
+                world. Ethiopia, recognized as the birthplace of coffee, produces some of the most renowned and
+                sought-after beans globally, each with a unique story rooted in centuries-old tradition. As a trusted
+                exporter, Roha Coffee takes pride in offering premium Ethiopian coffee from some of the most revered
+                coffee-growing regions in the country, including Yirgachefe, Kaffa, Jimma, Sidamo, and other distinct
+                areas.
+                Each of these regions contributes its own unique flavor profiles and characteristics, making Ethiopian
+                coffee renowned for its complexity, depth, and diversity. From the bright, fruity notes and floral
+                aromas of Yirgachefe, to the bold, rich body of Kaffa and the subtle, earthy undertones of Jimma, our
+                coffees cater to a variety of palates. Roha Coffee ensures that every bean is sourced with care,
+                directly from local farmers and cooperatives who practice sustainable and ethical farming methods.
+                <br>
+                <a href={% url "roha_explore_page" %} class="btn btn-dark rounded-pill mt-4">Explore Our Packages</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- First Column -->
+            <div class="col-lg-6 col-md-6 col-sm-12 p-4 d-flex flex-column align-items-center">
+                <h2>Our Specialty Coffee: An Elevated Coffee Experience</h2>
+                <p>Beyond regional varieties, we also specialize in Ethiopian specialty coffee. This includes
+                    handpicked, meticulously processed beans that meet the highest standards in the coffee industry. Our
+                    specialty coffee is selected based on flavor quality, cultivation techniques, and the unique terroir
+                    that Ethiopian regions offer. This allows us to provide beans with exceptional clarity, sweetness,
+                    and a depth of flavor that stands out in the global coffee market.
+                    At Roha Coffee, we believe that every cup of coffee should tell a story — one of origin,
+                    craftsmanship, and dedication. Whether you’re an international coffee distributor or a retailer
+                    looking to provide your customers with a world-class coffee experience, Roha Coffee is your gateway
+                    to Ethiopian coffee excellence.</p>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 p-4 d-flex flex-column align-items-center">
+                <div class="row mb-3">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="{% static 'assets/img/coffee1.png' %}" alt="Coffee Farmer" class="img-fluid w-100"
+                            style="height: 40vh;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="{% static 'assets/img/coffee2.png' %}" alt="Coffee Cherries" class="img-fluid w-100 mx-auto"
+                    style="height: 40vh;">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h2>Commitment to Sustainability and Combating Deforestation</h2>
+                <p>
+                    As we work to deliver high-quality coffee to global markets, Roha Coffee is deeply committed to
+                    environmental sustainability. We recognize the urgent need to combat deforestation in Ethiopia, a
+                    country whose forests are not only vital to local ecosystems but also integral to coffee
+                    cultivation. Ethiopia’s forests, particularly in regions like Kaffa (the ancestral home of wild
+                    Arabica coffee), face increasing threats from deforestation due to agriculture, population pressure,
+                    and land use changes.Roha Coffee is actively involved in promoting sustainable coffee farming
+                    practices that help preserve these forests. By working closely with farmers and cooperatives that
+                    follow agroforestry methods, we ensure that coffee is grown in harmony with the natural environment.
+                    This approach not only protects biodiversity but also enhances coffee quality, as shade-grown coffee
+                    tends to produce richer, more complex flavors.</p>
+            </div>
+        </div>
+        <div class="row p-3 my-3">
+            <div class="col-12">
+                <p>Through fair trade practices, we support farmers who are custodians of Ethiopia’s forests,
+                    encouraging them to use sustainable farming techniques that reduce the impact on the land and
+                    promote forest conservation. At Roha Coffee, we believe that the future of Ethiopian coffee is
+                    intertwined with the health of the environment, and we are dedicated to doing our part to preserve
+                    the natural habitats that make Ethiopian coffee so extraordinary.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+<section class="hero-section position-relative my-4" style="background-image: url('{% static 'assets/img/roha-page-banner-2.png' %}');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        width: 100vw;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;">
+    <div class="overlay" style="position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(29, 29, 53, 0.6);">
+    </div>
+    <div class="container text-center" style="position: relative; z-index: 2;">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-9 col-lg-8 px-3 px-md-5 py-3 py-md-5" style="max-width: 800px;">
+                <h1 class="fw-bold mb-3" style="color: #fff; font-family: 'Roboto Slab', serif; font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem);">
+                    Looking Ahead: The Roha Coffee Shop Experience
+                </h1>
+                <p class="lead mb-4" style="font-size: clamp(1rem, 1.5vw + 0.5rem, 1.2rem); color: #fff;">
+                    “In addition to our thriving export business, Roha Coffee is excited to introduce our upcoming coffee shop, a space designed to celebrate Ethiopia’s rich coffee culture. Located in a vibrant setting, our coffee shop will offer more than just a place to enjoy a cup of coffee. It will be an immersive experience, where visitors can explore the nuances of Ethiopian coffee through expertly crafted brews, tastings, and educational sessions. At Roha Coffee, we invite you to discover the art, history, and passion behind every cup of Ethiopian coffee we offer.”
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 p-4 d-flex flex-column align-items-center">
+                <h2>Roha Coffee: A Legacy of Quality and Sustainability</h2>
+                <p>From our carefully sourced beans to our commitment to sustainable farming and forest preservation,
+                    Roha Coffee strives to uphold Ethiopia's legendary coffee heritage while protecting the environment
+                    for future generations. Our mission is to bring the best of Ethiopian coffee to coffee lovers
+                    worldwide, ensuring that the unique flavors and traditions of Ethiopia continue to thrive in every
+                    corner of the globe.
+                    <br>
+                    Join us on this journey, as we continue to explore new horizons in coffee, with the same dedication
+                    that has made Ethiopia the heart of the world’s coffee culture, and our forests its enduring
+                    foundation.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6 p-4 d-flex flex-column align-items-center">
+                <div class="row mb-3">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img src="{% static 'assets/img/coffee1.png' %}" alt="Coffee Farmer" class="w-100"
+                            style="height: 40vh;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid mt-4" style="background-color:#E6E6E6;">
+    <div class="container p-0">
+        <div class="row my-0 mx-auto text-center">
+            <div class="col-12 col-lg-8 mx-auto text-center p-3 my-3">
+                <h6 class="text-center" style='font-family: "Rubik Mono One", monospace;'>YOUR DAILY DOSE OF</h6>
+                <h1 class="fw-bolder text-center" style='color:#FEA940; font-family: "Rubik Mono One", monospace;'>
+                    EXTRAORDINARY</h1>
+                <p class="text-dark text-light">We source the finest beans from around the globe, meticulously roasted
+                    and expertly brewed to deliver a coffee experience unlike any other. From the first aromatic whiff
+                    to the last satisfying sip, Escape the ordinary with our handcrafted coffee creations. Whether
+                    you're seeking a moment of quiet contemplation or a vibrant social connection, we elevate the
+                    everyday into something extraordinary.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Image Section without Gap -->
+<section class="container-fluid p-0">
+    <img src="{% static 'assets/img/roha-banner.png' %}" style="height: 100vh; object-fit: cover;"
+        class="img-fluid w-100" alt="Roha Banner" style="height: auto; max-height: 100vh; object-fit: cover;">
+</section>
+
+
+
+<!-- Explore By Category Section -->
+<section class="container my-5">
+    <h2 class="section-title text-center mb-4">Explore By Category</h2>
+    <div class="row">
+        <div id="categoryCarousel" class="carousel slide col-lg-10 col-md-10 col-sm-10 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active bg-dark">
+                    <div class="row g-0 justify-content-center text-center">
+                        <div class="col-3 category-item">
+                            <a href="{% url 'coffee_detail_page' %}" style="text-decoration: none;">
+                                <img src="{% static 'assets/img/roha-illustrations-06.svg' %}" alt="Kaffa"
+                                    class="category-image img-fluid" style="filter: brightness(0) invert(1);">
+                                <p class="text-white fs-5">Kaffa</p>
+                            </a>
+                        </div>
+                        <div class="col-3 category-item">
+                            <a href="{% url 'coffee_detail_page' %}" style="text-decoration: none;">
+                                <img src="{% static 'assets/img/roha-illustrations-07.svg' %}" alt="Genika"
+                                    class="category-image img-fluid" style="filter: brightness(0) invert(1);">
+                                <p class="text-white fs-5">Genika</p>
+                            </a>
+                        </div>
+                        <div class="col-3 category-item">
+                            <a href="{% url 'coffee_detail_page' %}" style="text-decoration: none;">
+                                <img src="{% static 'assets/img/roha-illustrations-08.svg' %}" alt="Harari"
+                                    class="category-image img-fluid" style="filter: brightness(0) invert(1);">
+                                <p class="text-white fs-5">Harari</p>
+                            </a>
+                        </div>
+                        <div class="col-3 category-item">
+                            <a href="{% url 'coffee_detail_page' %}" style="text-decoration: none;">
+                                <img src="{% static 'assets/img/roha-illustrations-09.svg' %}" alt="Sidama"
+                                    class="category-image img-fluid" style="filter: brightness(0) invert(1);">
+                                <p class="text-white fs-5">Sidama</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
+                <span class="bi bi-arrow-left-circle fs-2" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
+                <span class="bi bi-arrow-right-circle fs-2" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<style>
+    .category-item {
+        transition: background-color 0.3s ease;
+    }
+
+    .category-item:hover {
+        background-color: var(--bs-secondary);
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-inner {
+        max-height: 80vh;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        z-index: 1;
+    }
+
+    .carousel-control-prev :hover,
+    .carousel-control-next :hover{
+        color: #1d6f3f;
+    }
+
+    .carousel-control-next{
+        right: -100px;
+        color:#000;
+    }
+
+    .carousel-control-prev{
+        left: -100px;
+        color:#000;
+    }
+
+</style>
+
+
+<div class="stats-section">
+    <div class="stat-item">
+        <img src="{% static 'assets/img/employee.png' %}" alt="Employees Icon">
+        <p class="stat-number">200+</p>
+        <p class="stat-label">Employees</p>
+    </div>
+    <div class="stat-item">
+        <img src="{% static 'assets/img/client.png' %}" alt="Clients Icon">
+        <p class="stat-number">120+</p>
+        <p class="stat-label">Clients</p>
+    </div>
+    <div class="stat-item">
+        <img src="{% static 'assets/img/business.png' %}" alt="Businesses Icon">
+        <p class="stat-number">75+</p>
+        <p class="stat-label">Businesses</p>
+    </div>
+</div>
+
+</section>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    .highlight {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #2e7d32;
+
+    }
+
+    /* Export Section */
+    .export-section {
+        background-image: url("{% static 'assets/img/sesame.webp' %}");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .content-container {
+        background: rgba(255, 255, 255, 0.8);
+        height: 100%;
+        width: 100%;
+        margin-top: 0vh;
+    }
+
+    .explore-title {
+        font-size: 2rem;
+        color: #666;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        margin-top: 25vh;
+    }
+
+    .exports-title {
+        font-size: 3rem;
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .exports-description {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .coffee-btn {
+        background-color: #228b22;
+        color: white;
+    }
+
+    .coffee-btn:hover {
+        background-color: #196f19;
+    }
+
+    .sesame-btn {
+        background-color: #ccc;
+        color: #333;
+    }
+
+    .sesame-btn:hover {
+        background-color: #999;
+    }
+
+    /* Export Content Section */
+    .export-content-section {
+        padding: 60px 20px;
+        background-color: #fff;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2e7d32;
+
+    }
+
+    .description-1 {
+        margin-right: 7%;
+
+    }
+
+    .description-2 {
+        margin-left: 7%;
+
+    }
+
+    .image-text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+
+            {
+            % comment %
+        }
+
+        color: #1D1D35;
+
+            {
+            % endcomment %
+        }
+
+    }
+
+    .export-img,
+    .gallery-img {
+        width: 100%;
+        max-width: 45%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .image-gallery {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .gallery-img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Explore Origins Section */
+    .origins-section {
+        padding: 60px 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .carousel {
+        text-align: center;
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .carousel-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .carousel-btn {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #000;
+    }
+
+    .prev-btn {
+    }
+
+    .next-btn {
+    }
+
+
+
+    .stats-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-item img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #778452;
+
+        margin: 5px 0;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+        color: #778452;
+
+        text-transform: uppercase;
+    }
+
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1024px) {
+        .image-text {
+            flex-direction: column;
+        }
+
+        .export-img,
+        .description {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .carousel-content {
+            gap: 15px;
+        }
+
+        .gallery-img {
+            width: 48%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .button-group {
+            flex-direction: column;
+        }
+
+        .gallery-img {
+            width: 100%;
+        }
+
+        .carousel-item {
+            font-size: 1.2rem;
+        }
+
+        .prev-btn,
+        .next-btn {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+{% endblock %}

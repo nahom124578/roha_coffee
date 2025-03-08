@@ -1,0 +1,214 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="banner-section">
+        <div class="container-fluid position-relative p-0">
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-header min-vh-10" style="background-image: url('{% static 'assets/img/imagemic.png' %}');">
+                        <span class="mask bg-light opacity-100"></span>  <!-- Updated mask class -->
+                        <div class="banner-content text-center position-relative">
+                            <h1 class="banner-title">THE STARTUP COFFEE BUSINESS EXPO:<br>A Conversation With The Founder, Mr Ayele</h1>
+                            <p class="banner-details1">12 January, 2024</p>
+                            <p class="banner-details2">By Ayalew Mesfin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+        <p class="description text-center">
+            We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.</p>
+        
+        <div class="image2-container text-center">
+            <img src="{% static 'assets/img/imagemic.png' %}" alt="Coffee Business" class="img-fluid">
+        </div>
+        
+        <p class="description text-center">
+            We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality. </p>
+
+        <p class="quote text-center">
+            "Our commitment extends beyond quality; it<br /> empowers over 1 million farmers through<br /> sustainable practices and community support"
+        </p>
+
+        <p class="description text-center">
+            We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.</p>
+    </div>
+    <div class="container my-5">
+        <div class="row align-items-stretch image-container" style="height: 500px;">
+            <div class="col-lg-6 col-md-12 left-column">
+                
+                <img src="{% static 'assets/img/imagemic.png' %}" class="img-fluid equal-height" alt="Main Image">
+            </div>
+            <div class="col-lg-6 col-md-12 right-column">
+                
+                <img src="{% static 'assets/img/imagemic.png' %}" class="img-fluid equal-height mb-2" alt="Small Image 1">
+                <img src="{% static 'assets/img/imagemic.png' %}" class="img-fluid equal-height" alt="Small Image 2">
+            </div>
+        </div>
+    </div>
+    <p class="description text-center">
+        We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.</p>
+        <p class="description text-center">
+            We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.</p>
+            <p class="description text-center">
+                We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.</p>
+      
+
+    <div class="container">
+        <h2 class="text-left">More Stories To Explore</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <img src="{% static 'assets/img/image1.png' %}" alt="Story 1" class="img-fluid">
+                <h5>GROWING THE BEST COFFEE IN THE WORLD, AND MAKING BEST FRIENDS ON THE WAY</h5>
+                <p class="loza">From fellow coffee enthusiasts sharing their wisdom to local farmers teaching me traditional techniques, every interaction has been enriching. We're learning from each other, sharing laughter... </p>
+                <p class="Loza_Teferi"><img src="{% static 'assets/img/human.png' %}" >Loza Teferi — Jan 22, 2024</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="{% static 'assets/img/image2.png' %}" alt="Story 2" class="img-fluid">
+                <h5 >GROWING THE BEST COFFEE IN THE WORLD, AND MAKING BEST FRIENDS ON THE WAY</h5>
+                <p class="loza">From fellow coffee enthusiasts sharing their wisdom to local farmers teaching me traditional techniques, every interaction has been enriching. We're learning from each other, sharing laughter... </p>
+                <p class="Loza_Teferi"><img src="{% static 'assets/img/human.png' %}" >Loza Teferi — Jan 22, 2024</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="{% static 'assets/img/image3.png' %}" alt="Story 3" class="img-fluid">
+                <h5>GROWING THE BEST COFFEE IN THE WORLD, AND MAKING BEST FRIENDS ON THE WAY</h5>
+                <p class="loza">From fellow coffee enthusiasts sharing their wisdom to local farmers teaching me traditional techniques, every interaction has been enriching. We're learning from each other, sharing laughter... </p>
+                <p class="Loza_Teferi"> <img src="{% static 'assets/img/human.png' %}" >Loza Teferi — Jan 22, 2024</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<style>
+   
+
+    .page-header {
+        background-size: cover; 
+        background-position: center;
+      margin-bottom: 10%;
+        position: relative;
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+    }
+
+    
+
+    .banner-content {
+        position: relative; 
+        z-index: 2; 
+        color: #1E1E1E;
+        ; 
+        text-align: center; 
+        font-family: Roboto;
+        
+    }
+
+    .banner-title {
+        font-size: 3rem;
+        font-weight: 600;
+        font-family: Roboto Slab;
+        text-align: center;
+        color: #1E1E1E;
+
+    }
+
+    .banner-details1{
+        font-size: 1.5rem;
+        font-weight: 500;
+   
+    }
+    .banner-details2 {
+        font-size: 1.5rem;
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 70px;
+        text-align: center;
+
+
+    }
+
+    .description {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 40px;
+    text-align: left;
+    width: 62%; 
+    height: auto; 
+    margin-top: 5%;
+    margin-left: 50%; 
+    transform: translate(-50%, -50%); gap: 0; 
+ 
+color: #1D1D35;
+;
+}
+.image2-container{
+    margin-bottom: 15%;
+}
+
+    .quote {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 20%;
+        color: #1D1D35;
+
+    }
+    .loza{
+        color: #1D1D35;
+        font-size: 1rem;
+
+    }
+    .Loza_Teferi{
+        color: #000000;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .banner-title {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .banner-title {
+            font-size: 1.5rem;
+        }
+    }
+    .equal-height {
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .left-column img {
+            height: 100%;
+        }
+
+        .right-column img {
+            height: 50%; 
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .image-container {
+            height: 100%;
+            margin-bottom: 30%;
+        }
+</style>
+{% endblock %}

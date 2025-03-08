@@ -1,0 +1,233 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+  <section class="page-header position-relative" style="height: 35vh; overflow: hidden;">
+    <div style="background-image: url('{% static 'assets/img/iveco_hero.png' %}'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0; filter: blur(8px); z-index: -1; object-fit:cover;"></div>
+    <div class="container text-center position-relative" style="z-index: 1;">
+      <h1 class="display-4 text-dark fw-bold" style="padding: 10px 20px; border-radius: 5px;">CONSTRUCTION MACHINERY</h1>
+    </div>
+  </section>
+
+  <section>
+    <div class="container my-5">
+      <div class="row py-3">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="{% static 'assets/img/construction-1.png' %}" alt="Netaji Refined Sesame Oil" class="product-image rounded-2" style="max-width: 100%; height: 35vh;" />
+            </div>
+            <div class="col-lg-6">
+              <div class="row" style="flex: 1;">
+                <h3>Skip loader truck 2019 Iveco EUROCARGO 120-210</h3>
+                <p class="text-sm text-muted">Lithuania, Kirtimu street 17A, Vilnius</p>
+                <p>We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin</p>
+                <button class="btn btn-outline-primary mb-3 w-100">Ask For Price</button>
+                <button class="btn btn-primary w-100">Contact Now</button>
+                <p class="text-xs text-muted">2019 Iveco EUROCARGO 120-210 4x2 Skip Loader Lorry, Extendable Arms, 360 Camera, Manual Gearbox - PE19 AVR - ZCFAG1EFX02691277</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <!-- Mini Image Carousel Section -->
+            <div class="container">
+              <div class="row align-items-center">
+                <!-- Previous Button -->
+                <div class="col-auto">
+                  <button class="btn btn-outline-secondary" type="button" data-bs-target="#miniImageCarousel" data-bs-slide="prev"><i class="bi bi-chevron-left"></i> <!-- You can use an icon for arrows or text --></button>
+                </div>
+
+                <!-- Mini Image Carousel -->
+                <div class="col">
+                  <div id="miniImageCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <!-- First carousel slide -->
+                      <div class="carousel-item active">
+                        <div class="row text-center">
+                          <div class="col-3">
+                            <img src="{% static 'assets/img/construction-1.png' %}" class="img-fluid" alt="Thumbnail 1" />
+                          </div>
+                          <div class="col-3">
+                            <img src="{% static 'assets/img/construction-1.png' %}" class="img-fluid" alt="Thumbnail 2" />
+                          </div>
+                          <div class="col-3">
+                            <img src="{% static 'assets/img/construction-1.png' %}" class="img-fluid" alt="Thumbnail 3" />
+                          </div>
+                          <div class="col-3">
+                            <img src="{% static 'assets/img/construction-1.png' %}" class="img-fluid" alt="Thumbnail 4" />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Second carousel slide -->
+                      <div class="carousel-item">
+                        <div class="row text-center">
+                          <div class="col-3">
+                            <img src="{% static 'assets/img/construction-1.png' %}" class="img-fluid" alt="Thumbnail 5" />
+                          </div>
+                          <div class="col-3">
+                            <img src="{% static 'assets/img/construction-1.png' %}" class="img-fluid" alt="Thumbnail 6" />
+                          </div>
+                          <div class="col-3">
+                            <img src="{% static 'assets/img/construction-1.png' %}" class="img-fluid" alt="Thumbnail 7" />
+                          </div>
+                          <div class="col-3">
+                            <img src="{% static 'assets/img/construction-1.png' %}" class="img-fluid" alt="Thumbnail 8" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Next Button -->
+                <div class="col-auto">
+                  <button class="btn btn-outline-secondary" type="button" data-bs-target="#miniImageCarousel" data-bs-slide="next"><i class="bi bi-chevron-right"></i> <!-- You can use an icon for arrows or text --></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row bg-light p-3 m-3">
+            <div class="col-lg-12 text-sm text-dark">
+              <div class="row">
+                <div class="row" style="flex: 1;">
+                  <strong>Brand</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 2;">
+                  <p>Volkswagen</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 1;">
+                  <strong>Model</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 2;">
+                  <p>TR-45-CV</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="row" style="flex: 2;">
+                  <strong>Year Of Manufacture:</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 1;">
+                  <p>2023</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 1;">
+                  <strong>Milage:</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 2;">
+                  <p>202907 km</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 1;">
+                  <strong>Fuel:</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 2;">
+                  <p>Diesel</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 1;">
+                  <strong>Body Type:</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 2;">
+                  <p>Metal</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 2;">
+                  <strong>Gross Weight:</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 2;">
+                  <p>1163 KG</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 2;">
+                  <strong>Available Quantity:</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 1;">
+                  <p>50</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 1;">
+                  <strong>Color:</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 2;">
+                  <p>White and Black</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 1;">
+                  <strong>Warranty:</strong>
+                </div>
+                <div class="row text-end text-sm" style="flex: 2;">
+                  <p>1-2 years</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="row" style="flex: 2;">
+                  <button class="btn btn-primary w-100">Download Vehicle Specification</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container my-5" style="padding: 20px;">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Contact The Seller</h3>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name or Company Name</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Your Phone Number</label>
+              <input type="tel" class="form-control" id="phone" />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card p-3" style="background-color: #EEFDF2;">
+            <h4 style="text-align: center;">Need Assistance?</h4>
+            <div style="display: flex; align-items: center;">
+              <div>
+                <p style="color: #1D1D35;">Our company's Sales Advisor is ready to answer your questions in your own language</p>
+                <p style="color: #1D6F3F;">
+                  <strong>Gelila Million</strong><br />+251 911 122334
+                </p>
+              </div>
+              <img src="{% static 'assets/img/gellila.png' %}" alt="Sales Advisor" class="img-fluid mb-3" style="max-width: 150px; margin-right: 20px; border-radius: 5px;" />
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <button class="btn btn-outline-primary" style="width: 100%;">Call</button>
+              <button class="btn btn-outline-primary" style="width: 100%;">Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

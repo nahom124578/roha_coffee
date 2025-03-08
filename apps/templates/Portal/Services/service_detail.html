@@ -1,0 +1,125 @@
+{% extends 'Portal/index.html' %}
+{% load static %}
+
+{% block main %}
+<div class="container-fluid py-5">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="text-white">Update Service Details</h4>
+                <p class="text-white opacity-8">Make the necessary changes below.</p>
+            </div>
+            <div class="col-lg-6 text-right d-flex flex-column justify-content-center">
+                <button type="submit" class="btn btn-outline-white mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2">Save Changes</button>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="font-weight-bolder text-center">Service Image & Icon Preview</h5>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <!-- Slide for Icon -->
+                                <div class="swiper-slide">
+                                    <h6>Service Icon</h6>
+                                    <img src="{% if service.icon %}{{ service.icon.url }}{% else %}{% static 'images/default-icon.png' %}{% endif %}" 
+                                         alt="Service Icon" class="img-fluid" style="max-height: 200px; object-fit: cover;">
+                                    <input type="file" class="form-control mt-3" name="icon" accept="image/*">
+                                </div>
+                                <!-- Slide for Service Image -->
+                                <div class="swiper-slide">
+                                    <h6>Service Image</h6>
+                                    <img src="{% if service.image %}{{ service.image.url }}{% else %}{% static 'images/default-image.jpg' %}{% endif %}" 
+                                         alt="Service Image" class="img-fluid" style="max-height: 200px; object-fit: cover;">
+                                    <input type="file" class="form-control mt-3" name="image" accept="image/*">
+                                </div>
+                            </div>
+                            <!-- Swiper Navigation -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <h5 class="font-weight-bolder">Service Information</h5>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Title</label>
+                        <input class="form-control" type="text" name="title" value="{{ service.title }}" required>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <label>Description</label>
+                        <textarea class="form-control" name="description" rows="4" required>{{ service.description }}</textarea>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <label>Created On</label>
+                        <input class="form-control" type="text" value="{{ service.created_at|date:'Y-m-d H:i' }}" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer with Delete Option -->
+        <div class="row mt-4">
+            <div class="col-lg-12 text-right">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-url="{% url 'service_delete' service.id %}">
+                    Delete this Service
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this service?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form action="{% url 'service_delete' service.id %}" method="POST" id="deleteForm" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger" name="delete">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Swiper JS Initialization -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        spaceBetween: 10,
+        slidesPerView: 1, // Ensure 1 slide is shown on smaller screens
+    });
+
+    var deleteModal = document.getElementById('deleteModal');
+    deleteModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var url = button.getAttribute('data-url');
+        var form = deleteModal.querySelector('#deleteForm');
+        form.action = url;
+    });
+</script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+{% endblock %}

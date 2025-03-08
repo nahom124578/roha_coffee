@@ -1,0 +1,78 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block base %}
+<div class="min-height-300 bg-primary position-absolute w-100"></div>
+    <!-- Side Navigation Here-->
+    {% include 'Portal/sidenav.html' %}
+     <main class="main-content position-relative border-radius-lg ">
+      {% include 'Portal/navbar.html' %}
+      <div class="container-fluid py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-8 mx-auto">
+        {% if messages %}
+              <div class="alert-container">
+                <ul class="list-unstyled">
+                  {% for message in messages %}
+                  <div class="alert alert-{{message.tags}} alert-dismissible fade show text-light" role="alert">
+                    <strong>{{message}}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+          </div>
+
+          <div class="container mt-5">
+            <div class="row mt-4">
+              <div class="col-8 mx-auto">
+            <div class="alert alert-danger overall-error-message" style="color: white; display: none; opacity: 0.8; border: none;">
+              <button type="button" class="close" aria-label="Close" style="float: right; background: none; border: none; color: white; cursor: pointer;">
+                  &times;
+              </button>
+            </div> 
+          </div>  
+        </div>   
+          </div>
+        {% block main %}
+        
+        {% endblock%}
+      </div>
+     </main>
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectedIconText = document.getElementById('selectedIconText');
+            const iconSearch = document.getElementById('iconSearch');
+            const iconOptions = document.querySelectorAll('.icon-option');
+    
+            // Icon selection functionality
+            iconOptions.forEach(iconOption => {
+                iconOption.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const iconClass = iconOption.getAttribute('data-icon');
+                    selectedIconText.innerHTML = `<i class="bi ${iconClass} me-2"></i>`;
+                });
+            });
+    
+            // Icon search functionality
+            iconSearch.addEventListener('input', function () {
+                const searchQuery = iconSearch.value.toLowerCase().trim();
+                iconOptions.forEach(iconOption => {
+                    const iconName = iconOption.getAttribute('data-name').toLowerCase();
+                    if (iconName.includes(searchQuery)) {
+                        iconOption.style.display = 'block'; // Show matching icons
+                    } else {
+                        iconOption.style.display = 'none'; // Hide non-matching icons
+                    }
+                });
+            });
+        });
+    </script>
+    
+{% endblock %}

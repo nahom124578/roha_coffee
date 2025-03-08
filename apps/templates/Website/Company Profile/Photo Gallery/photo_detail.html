@@ -1,0 +1,152 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+<section class="bg-light container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center p-4 my-3" style="font-family: 'Roboto Slab', serif;">
+                <h2 class="text-center text-dark display-3 fw-bolder" style="font-weight: 1000;">THE STARTUP COFFEE BUSINESS EXPO:</h2>
+                <h2 class="text-center text-dark display-4 fw-bolder" style="font-weight: 1000;">A Conversation With The Founder Mr. Ayele</h2>
+                <p class="text-dark" style="font-family: 'Roboto', serif;">“The journey was not without challenges. From navigating the complexities <br> of international trade to ensuring the highest quality standards, every step was a learning experience.“</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid">
+    <div id="customCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <span class="mask bg-gradient-dark opacity-0.3"></span>
+                <img src="{% static 'assets/img/gallery-carousel.png' %}" class="d-block w-100" alt="Slide 1" style="object-fit: cover; height: 90vh;">
+            </div>
+            <div class="carousel-item">
+                <span class="mask bg-gradient-dark opacity-0.3"></span>
+                <img src="{% static 'assets/img/gallery-carousel.png' %}" class="d-block w-100" alt="Slide 2" style="object-fit: cover; height: 90vh;">
+            </div>
+            <div class="carousel-item">
+                <span class="mask bg-gradient-dark opacity-0.3"></span>
+                <img src="{% static 'assets/img/gallery-carousel.png' %}" class="d-block w-100" alt="Slide 3" style="object-fit: cover; height: 90vh;">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+<section class="container-fluid">
+    <div class="container">
+      <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="row">
+              <div class="col-12 my-2 p-2">
+                  <div class="card bg-dark text-white h-100 overflow-hidden">
+                      <img src="{% static 'assets/img/gallery-3.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                  </div>
+              </div>
+              <div class="col-6 my-2 p-2">
+                  <div class="card bg-dark text-white h-200 overflow-hidden">
+                      <img src="{% static 'assets/img/gallery-4.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                  </div>
+              </div>
+              <div class="col-6 my-2 p-2">
+                  <div class="card bg-dark text-white h-200 overflow-hidden">
+                      <img src="{% static 'assets/img/gallery-5.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <div class="col-lg-8 col-md-6 col-sm-12">
+          <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 my-2 p-2">
+                  <div class="card bg-dark text-white h-100 overflow-hidden">
+                      <img src="{% static 'assets/img/gallery-2.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="col-lg-12 col-md-6 col-sm-12 my-2 p-2">
+                      <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+                          <img src="{% static 'assets/img/gallery-6.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                      </div>
+                  </div>
+                  <div class="col-lg-12 col-md-6 col-sm-12 my-2 p-2">
+                      <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+                          <img src="{% static 'assets/img/gallery-7.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>      
+    </div>
+    </div>
+  </section>
+  <section class="bg-light container-fluid">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 p-5">
+          <h2 class="text-dark">More From Our Gallery</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 my-3">
+          <div class="text-center">
+            <div class="card bg-dark rounded-1 text-white">
+              <img src="{% static "assets/img/gallery-1.png"%}" class="card-img" alt="">
+            </div>
+            <h6 class="text-dark my-3">“The celebration was attended by key stakeholders, including farmers, suppliers
+            </h6>
+            <button class="btn btn-primary rounded-pill" type="button">Check All</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 my-3">
+          <div class="text-center">
+            <div class="card bg-dark rounded-1 text-white">
+              <img src="{% static "assets/img/gallery-1.png"%}" class="card-img" alt="">
+            </div>
+            <h6 class="text-dark my-3">“The celebration was attended by key stakeholders, including farmers, suppliers
+            </h6>
+            <button class="btn btn-primary rounded-pill" type="button">Check All</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 my-3">
+          <div class="text-center">
+            <div class="card bg-dark rounded-1 text-white">
+              <img src="{% static "assets/img/gallery-1.png"%}" class="card-img" alt="">
+            </div>
+            <h6 class="text-dark my-3">“The celebration was attended by key stakeholders, including farmers, suppliers
+            </h6>
+            <button class="btn btn-primary rounded-pill" type="button">Check All</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<style>
+    /* Adjust the height of the carousel to be responsive */
+    @media (max-width: 768px) {
+        #customCarousel .carousel-item img {
+            height: 40vh; /* Decrease the height on smaller screens */
+        }
+    }
+    @media (min-width: 769px) {
+        #customCarousel .carousel-item img {
+            height: 60vh; /* Maintain height on larger screens */
+        }
+    }
+</style>
+
+
+{% endblock %}

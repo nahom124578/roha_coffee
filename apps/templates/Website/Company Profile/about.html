@@ -1,0 +1,759 @@
+{% extends 'Website/index.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container" style="margin-bottom: 7rem;">
+    <div class="row mt-5">
+      <!-- Left Navigation Column -->
+      <div class="col-md-3 d-flex flex-column full-height">
+        <nav class="nav flex-column mt-auto">
+          <a class="nav-link active-link" href="#about-us">ABOUT US</a>
+          <a class="nav-link" href="#what-we-do">WHAT WE DO</a>
+          <a class="nav-link" href="#our-team">OUR TEAM</a>
+        </nav>
+      </div>
+
+
+<div class="container">
+    <div class="row">
+        <section id="about-section" class="d-flex">
+            <!-- Sidebar Links -->
+            <div class="col-lg-3">
+                <nav class="nav flex-column">
+                    <a class="nav-link text-dark fw-bold mb-2 active" href="#about-section" onclick="activateLink(this)">ABOUT US</a>
+                    <a class="nav-link text-dark fw-bold mb-2" href="#journey-section" onclick="activateLink(this)">OUR JOURNEY</a>
+                    <a class="nav-link text-dark fw-bold mb-2" href="#what-we-do-section" onclick="activateLink(this)">WHAT WE DO</a>
+                </nav>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-lg-8 mx-auto">
+                <h5 class="text-success fw-bold mb-3">ABOUT US</h5>
+                <p class="text-dark" style="line-height: 1.6;">
+                    Welcome to Ethio Biamer Trading PLC, your trusted partner in the import and export sector. Since our inception, we have been dedicated to providing high-quality products and services that cater to the diverse needs of our customers. With a strong commitment to excellence, we have established ourselves as a leading trading company in Ethiopia, fostering both local and international partnerships.
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
+      <section class="hero-section position-relative min-vh-70" style=" 
+      margin-bottom: 60px;
+      background-image: url('{% static 'assets/img/aboutus-team.png' %}');
+      background-size: cover;
+      background-position: center;
+   
+      padding: 60px 0;
+      color: #fff;
+      position: relative; ">
+        <div class="overlay" style=" position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(29, 29, 53, 0.6);/* Lighten the background */
+        "></div>
+        <div class="container hero-content text-center d-flex align-items-center" style=" position: relative;
+          z-index: 1; min-height: 50vh;">
+          <div class="row w-100">
+            <!-- Text Content -->
+            <div class="col-md-6 text-md-end d-flex flex-column justify-content-center">
+              <h1 style="font-size: 5rem;
+              font-weight: bold;
+              color:#FFFFFF;
+              line-height: 80px;
+              margin-right: 5rem;"> <span style="display: block;">OUR</span>
+        <span style="display: block;">JOURNEY</span></h1>
+            </div>
+            <!-- Description and Button -->
+            <div class="col-md-6 text-md-start d-flex flex-column justify-content-center">
+              <p style="font-size: 1.1rem;
+              color: #FFFFFF;
+              margin-bottom: 20px;
+              line-height: 40px;">
+ Ethio Biamer Trading PLC was founded with a clear vision: to bridge local markets with quality products and services that enhance everyday life. Our journey began with a focus on importing essential goods, and over the years, we have expanded our operations to include a wide range of products and services. Our growth has been fueled by our unwavering commitment to customer satisfaction, innovation, and ethical business practices.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+<section id="journey-section">
+<div class="page-header min-vh-70 m-3" style="position: relative; background-image: url('{% static 'assets/img/aboutus-team.png' %}'); background-size: cover; background-position: center;">
+    <!-- Dark overlay -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 53, 0.6);">
+        <!-- Text container -->
+        <div class="text-container" style="position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center; padding: 20px;">
+            <h2 style="color: white; font-size: 3rem; font-weight: bold; margin-bottom: 20px;">OUR JOURNEY</h2>
+            <p style="color: white; font-size: 1.2rem; line-height: 1.6; max-width: 800px;">Ethio Biamer Trading PLC was founded with a clear vision: to bridge local markets with quality products and services that enhance everyday life. Our journey began with a focus on importing essential goods, and over the years, we have expanded our operations to include a wide range of products and services. Our growth has been fueled by our unwavering commitment to customer satisfaction, innovation, and ethical business practices.</p>
+        </div>
+    </div>
+</div>
+</section>
+<!-- CEO Quote Section -->
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <!-- Image Section -->
+        <div class="col-lg-6">
+            <img src="{% static 'assets/img/aboutus-team2.png' %}" class="img-fluid rounded" alt="Team Collaboration Image" style="max-width: 100%; height: auto;">
+        </div>
+        <!-- Text Section -->
+        <div class="col-lg-6">
+            <blockquote class="blockquote text-success">
+                <p class="mb-4">
+                    <i class="bi bi-quote"></i>
+                    <strong>The journey was not without challenges. From navigating the complexities of international trade to ensuring the highest quality standards, every step was a learning experience.</strong>
+                    <i class="bi bi-quote" style="transform: rotate(180deg);"></i>
+                </p>
+                <footer class="blockquote-footer text-dark">
+                    Mr. Ayele Negash <cite title="Source Title" class="text-success">CEO</cite>
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+<!-- Our Businesses Section -->
+ <section id="what-we-do-section">
+<div class="container mt-5">
+    <h2 class="text-center mb-5" style="font-weight: bold; color: #1C1C1C;">WHAT WE DO</h2>
+    <div class="row justify-content-center">
+        <!-- Card 1: Imports -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 d-flex flex-column align-items-center text-center" style="background-color: #f5f9f8; border: none; height: 100%;">
+                <img src="{% static 'assets/img/imports-icon.svg' %}" alt="Imports Icon" style="width: 80px; height: auto; margin-bottom: 20px;">
+                <h5 class="mt-3 text-dark">IMPORTS</h5>
+                <p class="mt-2 text-muted">We specialize in importing a variety of high-demand goods that are crucial to the Ethiopian market. Our offerings include reliable vehicles, heavy-duty trucks, high-quality edible oils, durable iron bars, sanitary fixtures, and tires. Each product is sourced from reputable manufacturers, ensuring that our customers receive only the best.</p>
+            </div>
+        </div>
+
+        <!-- Card 2: Exports -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-4 d-flex flex-column align-items-center text-center" style="background-color: #f5f9f8; border: none; height: 100%;">
+                <img src="{% static 'assets/img/exports-icon.svg' %}" alt="Exports Icon" style="width: 80px; height: auto; margin-bottom: 20px;">
+                <h5 class="mt-3 text-dark">EXPORTS</h5>
+                <p class="mt-2 text-muted">Our commitment to quality is also reflected in our export operations. We proudly export premium Ethiopian coffee, a product renowned for its unique flavor and rich aroma. By supporting local farmers and promoting Ethiopian coffee on the global stage, we contribute to the growth of the agricultural sector and the local economy.</p>
+            </div>
+        </div>
+
+   <!-- Card 3: Additional Services -->
+<div class="col-md-8 mb-4">
+    <div class="card p-4 d-flex flex-row align-items-center" style="background-color: #f5f9f8; border: none;">
+        <!-- Left Column: Icon and Title -->
+        <div class="d-flex flex-column align-items-center text-center" style="width: 150px;">
+            <img src="{% static 'assets/img/additional-services-icon.png' %}" alt="Additional Services Icon" style="width: 80px; height: auto; margin-bottom: 10px;">
+            <h5 class="mt-3 text-dark">ADDITIONAL SERVICES</h5>
+        </div>
+
+        <!-- Right Column: Description -->
+        <div class="text-start ms-4">
+            <p class="text-muted">Beyond trading, Ethio Biamer Trading PLC offers a range of additional services designed to meet the needs of our clients. Our machine rental services provide businesses with access to the equipment they need without the burden of ownership. In addition, our real estate services focus on developing sustainable living and working spaces that enhance community well-being.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+<!-- Statistics Section -->
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-16 col-md-4">
+            <i class="bi bi-person-badge" style="font-size: 48px; color: #778452;"></i>
+            <h5 class="mt-2 text-success" style="font-size: 24px; font-weight: bold; color: #778452;">2000+ EMPLOYEES</h5>
+        </div>
+        <div class="col-16 col-md-4">
+            <i class="bi bi-people" style="font-size: 48px; color: #778452;"></i>
+            <h5 class="mt-2 text-success" style="font-size: 24px; font-weight: bold; color: #778452;">120+ CLIENTS</h5>
+        </div>
+        <div class="col-16 col-md-4">
+            <i class="bi bi-briefcase" style="font-size: 48px; color: #778452;"></i>
+            <h5 class="mt-2 text-success" style="font-size: 24px; font-weight: bold; color: #778452;">75+ BUSINESSES</h5>
+        </div>
+    </div>
+</div>
+<!-- team section -->
+ <section style="background-color: #EEFDF2; padding: 60px 0;">
+    <div class="container my-5" id="our-team" style="background-color: #EEFDF2;">
+        <div class="row text-center">
+            <div class="col-lg-6 mx-auto" style="margin-bottom: 60px;">
+                <h2 style="font-weight: bold; font-size: 2.5rem; color: #2C3E50;">OUR MANAGEMENT TEAM</h2>
+                <p style="color: #6c757d;">Meet the dedicated professionals driving our success and innovation. Learn about the visionaries behind our strategic direction and growth.</p>
+            </div>
+        </div>
+        
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" style="position: relative;">
+            
+            
+            <!-- Carousel Items/Slides -->
+            <div class="carousel-inner" style="overflow: hidden;">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3 col-lg-3 testimonial text-center">
+                            <img src="{% static 'assets/img/marc.jpeg' %}" alt="Team Image" style="  width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;">
+                            <h5 style="color: #778452;">Tigist Teshome</h5>
+                            <p class="position">GENERAL MANAGER</p>
+                            <i class="bi bi-book" style="font-size: 20px; color: #1D6F3F;"></i>
+                            <p>Diploma in Marketing</p>
+                        </div>
+                        <div class="col-md-3 col-lg-3 testimonial text-center">
+                            <img src="{% static 'assets/img/marc.jpeg' %}" alt="Team Image" style="  width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;">
+                            <h5 style="color: #778452;">Alemayehu Demisse</h5>
+                            <p class="position">DEPUTY GENERAL MANAGER</p>
+                            <i class="bi bi-book" style="font-size: 20px; color: #1D6F3F;"></i>
+                            <p>Masters of Business Administration</p>
+                        </div>
+                        <div class="col-md-3 col-lg-3 testimonial text-center">
+                            <img src="{% static 'assets/img/marc.jpeg' %}" alt="Team Image" style="  width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;">
+                            <h5 style="color: #778452;">Biniyam Tilahun</h5>
+                            <p class="position">MANAGING DIRECTOR</p>
+                            <i class="bi bi-book" style="font-size: 20px;"></i>
+                            <p>Masters in International Marketing</p>
+                        </div>
+                        <div class="col-md-3 col-lg-3 testimonial text-center">
+                            <img src="{% static 'assets/img/marc.jpeg' %}" alt="Team Image" style="  width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;">
+                            <h5 style="color: #778452;">Hibist Gebru</h5>
+                            <p class="position">EXPORT & IMPORT MANAGER</p>
+                            <i class="bi bi-book" style="font-size: 20px; color: #1D6F3F;"></i>
+                            <p>Masters of Business Administration</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-item justify-content-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3 col-lg-3 testimonial text-center">
+                            <img src="{% static 'assets/img/marc.jpeg' %}" alt="Team Image" style="  width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;">
+                            <h5 style="color: #778452;">Tigist Teshome</h5>
+                            <p class="position">GENERAL MANAGER</p>
+                            <i class="bi bi-book" style="font-size: 20px; color: #1D6F3F;"></i>
+                            <p>Diploma in Marketing</p>
+                        </div>
+                        <div class="col-md-3 col-lg-3 testimonial text-center">
+                            <img src="{% static 'assets/img/marc.jpeg' %}" alt="Team Image" style="  width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;">
+                            <h5 style="color: #778452;">Alemayehu Demisse</h5>
+                            <p class="position">DEPUTY GENERAL MANAGER</p>
+                            <i class="bi bi-book" style="font-size: 20px; color: #1D6F3F;"></i>
+                            <p>Masters of Business Administration</p>
+                        </div>
+                        <div class="col-md-3 col-lg-3 testimonial text-center">
+                            <img src="{% static 'assets/img/marc.jpeg' %}" alt="Team Image" style="  width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;">
+                            <h5 style="color: #778452;">Biniyam Tilahun</h5>
+                            <p class="position">MANAGING DIRECTOR</p>
+                            <i class="bi bi-book" style="font-size: 20px;color: #1D6F3F;"></i>
+                            <p>Masters in International Marketing</p>
+                        </div>
+                        <div class="col-md-3 col-lg-3 testimonial text-center">
+                            <img src="{% static 'assets/img/marc.jpeg' %}" alt="Team Image" style="  width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;">
+                            <h5 style="color: #778452;">Hibist Gebru</h5>
+                            <p class="position">EXPORT & IMPORT MANAGER</p>
+                            <i class="bi bi-book" style="font-size: 20px; color: #1D6F3F;"></i>
+                            <p>Masters of Business Administration</p>
+                        </div>
+                    </div>
+                </div>
+    
+               
+            </div>
+    
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" style="position: absolute; top: 50%; transform: translateY(-50%); left: -80px; ">
+                <span class="bi bi-arrow-left-circle" aria-hidden="true" style="font-size: 3rem; color: #000;"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" style="position: absolute; top: 50%; transform: translateY(-50%); right: -100px;" >
+                <span class="bi bi-arrow-right-circle" aria-hidden="true" style="font-size: 3rem; color: #000;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    </div>
+ </section>
+
+<!-- Awards Section -->
+<div class="container mt-5" >
+    <!-- Title Section -->
+    <div class="row text-center">
+        <div class="col-lg-8 mx-auto">
+            <h1 style="  color: #2C3E50;">AWARDS AND RECOGNITIONS</h1>
+            <p style="color: #6c757d;">This is the paragraph where you can write more details about your Awards. Keep your user engaged by providing meaningful information.</p>
+        </div>
+    </div>
+<div class="position-relative">
+    <a href="#awardCarousel" role="button" data-bs-slide="prev" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 2rem; color: #6c757d;">
+        <i class="bi bi-arrow-left-circle"></i>
+    </a>
+    <div id="awardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row mt-4 text-center justify-content-center align-items-center">
+                   
+    
+                    <!-- Award Item 1 -->
+                    <div class="col-lg-2 col-md-4 mb-5">
+                        <div class="award-card">
+                            <img src="{% static 'assets/img/award.png' %}" alt="Award Icon" style="border-radius: 15%; width: 150px; height: 150px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                            <h5 style="margin-top: 15px; font-weight: bold; color: #2C3E50;">AWARD NAME</h5>
+                            <p style="color: #6c757d;">2017</p>
+                        </div>
+                    </div>
+    
+                    <!-- Award Item 2 -->
+                    <div class="col-lg-2 col-md-4 mb-5">
+                        <div class="award-card">
+                            <img src="{% static 'assets/img/award.png' %}" alt="Award Icon" style="border-radius: 15%; width: 150px; height: 150px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                            <h5 style="margin-top: 15px; font-weight: bold; color: #2C3E50;">AWARD NAME</h5>
+                            <p style="color: #6c757d;">2017</p>
+                        </div>
+                    </div>
+    
+                    <!-- Award Item 3 -->
+                    <div class="col-lg-2 col-md-4 mb-5">
+                        <div class="award-card">
+                            <img src="{% static 'assets/img/award.png' %}" alt="Award Icon" style="border-radius: 15%; width: 150px; height: 150px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                            <h5 style="margin-top: 15px; font-weight: bold; color: #2C3E50;">AWARD NAME</h5>
+                            <p style="color: #6c757d;">2017</p>
+                        </div>
+                    </div>
+    
+                    <!-- Award Item 4 -->
+                    <div class="col-lg-2 col-md-4 mb-5">
+                        <div class="award-card">
+                            <img src="{% static 'assets/img/award.png' %}" alt="Award Icon" style="border-radius: 15%; width: 150px; height: 150px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                            <h5 style="margin-top: 15px; font-weight: bold; color: #2C3E50;">AWARD NAME</h5>
+                            <p style="color: #6c757d;">2017</p>
+                        </div>
+                    </div>
+    
+                   
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row mt-4 text-center justify-content-center align-items-center">
+                    <!-- Award Item 1 -->
+                    <div class="col-lg-2 col-md-4 mb-5">
+                        <div class="award-card">
+                            <img src="{% static 'assets/img/award.png' %}" alt="Award Icon" style="border-radius: 15%; width: 150px; height: 150px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                            <h5 style="margin-top: 15px; font-weight: bold; color: #2C3E50;">AWARD NAME</h5>
+                            <p style="color: #6c757d;">2017</p>
+                        </div>
+                    </div>
+    
+                    <!-- Award Item 2 -->
+                    <div class="col-lg-2 col-md-4 mb-5">
+                        <div class="award-card">
+                            <img src="{% static 'assets/img/award.png' %}" alt="Award Icon" style="border-radius: 15%; width: 150px; height: 150px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                            <h5 style="margin-top: 15px; font-weight: bold; color: #2C3E50;">AWARD NAME</h5>
+                            <p style="color: #6c757d;">2017</p>
+                        </div>
+                    </div>
+    
+                    <!-- Award Item 3 -->
+                    <div class="col-lg-2 col-md-4 mb-5">
+                        <div class="award-card">
+                            <img src="{% static 'assets/img/award.png' %}" alt="Award Icon" style="border-radius: 15%; width: 150px; height: 150px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                            <h5 style="margin-top: 15px; font-weight: bold; color: #2C3E50;">AWARD NAME</h5>
+                            <p style="color: #6c757d;">2017</p>
+                        </div>
+                    </div>
+    
+                    <!-- Award Item 4 -->
+                    <div class="col-lg-2 col-md-4 mb-5">
+                        <div class="award-card">
+                            <img src="{% static 'assets/img/award.png' %}" alt="Award Icon" style="border-radius: 15%; width: 150px; height: 150px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                            <h5 style="margin-top: 15px; font-weight: bold; color: #2C3E50;">AWARD NAME</h5>
+                            <p style="color: #6c757d;">2017</p>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+       
+    </div>
+    <a href="#awardCarousel" role="button" data-bs-slide="next" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 2rem; color: #6c757d;">
+        <i class="bi bi-arrow-right-circle"></i>
+    </a>
+    
+    
+
+</div>
+   
+
+ 
+</div>
+
+
+<div class="award-section" style="background-color: #EEFDF2; padding: 50px;">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Image Section -->
+        <div class="col-md-6">
+          <img src="{% static 'assets/img/award-2.png' %}" alt="Award Trophy" style="width: 100%; max-width: 450px; object-fit: cover; border-radius: 10px;">
+        </div>
+  
+        <!-- Award Description Section -->
+        <div class="col-md-6">
+          <h2 style="font-weight: 700; color: #2C3E50; font-size: 2rem; line-height: 40px;">THE GOLDEN BEAN EXPORT EXCELLENCE AWARD</h2>
+          <p style="color: #2C3E50; font-size: 1.1rem; line-height: 40px;">
+            We are thrilled to announce that Roha Coffee has been honored with the prestigious Golden Bean Export Excellence Award! This accolade is a testament to our unwavering commitment to quality, sustainability, and innovation in the coffee export industry.
+          </p>
+          <p style="color: #2C3E50; font-size: 1.1rem; line-height: 40px;">
+            At Roha Coffee, we take immense pride in delivering the finest Ethiopian coffee beans to the global market. This award recognizes our dedication to ensuring that every cup brewed from our beans tells a story of rich heritage and exceptional craftsmanship.
+          </p>
+          <p style="color: #2C3E50; font-size: 1.1rem; line-height: 40px;">
+            We are deeply grateful for this recognition and remain committed to promoting Ethiopian coffee culture worldwide. Thank you for being part of our journey and for your continued support.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Certifications Section -->
+<div class="certifications-section" style=" padding: 50px 0;">
+    <div class="container">
+      <h2 style="text-align: center; font-weight: 700; color: #2C3E50; margin-bottom: 40px;">CERTIFICATIONS</h2>
+      
+     
+    </div>
+  
+  <div class="container my-5">
+    <div class="row justify-content-center">
+        <!-- Award Item 1 -->
+        <div class="col-lg-3 col-md-4">
+            <div class="award-card d-flex flex-column justify-content-end" style="   position: relative;
+            padding-top: 60px;
+            background-color: #EEFDF2; 
+            border-radius: 10px;
+            text-align: center;
+            min-height: 250px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;">
+                <img src="{% static 'assets/img/certificate.png' %}"alt="Certificate 2022" alt="Certificate" style="    position: absolute;
+                top: -30px; /* Adjust to make the image float */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 150px;
+                height: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin-top: 60px;
+                font-weight: bold;
+                color: #2C3E50;">CERTIFICATE NAME</h5>
+                <p style="  color: #6c757d;
+            margin-bottom: 0;">2017</p>
+            </div>
+        </div>
+
+        <!-- Award Item 2 -->
+        <div class="col-lg-3 col-md-4">
+            <div class="award-card d-flex flex-column justify-content-end" style="   position: relative;
+            padding-top: 60px;
+            background-color: #EEFDF2; /* Light green background */
+            border-radius: 10px;
+            text-align: center;
+            min-height: 250px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;">
+                <img src="{% static 'assets/img/certificate.png' %}"alt="Certificate 2022" alt="Certificate" style="    position: absolute;
+                top: -30px; /* Adjust to make the image float */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 150px;
+                height: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin-top: 60px;
+                font-weight: bold;
+                color: #2C3E50;">CERTIFICATE NAME</h5>
+                <p style="  color: #6c757d;
+            margin-bottom: 0;">2017</p>
+            </div>
+        </div>
+
+        <!-- Award Item 3 -->
+        <div class="col-lg-3 col-md-4">
+            <div class="award-card d-flex flex-column justify-content-end" style="   position: relative;
+            padding-top: 60px;
+            background-color: #EEFDF2; /* Light green background */
+            border-radius: 10px;
+            text-align: center;
+            min-height: 250px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;">
+                <img src="{% static 'assets/img/certificate.png' %}"alt="Certificate 2022" alt="Certificate" style="    position: absolute;
+                top: -30px; /* Adjust to make the image float */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 150px;
+                height: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin-top: 60px;
+                font-weight: bold;
+                color: #2C3E50;">CERTIFICATE NAME</h5>
+                <p style="  color: #6c757d;
+            margin-bottom: 0;">2017</p>
+            </div>
+        </div>
+
+        <!-- Award Item 4 -->
+        <div class="col-lg-3 col-md-4">
+            <div class="award-card d-flex flex-column justify-content-end" style="   position: relative;
+            padding-top: 60px;
+            background-color: #EEFDF2; /* Light green background */
+            border-radius: 10px;
+            text-align: center;
+            min-height: 250px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;">
+                <img src="{% static 'assets/img/certificate.png' %}"alt="Certificate 2022" alt="Certificate" style="position: absolute;
+                top: -30px; /* Adjust to make the image float */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 150px;
+                height: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                ">
+                <h5 style="margin-top: 60px;
+                font-weight: bold;
+                color: #2C3E50;">CERTIFICATE NAME</h5>
+                <p style="  color: #6c757d;
+            margin-bottom: 0;">2017</p>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  <style>
+            .container {
+            margin-top: 10px;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #28a745; /* Hover effect for links */
+        }
+
+        .nav-link.active {
+            color: #28a745; /* Active link color */
+            font-weight: bold;
+        }
+
+        section h5 {
+            font-size: 1.5rem; /* Default font size for heading */
+        }
+
+        section p {
+            font-size: 1rem; /* Default font size for paragraphs */
+            max-width: 800px;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-lg-3 {
+            flex: 0 0 25%; /* Sidebar takes 25% width */
+            max-width: 25%;
+        }
+
+        .col-lg-8 {
+            flex: 0 0 66.6667%; /* Main content takes 66.67% width */
+            max-width: 66.6667%;
+        }
+
+        /* Tablet view adjustments (max-width: 992px) */
+        @media (max-width: 992px) {
+            section h5 {
+                font-size: 1.2rem; /* Smaller heading font size */
+            }
+
+            section p {
+                font-size: 0.9rem; /* Smaller paragraph font size */
+            }
+
+            .col-lg-3 {
+                flex: 0 0 30%; /* Sidebar takes 30% width */
+                max-width: 30%;
+            }
+
+            .col-lg-8 {
+                flex: 0 0 65%; /* Main content takes 65% width */
+                max-width: 65%;
+            }
+        }
+
+        /* Mobile view adjustments (max-width: 768px) */
+        @media (max-width: 768px) {
+            .d-flex {
+                flex-direction: column; /* Stack sidebar and content vertically */
+            }
+
+            .col-lg-3 {
+                flex: 0 0 100%; /* Sidebar takes full width */
+                max-width: 100%;
+            }
+
+            .col-lg-8 {
+                flex: 0 0 100%; /* Main content takes full width */
+                max-width: 100%;
+            }
+
+            section h5 {
+                font-size: 1rem; /* Even smaller heading font size */
+            }
+
+            section p {
+                font-size: 0.85rem; /* Even smaller paragraph font size */
+            }
+
+            .nav {
+                margin-bottom: 20px; /* Space between navbar and content */
+            }
+        }
+    .nav-link {
+        color: #333;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #28a745; /* Hover effect for links */
+    }
+
+    .nav-link.active {
+        color: #28a745; /* Active link color */
+        font-weight: bold;
+    }
+
+    section h5 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+        max-width: 800px;
+    }
+        /* Base styles for desktop and larger screens */
+        .container {
+            margin-top: 30px;
+        }
+
+        blockquote {
+            border-left: none !important; /* Remove the gray line */
+        }
+
+        blockquote p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+        }
+
+        .bi-quote {
+            font-size: 2rem;
+            vertical-align: sub;
+        }
+
+        .blockquote-footer {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        /* Tablet view adjustments (max-width: 992px) */
+        @media (max-width: 992px) {
+            .row {
+                flex-direction: column-reverse; /* Stack text above the image */
+            }
+
+            blockquote p {
+                font-size: 1.1rem; /* Slightly smaller text for tablet */
+            }
+        }
+
+        /* Mobile view adjustments (max-width: 768px) */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column-reverse; /* Stack text above the image */
+            }
+
+            blockquote p {
+                font-size: 1rem; /* Smaller text for mobile */
+            }
+
+            .blockquote-footer {
+                font-size: 0.9rem; /* Smaller footer text for mobile */
+            }
+        }
+
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h5 {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .card img {
+        margin-bottom: 20px; /* Space between the icon and the title */
+    }
+
+    .card p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .col-md-8, .col-md-4 {
+            width: 100%; 
+        }
+    }
+    blockquote {
+        border-left: none !important; /* Remove the gray line */
+    }
+</style>
+
+<script>
+    // JavaScript to activate the clicked link
+    function activateLink(element) {
+        var links = document.querySelectorAll('.nav-link');
+        links.forEach(function(link) {
+            link.classList.remove('active');
+        });
+        element.classList.add('active');
+    }
+</script>
+
+{% endblock %}
+

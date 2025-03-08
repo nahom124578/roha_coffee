@@ -1,0 +1,380 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<section class="import-section position-relative" 
+    style="
+    margin-bottom: 4rem;
+    background-image: url('{% static 'assets/img/sanitary.png' %}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;">
+    
+    <!-- Apply a filter to blur and lighten the background -->
+    <div class="overlay" style=" position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:rgba(238, 253, 242, 0.77); /* Lighten the background */">
+      </div>
+    
+    <div class="container import-content" style="position: relative; z-index: 1;">
+      <h5 style="color:#1D1D35">EXPLORE</h5>
+      <h1 style="color:#1D1D35; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">
+        OUR IMPORTS
+      </h1>
+      
+      <span style="color:#343434; margin-bottom: 40px; display: inline-block; text-align: center;">
+        Our commitment to sustainability and fair trade principles guarantees that our products support 
+        the livelihoods of those involved in the supply chain while enriching the global marketplace.
+      </span>
+      
+      <!-- Button Group -->
+      <div class="d-flex flex-wrap justify-content-center" style="max-width: 800px; margin: 0 auto; gap: 10px;">
+       <a href="{% url 'trucks_page' %}">
+        <button class="btn btn-tag" style="color: #1D6F3F;
+          border: 1px solid #008000;
+          border-radius: 25px;
+          padding: 10px 20px;
+          margin: 10px;
+          font-size: 1rem;
+          min-width: 150px;
+          background-color: transparent;
+          transition: all 0.3s ease;">
+          Iveco Trucks
+        </button>
+
+       </a>
+       <a href="{% url 'hybrid_vehicles_page' %}">
+        <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Hybrid Vehicles
+      </button>
+    
+       </a>
+       <a href="{% url 'electric_vehicles_page' %}">
+        <button class="btn btn-tag" style="color:#1D6F3F;
+          border: 1px solid #008000;
+          border-radius: 25px;
+          padding: 10px 20px;
+          margin: 10px;
+          font-size: 1rem;
+          min-width: 150px;
+          background-color: transparent;
+          transition: all 0.3s ease;">
+          Electric Vehicles
+        </button>
+
+       </a>
+       <a href="{% url 'construction_page' %}">
+        <button class="btn btn-tag" style="color:#1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Construction Machinery
+      </button>
+
+       </a>
+       <a href="{% url 'sanitarty_fixture_page' %}">
+        <button  class="btn btn-tag btn-active" style="background-color: #008000;
+        color: white;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        transition: all 0.3s ease;" >
+        Sanitary Fixtures
+      </button>
+
+       </a>
+       <a href="{% url 'edible_oil_page' %}">
+        <button  class="btn btn-tag" style="
+        color:#1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Edible Oil
+      </button>
+
+       </a>
+       <a href="{% url 'iron_bar_page' %}">
+        <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Iron Bars
+      </button>
+
+       </a>
+       <a href="{% url 'tires_page' %}">
+        <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+        Tires
+      </button>
+
+       </a>
+     </div>
+    </div>
+  </section>
+  <div class="container mt-5" style="margin-bottom: 4rem;">
+    <div class="row card-container d-flex flex-wrap" >
+        <div class="col-md-6">
+            <div class="left-card d-flex justify-content-center" style=" background-color:#1D1D35;
+            flex: 1;
+            flex-direction: column;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center; 
+            margin-right: 2rem;">
+                <img src="{% static 'assets/img/SANITANA-1.png' %}" alt="Sanitana Logo" class="img-fluid mb-4">
+                <p class="mt-4" style="margin-top: 3rem;">
+                    We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it's a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.
+                </p>
+                <button class="btn btn-custom" style="  background-color:#1D6F3F;
+                border: none;
+                max-width: 200px;
+                align-self: center;
+                border-radius: 20px;
+                padding: 0.5rem 1.5rem;
+                color: white;
+                font-weight: bold;
+                margin-top: 3rem;">Explore Products</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="img-card">
+                <img src="{% static 'assets/img/sanitary-2.png' %}" class="img-fluid" alt="Image Description">
+                <p class="mt-4">
+                    We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin.
+                </p>
+                <p>
+                    We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable practices and community support. This endeavor is more than a business—it's a dedication to preserving Ethiopia’s coffee legacy and promoting unparalleled quality.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="import-section position-relative" 
+    style="
+    margin-bottom: 6rem;
+    background-image: url('{% static 'assets/img/sanitary.png' %}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;">
+    
+    <!-- Apply a filter to blur and lighten the background -->
+    <div class="overlay" style=" position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:rgba(238, 253, 242, 0.77); /* Lighten the background */">
+      </div>
+    
+    <div class="container arrivals-section" style="position: relative; z-index: 1;">
+     
+      <h1 style="color:#1D1D35; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem;">
+        OUR LATEST ARRIVALS
+      </h1>
+      <div class="row justify-content-center" >
+        <div class="col-md-3 product-card">
+            <img src="{% static 'assets/img/sanitary-3.png' %}" alt="Single Lever Basin Mixer" style=" max-width: 100%;
+            height: auto;
+            border-radius: 8px;">
+            <div class="product-name" style="color: #1D1D35; font-weight: bold;">Single Lever Basin Mixer</div>
+        </div>
+        <div class="col-md-3 product-card">
+            <img src="{% static 'assets/img/sanitary-4.png' %}" alt="Fonte Built In Bath Tub" style=" max-width: 100%;
+            height: auto;
+            border-radius: 8px;">
+            <div class="product-name" style="color: #1D1D35; font-weight: bold;">Fonte Built In Bath Tub</div>
+        </div>
+        <div class="col-md-3 product-card">
+            <img src="{% static 'assets/img/sanitary-5.png' %}" alt="Glassy-Black Shower Panel" style=" max-width: 100%;
+            height: auto;
+            border-radius: 8px;">
+            <div class="product-name" style="color: #1D1D35; font-weight: bold;">Glassy-Black Shower Panel</div>
+        </div>
+        <div class="col-md-3 product-card">
+            <img src="{% static 'assets/img/sanitary-6.png' %}" alt="1110-UC Urinal Partition" style=" max-width: 100%;
+            height: auto;
+            border-radius: 8px;">
+            <div class="product-name" style="color: #1D1D35; font-weight: bold;">1110-UC Urinal Partition</div>
+        </div>
+    </div>
+      
+      
+      
+    </div>
+  </section>
+    <!-- Explore Origins Section -->
+    
+    <section class="container my-5" style="margin-bottom: 50px;">
+      <h2 class="section-title" style="text-align: center;">Explore By Category</h2>
+      
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <!-- First Slide -->
+              <div class="carousel-item active bg-dark">
+                  <div class="row g-0 justify-content-center align-items-center text-center">
+                      <div class="col-3 category-item">
+                          <a href="{% url 'sanitary_fixtures_by_category_page' %}" style="text-decoration: none;">
+                              <img src="{% static 'assets/img/roha-illustrations-06.svg' %}" alt="Category Image 1" class="category-image" style="width: 100%; filter: brightness(0) invert(1);">
+                              <p class="text-white text-light fs-5 fs-md-4 fs-lg-3" style="font-size:25px;">Bathtub</p>
+                          </a>
+                      </div>
+                      <div class="col-3 category-item">
+                          <a href="{% url 'sanitary_fixtures_by_category_page' %}" style="text-decoration: none;">
+                              <img src="{% static 'assets/img/roha-illustrations-07.svg' %}" alt="Category Image 2" class="category-image" style="width: 100%; filter: brightness(0) invert(1);">
+                              <p class="text-white text-light fs-5 fs-md-4 fs-lg-3" style="font-size:25px;">Faucet</p>
+                          </a>
+                      </div>
+                      <div class="col-3 category-item">
+                          <a href="{% url 'sanitary_fixtures_by_category_page' %}" style="text-decoration: none;">
+                              <img src="{% static 'assets/img/roha-illustrations-08.svg' %}" alt="Category Image 3" class="category-image" style="width: 100%; filter: brightness(0) invert(1);">
+                              <p class="text-white text-light fs-5 fs-md-4 fs-lg-3" style="font-size:25px;">Vanity</p>
+                          </a>
+                      </div>
+                      <div class="col-3 category-item">
+                          <a href="{% url 'sanitary_fixtures_by_category_page' %}" style="text-decoration: none;">
+                              <img src="{% static 'assets/img/roha-illustrations-09.svg' %}" alt="Category Image 4" class="category-image" style="width: 100%; filter: brightness(0) invert(1);">
+                              <p class="text-white text-light fs-5 fs-md-4 fs-lg-3" style="font-size:25px;">Toilet</p>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+          
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev" 
+              style="position: absolute; top: 50%; transform: translateY(-50%); font-size: 2rem; color: #1D1D35; background: transparent; border: none; left: -135px; z-index: 1;">
+              <span class="bi bi-arrow-left-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next" 
+              style="position: absolute; top: 50%; transform: translateY(-50%); font-size: 2rem; color: #1D1D35; background: transparent; border: none; right: -135px; z-index: 1;">
+              <span class="bi bi-arrow-right-circle" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+  </section>
+
+  <style>
+    .category-item {
+      transition: background-color 0.3s ease;
+    }
+  
+    .category-item:hover {
+      background-color: var(--bs-secondary);
+      transition: background-color 0.3s ease;
+    }
+  
+    .category-item a {
+      display: block;
+      padding: 15px 0;
+    }
+  </style>
+  <section class="content position-relative" 
+  style="
+  margin-bottom: 60px;
+  margin-top: 6rem;
+  background-image: url('{% static 'assets/img/sanitary-2.png' %}');
+  background-size: cover;
+  background-position: center;
+  
+  padding: 100px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;">
+  
+  <!-- Apply a filter to blur and lighten the background -->
+  <div class="overlay" style=" position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(29, 29, 53, 0.6); /* Lighten the background */">
+    </div>
+  
+  <div class="container import-content" style="position: relative; z-index: 1; margin-top: 4rem;">
+    
+    <h1 style="color: #fff;; font-size: 2.5rem; font-weight: bold; margin-bottom: 3rem;">
+      Introducing Our Brand-New Showroom: A Hub of Elegance and Functionality!
+    </h1>
+    
+    <span style="color: #fff;; margin-bottom: 40px; display: inline-block; text-align: center;  font-size: 1.2rem;
+    max-width: 500px;
+    line-height: 1.5;">
+      We are thrilled to announce the grand opening of our state-of-the-art showroom, designed to bring you the latest in sanitary fixtures and bathroom innovation. 
+      Whether you're an architect, interior designer, or homeowner,
+      our showroom promises to be an oasis of inspiration, showcasing a curated selection of our finest products.
+    </span>
+    
+    
+  </div>
+</section>
+ <div class="container text-center" style="margin-bottom: 60px; margin-top: 4rem;" >
+    <div class="row">
+      <div class="col">
+        <i class="bi bi-person-badge" style="font-size: 3rem; color: #6B8E23;"></i>
+        <p>2000+<br>EMPLOYEES</p>
+      </div>
+      <div class="col">
+        <i class="bi bi-people" style="font-size: 3rem; color: #6B8E23;"></i>
+        <p>120+<br>CLIENTS</p>
+      </div>
+      <div class="col">
+        <i class="bi bi-briefcase-fill" style="font-size: 3rem; color: #6B8E23;"></i>
+        <p>75+<br>BUSINESSES</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+{% endblock %}

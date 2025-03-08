@@ -1,0 +1,57 @@
+{% extends 'Portal/index.html' %}
+{% block main %}
+<div class="d-sm-flex justify-content-between">
+    <a href="{% url 'service_create' %}" class="btn btn-outline-light">New Service</a>
+</div>
+<div class="table-responsive my-3">
+    <table class="table table-flush" id="datatable-search">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for service in services %}
+            <tr>
+                <td>{{ service.id }}</td>
+                <td>{{ service.title }}</td>
+                <td>{{ service.description|truncatewords:10 }}</td>
+                <td>{{ service.created_at|date:"Y-m-d H:i" }}</td>
+                <td>
+                    <a href="{% url 'service_detail' service.pk %}">View</a> |
+                    {% comment %} <a href="{% url 'service_update' service.pk %}">Edit</a> | {% endcomment %}
+                    {% comment %} <a href="{% url 'service_delete' service.pk %}">Delete</a> {% endcomment %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% comment %} <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="iconDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <span id="selectedIconText">Select an Icon</span>
+    </button>
+
+    <div class="dropdown-menu" aria-labelledby="iconDropdown" style="max-height: 400px; overflow-y: auto;">
+        <!-- Search input for filtering icons -->
+        <input type="text" id="iconSearch" class="form-control mb-3" placeholder="Search icons...">
+
+        <div class="container">
+            <div class="row row-cols-6 g-2" id="iconContainer">
+                {% for icon in icons %}
+                    <div class="col text-center icon-item" data-icon-name="{{ icon }}">
+                        <a href="#" class="icon-option d-flex justify-content-center align-items-center text-lg" data-icon="{{ icon }}">
+                            <i class="bi {{ icon }}"></i>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+{% endblock %}

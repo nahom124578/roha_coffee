@@ -1,0 +1,204 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<section class="import-section position-relative" 
+style="
+margin-bottom: 60px;
+background-image: url('{% static 'assets/img/iron.png' %}');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 100px 0;
+color: #fff;
+text-align: center;
+position: relative;">
+
+<div class="overlay" style=" position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.5); /* Lighten the background */
+backdrop-filter: blur(3px); /* Blur effect */"></div>
+
+<div class="container import-content" style="position: relative; z-index: 1;">
+    <h1 style="color:#1D1D35">IRON BARS</h1>
+</div>
+
+</section>
+   
+<div class="container my-5" style="padding-top: 20px;">
+    <div class="row">
+        <!-- Main Product Image and Product Details in One Column -->
+        <div class="col-lg-8 mb-4">
+            <div class="row">
+                <!-- Main Product Image -->
+                <div class="col-md-6 mb-4">
+                    <div class="image-carousel">
+                        <img src="{% static 'assets/img/iron-bars-ferro.png' %}" alt="Netaji Refined Sesame Oil" class="product-image img-fluid" style="width: 100%; height: auto; max-height: 400px; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="col-md-6">
+                    <h3>Skip loader truck 2019 Iveco EUROCARGO 120-210</h3>
+                    <p>Lithuania, Kirtimu street 17A, Vilnius</p>
+                    <p>We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin.</p>
+                    
+                    <button class="btn btn-outline-success w-100 mb-2">Ask For Price</button>
+                    <button class="btn btn-success w-100 mb-4">Contact Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Specifications -->
+        <div class="col-lg-4">
+            <div class="specifications bg-light p-3 rounded">
+                <div class="row">
+                    <div class="col-6"><strong>Diameter</strong></div>
+                    <div class="col-6">5.0mm-800mm</div>
+
+                    <div class="col-6"><strong>Length</strong></div>
+                    <div class="col-6">5800, 6000 or customized</div>
+
+                    <div class="col-6"><strong>Standard</strong></div>
+                    <div class="col-6">GB, GOST, ASTM, AISI, JIS, BS, DIN, EN</div>
+
+                    <div class="col-6"><strong>Surface</strong></div>
+                    <div class="col-6">Black skin, Bright, etc.</div>
+
+                    <div class="col-6"><strong>Technology</strong></div>
+                    <div class="col-6">Hot rolling, Cold drawing, Hot forging</div>
+
+                    <div class="col-6"><strong>Material</strong></div>
+                    <div class="col-6">S235JR, S275JR, S355JR, S355J2, Q235, Q345</div>
+
+                    <div class="col-6"><strong>Warranty</strong></div>
+                    <div class="col-6">1-2 years</div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-outline-success w-100 mt-3">Download Vehicle Specification</a>
+        </div>
+    </div>
+
+    <!-- Image Carousel and Contact Section -->
+    <div class="row align-items-center mt-5">
+        <!-- Carousel Section -->
+        <div class="col-md-8 position-relative mb-4">
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{% static 'assets/img/iron-bars-ferro.png' %}" class="img-fluid" alt="Image 1">
+                            </div>
+                            <div class="col-4">
+                                <img src="{% static 'assets/img/iron-bars-ferro.png' %}" class="img-fluid" alt="Image 2">
+                            </div>
+                            <div class="col-4">
+                                <img src="{% static 'assets/img/iron-bars-ferro.png' %}" class="img-fluid" alt="Image 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{% static 'assets/img/iron-bars-ferro.png' %}" class="img-fluid" alt="Image 4">
+                            </div>
+                            <div class="col-4">
+                                <img src="{% static 'assets/img/iron-bars-ferro.png' %}" class="img-fluid" alt="Image 5">
+                            </div>
+                            <div class="col-4">
+                                <img src="{% static 'assets/img/iron-bars-ferro.png' %}" class="img-fluid" alt="Image 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              
+<!-- Carousel Controls with Custom Color -->
+<button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev" 
+        style="position: absolute; top: 50%; left: -10%; transform: translateY(-50%); font-size: 2rem;">
+    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #1D1D35;"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next" 
+        style="position: absolute; top: 50%; right: -10%; transform: translateY(-50%); font-size: 2rem;">
+    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #1D1D35;"></span>
+</button>
+            </div>
+        </div>
+
+      
+    <!-- Contact Form and Seller Assistance -->
+    <div class="row my-5">
+        <!-- Contact Form -->
+        <div class="col-md-6">
+            <h3>Contact The Seller</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name or Company Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Your Phone Number</label>
+                    <input type="tel" class="form-control" id="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Seller Assistance -->
+        <div class="col-md-6">
+            <div class="card p-3" style="background-color: #EEFDF2;">
+                <h4 class="text-center">Need Assistance?</h4>
+                <div class="d-flex align-items-center">
+                    <div>
+                        <p style="color: #1D1D35;">Our Sales Advisor is ready to answer your questions in your language</p>
+                        <p style="color: #1D6F3F;"><strong>Gelila Million</strong><br>+251 911 122334</p>
+                    </div>
+                    <img src="{% static 'assets/img/gellila.png' %}" alt="Sales Advisor" class="img-fluid mb-3" style="max-width: 150px; margin-right: 20px; border-radius: 5px;">
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-success w-50">Call</button>
+                    <button class="btn btn-outline-success w-50">Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .product-image {
+    border-radius: 8px;
+}
+
+.specifications div {
+    padding: 5px 0;
+}
+
+.btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+</style>
+
+
+{% endblock %}

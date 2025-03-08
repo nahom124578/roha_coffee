@@ -1,0 +1,423 @@
+{% extends 'Website/index.html' %}
+{% load static %}
+{% block body %}
+<section>
+<section class="bg-light container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center p-5 my-4">
+        <h2 class="text-primary fs-4 fs-md-2 fs-lg-1">Gallery</h2>
+
+<!-- Desktop view with line break -->
+<h1 class="text-center text-dark fw-bolder display-2 d-none d-xl-block" style="font-family: 'Roboto', serif;">
+  WELCOME TO OUR <br> GALLERY
+</h1>
+
+<!-- Tablet view with slightly smaller font size and no line break (600px to 1024px) -->
+<h1 class="text-center text-dark fw-bolder fs-2 display-3 d-none d-md-block d-xl-none" style="font-family: 'Roboto', serif;">
+  WELCOME TO OUR GALLERY
+</h1>
+
+<!-- Mobile view with smaller font size and no line break (300px to 600px) -->
+<h1 class="text-center text-dark fw-bolder fs-6 d-md-none" style="font-family: 'Roboto', serif;">
+  WELCOME TO OUR GALLERY
+</h1>
+
+
+</div>
+    </div>
+  </div>
+  <div class="container-fluid d-none d-md-block">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 my-3">
+            <div class="text-center">
+                <div class="card bg-dark rounded-1 text-white">
+                    <img src="{% static 'assets/img/gallery-1.png' %}" class="card-img" alt="">
+                </div>
+                <h6 class="text-dark my-3 fs-9 d-md-none d-lg-block">
+                    “The celebration was attended by key stakeholders, including farmers, suppliers
+                </h6>
+                <h6 class="text-dark my-3 fs-10 d-none d-md-block d-lg-none">
+                    “The celebration was attended by key stakeholders, including farmers, suppliers
+                </h6>
+                <button class="btn btn-primary rounded-pill" type="button">
+                    <a class="text-white text-decoration-none" href="{% url 'gallery_details_page' %}">Check All</a>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 my-3">
+            <div class="text-center">
+                <div class="card bg-dark rounded-1 text-white">
+                    <img src="{% static 'assets/img/gallery-1.png' %}" class="card-img" alt="">
+                </div>
+                <h6 class="text-dark my-3 fs-9 d-md-none d-lg-block">
+                    “The celebration was attended by key stakeholders, including farmers, suppliers
+                </h6>
+                <h6 class="text-dark my-3 fs-10 d-none d-md-block d-lg-none">
+                    “The celebration was attended by key stakeholders, including farmers, suppliers
+                </h6>
+                <button class="btn btn-primary rounded-pill" type="button">
+                    <a class="text-white text-decoration-none" href="{% url 'gallery_details_page' %}">Check All</a>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 my-3">
+            <div class="text-center">
+                <div class="card bg-dark rounded-1 text-white">
+                    <img src="{% static 'assets/img/gallery-1.png' %}" class="card-img" alt="">
+                </div>
+                <h6 class="text-dark my-3 fs-9 d-md-none d-lg-block">
+                    “The celebration was attended by key stakeholders, including farmers, suppliers
+                </h6>
+                <h6 class="text-dark my-3 fs-10 d-none d-md-block d-lg-none">
+                    “The celebration was attended by key stakeholders, including farmers, suppliers
+                </h6>
+                <button class="btn btn-primary rounded-pill" type="button">
+                    <a class="text-white text-decoration-none" href="{% url 'gallery_details_page' %}">Check All</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="d-block d-md-none " style="margin-top: -20%;">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 my-3">
+      <div class="text-center">
+        <div class="card bg-dark rounded-1 text-white">
+          <img src="{% static "assets/img/gallery-1.png"%}" class="card-img" alt="">
+        </div>
+        <p class="text-dark">“The celebration was attended by key stakeholders, including farmers, suppliers....</p>
+        <button class="btn btn-primary rounded-pill" type="button"><a class="text-white text-decoration-none" href="{% url 'gallery_details_page' %}">Check All</a></button>
+       
+        <div class="d-flex justify-content-center mt-1">
+          <button class="btn btn-outline-secondary rounded-circle mx-1" style="width: 40px; height: 40px; padding: 0;">&larr;</button>
+          <button class="btn btn-outline-secondary rounded-circle mx-1" style="width: 40px; height: 40px; padding: 0;">&rarr;</button>
+      </div>
+</div>
+</div>
+</div>
+</section>
+<section class="container-fluid">
+  <div id="customCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <span class="mask bg-gradient-dark opacity-0.3"></span>
+        <img src="{% static 'assets/img/gallery-carousel.png' %}" class=" w-100 h-50" alt="Slide 1">
+        <div class="carousel-caption ">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <!-- Left Column: Image Cards -->
+              <div class="col-md-6">
+                <div class="mini-images-container d-flex justify-content-between mb-3">
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-1.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 1">
+                   
+                  </div>
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-2.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 2">
+                    
+                  </div>
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-1.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 3">
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- Right Column: Caption Text -->
+              <div class="col-md-6 text-center text-md-start">
+                <p class="caption-text fs-10">We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other carousel items -->
+      <div class="carousel-item">
+        <span class="mask bg-gradient-dark opacity-0.3"></span>
+        <img src="{% static 'assets/img/gallery-carousel.png' %}" class=" w-100 h-50" alt="Slide 2">
+        <div class="carousel-caption ">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <!-- Left Column: Image Cards -->
+              <div class="col-md-6">
+                <div class="mini-images-container d-flex justify-content-between mb-3">
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-1.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 1">
+                    
+                  </div>
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-2.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 2">
+                    
+                  </div>
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-1.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 3">
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- Right Column: Caption Text -->
+              <div class="col-md-6 text-center text-md-start">
+                <p class="caption-text fs-10">We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <span class="mask bg-gradient-dark opacity-0.3"></span>
+        <img src="{% static 'assets/img/gallery-carousel.png' %}" class=" w-100 h-50" alt="Slide 3">
+        <div class="carousel-caption ">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <!-- Left Column: Image Cards -->
+              <div class="col-md-6">
+                <div class="mini-images-container d-flex justify-content-between mb-3 ">
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-1.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 1">
+                    
+                  </div>
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-2.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 2">
+                    
+                  </div>
+                  <div class="mini-image card bg-dark text-white">
+                    <img src="{% static 'assets/img/carousel-caption-1.png' %}" class="card-img-top" style="height: 60px; object-fit: cover;" alt="Mini 3">
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- Right Column: Caption Text -->
+              <div class="col-md-6 text-center text-md-start">
+                <p class="caption-text fs-10">We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <style>
+    .fs-10 {
+      font-size: 0.5rem; /* Smaller font size */
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.05); /* Lighter overlay */
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .mini-images-container {
+      display: flex;
+      justify-content: space-between; /* Align images in a row */
+      flex-wrap: nowrap; /* Prevent wrapping for desktop */
+      overflow-x: auto; /* Allow horizontal scroll for overflow */
+    }
+
+    .mini-image {
+      width: 30%; /* Each image takes 30% of the container width */
+      margin-right: 10px; /* Space between images */
+      flex-shrink: 0; /* Prevent images from shrinking */
+    }
+
+    .card {
+      margin-bottom: 10px; /* Space between card images */
+    }
+
+    @media (max-width: 1024px) {
+      
+   .col-md-6 {
+    width: 100%; /* Make columns full width */
+    
+  margin-top: -120px;
+  }
+  .mini-images-container {
+    justify-content: space-between; /* Align images in a row */
+  
+  }
+
+  .caption-text {
+    margin-bottom: 15px; /* Space between the caption and images */
+  }
+}
+@media (max-width: 390px) {
+  .caption-text{
+        font-size: 0.1rem;
+      }
+}
+
+@media (max-width: 790px) {
+  
+  
+      
+          
+      .col-md-6 {
+        width: 100%; /* Make columns full width */
+       
+        
+      margin-top: -120px;
+
+      }
+      .caption-text{
+        font-size: 0.35rem;
+      }
+      .mini-images-container {
+        justify-content: space-between; /* Align images in a row */
+       margin-top: 70px;
+      }
+      .mini-image{
+        max-height: 40px;
+        
+      }
+    
+      .caption-text {
+        margin-bottom: 15px; /* Space between the caption and images */
+      }
+    }
+
+    .caption-text {
+      color: #fff;
+    }
+  </style>
+</section>
+
+
+<section class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center p-2 my-2">
+        <h1 class="text-center text-dark display-5 fw-bolder" style="font-weight:1000;">Explore Older Collections</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6">
+        <div class="row">
+            <div class="col-12 my-2 p-2">
+                <div class="card bg-dark text-white h-100 overflow-hidden">
+                    <img src="{% static 'assets/img/gallery-3.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-6 my-2 p-2">
+                <div class="card bg-dark text-white h-200 overflow-hidden">
+                    <img src="{% static 'assets/img/gallery-4.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-6 my-2 p-2">
+                <div class="card bg-dark text-white h-200 overflow-hidden">
+                    <img src="{% static 'assets/img/gallery-5.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-8 col-md-8 col-sm-6">
+        <div class="row">
+            <div class="col-lg-6 col-md-4 col-sm-12 my-2 p-2">
+                <div class="card bg-dark text-white h-100 overflow-hidden">
+                    <img src="{% static 'assets/img/gallery-2.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col">
+              <div class="col-lg-12 col-md-12 d-none d-md-block my-2 p-2">
+                <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+                        <img src="{% static 'assets/img/gallery-6.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 d-none d-md-block my-2 p-2">
+                  <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+                        <img src="{% static 'assets/img/gallery-7.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" d-lg-none d-md-none  col-sm-24 my-2 p-2">
+      <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+          <img src="{% static 'assets/img/gallery-6.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+      </div>
+  </div>
+  <div class=" d-lg-none d-md-none  col-sm-12 my-2 p-2">
+      <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+          <img src="{% static 'assets/img/gallery-7.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+      </div>
+  </div>
+</div>
+
+    <div class="row my-2 p-2">
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <div class="row">
+          <div class="col-12 my-2 p-2">
+            <div class="card bg-dark text-white">
+              <img src="{% static "assets/img/gallery-8.png" %}" class="card-img" alt="">
+            </div>
+          </div>
+          <div class="col-6 my-2 p-2">
+            <div class="card bg-dar1 text-white">
+              <img src="{% static "assets/img/gallery-9.png" %}" class="card-img" alt="">
+            </div>
+          </div>
+          <div class="col-6 my-2 p-2">
+            <div class="card bg-dark text-white">
+              <img src="{% static "assets/img/gallery-7.png" %}" class="card-img" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-6">
+        <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12 my-2 p-2">
+            <div class="card bg-dark text-white overflow-hidden" style="height: 450px;">
+                <img src="{% static 'assets/img/gallery-6.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+            </div>
+        </div>
+        <div class="col">
+          <div class="col-lg-12 col-md-12 d-none d-md-block my-2 p-2">
+            <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+                    <img src="{% static 'assets/img/gallery-9.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 d-none d-md-block my-2 p-2">
+              <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+                    <img src="{% static 'assets/img/gallery-4.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <div class=" d-lg-none d-md-none  col-sm-12 my-2 p-2">
+      <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+          <img src="{% static 'assets/img/gallery-9.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+      </div>
+  </div>
+  <div class=" d-lg-none d-md-none  col-sm-12 my-2 p-2">
+      <div class="card bg-dark text-white overflow-hidden" style="height: 200px;">
+          <img src="{% static 'assets/img/gallery-4.png' %}" class="card-img h-100" alt="" style="object-fit: cover;">
+      </div>
+  </div>
+    
+  </div>
+  </div>
+</section>
+
+
+
+
+
+{% endblock %}

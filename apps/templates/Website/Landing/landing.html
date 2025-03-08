@@ -1,0 +1,967 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<style>
+  /* About Section */
+
+  .about-section {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+
+  .about-section h6 {
+    color: #28a343;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .col-lg-8 {
+    text-align: left;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .btn-custom {
+    background-color: #28a745;
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    align-items: end;
+  }
+
+  .btn-custom:hover {
+    background-color: #218838;
+  }
+
+  /* Services Section */
+  .service-section {
+    padding: 3rem 1rem;
+    background-color: #f3f3f3;
+    text-align: center;
+  }
+
+  .service-section h3 {
+    color: white;
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .service-card .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 167, 69, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Why Choose Us Section */
+  .why-choose-us {
+
+    padding: 50px 20px;
+    text-align: left;
+  }
+
+  .why-choose-us h2 {
+    font-size: 2rem;
+  }
+
+  .mask {
+    background-color: rgba(31, 94, 31, 0.9);
+    /* Light green with some transparency */
+  }
+
+  .icon1 {
+    width: 40px;
+    height: auto;
+    max-height: 20%;
+    max-width: 15%;
+  }
+
+  .bg-gradient-light-green {
+    background: rgba(21, 73, 21, 0.9);
+    /* Light green gradient */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .why-choose-us h4 {
+    font-size: 1.1rem;
+    color: #555;
+    font-family: Roboto Slab;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: left;
+
+  }
+
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+  }
+
+  .service {
+    flex-basis: 100%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .service img {
+    width: 100%;
+    height: 566px;
+    border-radius: 10px;
+  }
+
+
+  .services-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+
+
+  }
+
+  .service-item {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 40%;
+
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background-image: url("{% static 'assets/img/Ellipse.png' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+  }
+
+  .icon {
+    width: 40%;
+    height: auto;
+  }
+
+
+
+
+
+  .service-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+
+  .Blog-container-caption h2 {
+    font-family: Roboto Slab;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+
+    margin-top: -700px;
+    color: white;
+
+  }
+
+  .Blog-container-caption-p {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+
+    color: white;
+
+  }
+
+  .Blog-container button {
+    background: #DEB887;
+    width: 208px;
+    height: 55px;
+    margin-top: 51px;
+    border-radius: 3.2px 0px 0px 0px;
+    margin-bottom: 400px;
+
+  }
+
+  .event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+  }
+
+  .event-text {
+    max-width: 100%;
+  }
+
+  .event-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .event-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  /* Product Catalog Section */
+  .product-catalog {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    align-items: center;
+
+  }
+
+  .catalog-item {
+    flex-basis: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .product-catalog-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #EEFDF2;
+    padding: 40px;
+  }
+
+  .catalog-info {
+    font-family: Roboto;
+    font-size: 24px;
+    text-align: left;
+
+    max-width: 20%;
+  }
+
+  .catalog-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2b2b2b;
+    margin-bottom: 20px;
+  }
+
+  .catalog-description {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .catalog-items {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .catalog-item {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .item-icon-container {
+    margin-right: 10px;
+  }
+
+  .item-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .item-content {
+    max-width: 500px;
+    /* Allow more space for text */
+  }
+
+  .item-title {
+    color: #2C6E49;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .item-description {
+    font-size: 16px;
+    color: #2D2F33;
+    margin: 5px 0 0;
+    line-height: 1.5;
+  }
+
+  .testimonial {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+
+  .testimonial h5 {
+    color: #008000;
+  }
+
+  .testimonial .position {
+    color: #016938;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: #1f251f;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #4e574e;
+    border-radius: 50%;
+  }
+
+
+
+  @media (min-width: 768px) {
+    .carousel-caption h2 {
+      font-size: 3rem;
+    }
+
+    .why-choose-us h2,
+    .client-testimonials h2 {
+      font-size: 2.5rem;
+    }
+
+    .services,
+    .product-catalog,
+    .testimonials {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .service,
+    .catalog-item,
+    .testimonial {
+      flex-basis: 30%;
+    }
+
+    .event {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .event-text {
+      max-width: 50%;
+    }
+
+    .event-image {
+      width: 40%;
+      height: 300px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .carousel-caption h2 {
+      font-size: 4rem;
+    }
+
+    .services .service,
+    .product-catalog .catalog-item,
+    .testimonials .testimonial {
+      flex-basis: 23%;
+    }
+
+    .event-text {
+      max-width: 40%;
+    }
+
+    .event-image {
+      width: 50%;
+      height: 400px;
+    }
+  }
+
+
+
+
+
+  .carousel-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .prev-button,
+  .next-button {
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    background-color: transparent;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: #000;
+    border-color: #000;
+  }
+
+  .dot:hover {
+    border-color: #717171;
+  }
+</style>
+
+
+<!-- Carousel -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <div class="page-header min-vh-85 m-3 border-radius-xl"
+        style="background-image: url('{% static 'assets/img/coffee-farm.jpg' %}'); background-size: cover; background-position: center;">
+        <span class="mask bg-gradient-dark opacity-0.8"></span>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-10 col-sm-12 my-auto mx-auto d-flex flex-column justify-content-center align-items-center text-center">
+              <h2 class="text-white text-center mb-0 fadeIn1 fadeInBottom display-6 display-md-4">Your Trusted Partner For Quality Imports, Top Ethiopian Exports, Tailored Real Estate Services, And Efficient Machinery Rentals. Let's Grow Together!</h2>
+              <br>
+              <button class="btn btn-white text-dark text-sm opacity-8 fadeIn3 fadeInBottom rounded-pill px-4"><a
+                  class="text-dark text-decoration-none" href="{% url 'gallery_page' %}">Visit Our Gallery <span><i
+                      class="bi bi-arrow-right"></i></span></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="page-header min-vh-85 m-3 border-radius-xl"
+        style="background-image: url('{% static 'assets/img/coffee-farm.jpg' %}'); background-size: cover; background-position: center;">
+        <span class="mask bg-gradient-dark opacity-0.8"></span>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-10 col-sm-12 my-auto mx-auto d-flex flex-column justify-content-center align-items-center text-center">
+              <h2 class="text-white text-center mb-0 fadeIn1 fadeInBottom display-6 display-md-4">Your Trusted Partner For Quality Imports, Top Ethiopian Exports, Tailored Real Estate Services, And Efficient Machinery Rentals. Let's Grow Together!</h2>
+              <br>
+              <button class="btn btn-white text-dark text-sm opacity-8 fadeIn3 fadeInBottom rounded-pill px-4"><a
+                  class="text-dark text-decoration-none" href="{% url 'gallery_page' %}">Visit Our Gallery <span><i
+                      class="bi bi-arrow-right"></i></span></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <div class="page-header min-vh-85 m-3 border-radius-xl"
+        style="background-image: url('{% static 'assets/img/coffee-farm.jpg' %}'); background-size: cover; background-position: center;">
+        <span class="mask bg-gradient-dark opacity-0.8"></span>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-10 col-sm-12 my-auto mx-auto d-flex flex-column justify-content-center align-items-center text-center">
+              <h2 class="text-white text-center mb-0 fadeIn1 fadeInBottom display-6 display-md-4">Your Trusted Partner For Quality Imports, Top Ethiopian Exports, Tailored Real Estate Services, And Efficient Machinery Rentals. Let's Grow Together!</h2>
+              <br>
+              <button class="btn btn-white text-dark text-sm opacity-8 fadeIn3 fadeInBottom rounded-pill px-4"><a
+                  class="text-dark text-decoration-none" href="{% url 'gallery_page' %}">Visit Our Gallery <span><i
+                      class="bi bi-arrow-right"></i></span></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="min-vh-85 position-absolute w-100 top-0">
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+      <span class="bi bi-chevron-left position-absolute bottom-50" aria-hidden="true" style="font-size: 1.5rem;"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+      <span class="bi bi-chevron-right position-absolute bottom-50" aria-hidden="true" style="font-size: 1.5rem;"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+</div>
+
+<div class="the_back">
+  <div class="container mt-4">
+    <div class="row align-items-center" style=" padding: 50px 0;">
+      <div class="container">
+        <div class="row">
+          <!-- Left Section: Number with Brackets -->
+          <div class="col-lg-4 d-flex justify-content-center align-items-center">
+            <div class="experience-box text-center" style="position: relative; display: flex; align-items: center;">
+              <h1 style="font-size: 96px; line-height: 1; font-weight: bold; color: #2D2F33; margin: 0;">
+                <span class="bracket-left" style="color:#2C6E49; font-size: 150px; font-weight: 100;">[</span>
+              </h1>
+              <div style="display: flex; flex-direction: row; align-items: center; margin: 0 10px;">
+                <span
+                  style="font-size: 96px; font-weight: bold; color: #2D2F33; font-family: 'Roboto', serif;">04</span>
+                <span style="font-size: 18px; font-weight: bold; color: #2D2F33;">Years<br>Of<br>Experience</span>
+              </div>
+              <h1 style="font-size: 96px; line-height: 1; font-weight: bold; color: #2D2F33; margin: 0;">
+                <span class="bracket-right" style="color:#2C6E49; font-size: 150px; font-weight: 100;">]</span>
+              </h1>
+            </div>
+          </div>
+
+          <!-- Right Section: About Us Text and Button -->
+          <div class="col-lg-8 p-3 my-3">
+            <h6 class="text-uppercase display-5 text-primary text-sm-center text-lg-start" style="font-weight: bold;">
+              ETHIO-BINAMER TRADING PLC</h6>
+            <p style="color: #2D2F33; ">
+              "Since our inception, we have been dedicated to providing high-quality products and services that cater to
+              the diverse needs of our customers. With a strong commitment to excellence, we have established ourselves
+              as a leading trading company in Ethiopia, fostering both local and international partnerships."</p>
+            <div class="d-flex justify-content-end">
+              <a href="{% url 'about_page' %}" class="btn btn-primary text-white rounded-pill"
+                style="font-size: 16px; padding: 10px 20px;">
+                Continue Reading <span><i class="bi bi-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4 mb-4">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-3 col-md-6 col-sm-6 my-2 p-2">
+            <a href="{% url 'export_page' %}">
+              <div class="card text-white" style="border-radius: 15px;">
+                <img class="" src="{% static 'assets/img/sesame.webp' %}" class="card-img" alt="..."
+                  style="height:45vh; object-fit:cover;">
+                <div
+                  class="card-img-overlay rounded-0 d-flex flex-column justify-content-center align-items-center mask bg-gradient-light-green">
+                  <img src="{% static 'assets/img/icons/icons/Group.png' %}" alt="Export Icon" class="icon1 mb-2">
+                  <!-- Add icon -->
+                  <h3 class="card-title text-light">Exports</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 my-2 p-2">
+            <a href="{% url 'import_page' %}">
+              <div class="card text-white" style="border-radius: 15px;">
+                <img class="" src="{% static 'assets/img/truck.jpeg' %}" class="card-img" alt="..."
+                  style="height:45vh; object-fit:cover;">
+                <div
+                  class="card-img-overlay rounded-0 d-flex flex-column justify-content-center align-items-center mask bg-gradient-light-green">
+                  <img src="{% static 'assets/img/icons/icons/cars.png' %}" alt="Import Icon" class="icon1 mb-2">
+                  <!-- Add icon -->
+                  <h3 class="card-title text-light">Imports</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 my-2 p-2">
+            <a href="{% url 'rentals_page' %}">
+              <div class="card text-white" style="border-radius: 15px;">
+                <img class="" src="{% static 'assets/img/construction.webp' %}" class="card-img" alt="..."
+                  style="height:45vh; object-fit:cover;">
+                <div
+                  class="card-img-overlay rounded-0 d-flex flex-column justify-content-center align-items-center mask bg-gradient-light-green">
+                  <img src="{% static 'assets/img/icons/icons/clip.png' %}" alt="Rental Icon" class="icon1 mb-2">
+                  <!-- Add icon -->
+                  <h3 class="card-title text-light">Rental</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 my-2 p-2">
+            <a href="#">
+              <div class="card text-white" style="border-radius: 15px;">
+                <img class="" src="{% static 'assets/img/realestate.jpg' %}" class="card-img" alt="..."
+                  style="height:45vh; object-fit:cover;">
+                <div
+                  class="card-img-overlay rounded-0 d-flex flex-column justify-content-center align-items-center mask bg-gradient-light-green">
+                  <img src="{% static 'assets/img/icons/icons/realstate.png' %}" alt="Real Estate Icon"
+                    class="icon1 mb-2"> <!-- Add icon -->
+                  <h3 class="card-title text-light">Real Estate</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+      <div class="container">
+        <h6 class="text-success">Why Choose Us</h6>
+        <h4>With a global reach and deep local expertise, we're your trusted<br /> partner for reliable, efficient, and
+          profitable business ventures. Let's grow together!</h4>
+      </div>
+    </section>
+    <section class="container">
+
+      <div class="row my-4 p-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+          <div class="icon-container d-flex justify-content-center align-items-center mx-auto">
+            <img src="{% static 'assets/img/imports-2.svg' %}" alt="Imports Icon" class="icon">
+          </div>
+
+          <h3 class="service-title">Imports</h3>
+          <p class="service-description">
+            We provide top-quality imports, from advanced machinery to essential oil, steel, tires, and more, tailored
+            to your business needs. </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+          <div class="icon-container d-flex justify-content-center align-items-center mx-auto">
+            <img src="{% static 'assets/img/exports-2.svg' %}" alt="Exports Icon" class="icon">
+          </div>
+          <h3 class="service-title">Exports</h3>
+          <p class="service-description">
+            We export premium ethiopian coffee and sesame, meeting global standards with ethical sourcing and unmatched
+            quality. Partner with us!</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+          <div class="icon-container d-flex justify-content-center align-items-center mx-auto">
+            <img src="{% static 'assets/img/rentals-2.svg' %}" alt="Rentals Icon" class="icon">
+          </div>
+
+          <h3 class="service-title">Rentals</h3>
+          <p class="service-description">
+            We provide reliable rental machinery and construction vehicles, offering modern equipment, flexible terms,
+            and competitive rates to boost your project's success!
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center">
+          <div class="icon-container d-flex justify-content-center align-items-center mx-auto">
+            <img src="{% static 'assets/img/real-estate-2.svg' %}" alt="Real-Estates Icon" class="icon">
+          </div>
+          <h3 class="service-title">Real-Estates</h3>
+          <p class="service-description">
+            Our expert real estate services offer personalized guidance for buying, selling, or investing, ensuring you
+            secure the best opportunities with confidence!
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Blog Section -->
+  <style>
+    .hero-section {
+      background-image: url('{% static "assets/img/cups.png" %}');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .hero-section .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  
+    .hero-section .content {
+      position: relative;
+      z-index: 2;
+    }
+  
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 30px;
+      font-family: 'Roboto Slab', serif;
+    }
+  
+    .hero-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+  
+    .hero-section .btn-primary {
+      background-color: #ffc107;
+      color: black;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .hero-section {
+        height: auto;
+        padding: 60px 20px;
+        width: 100%;
+        margin: 0;
+      }
+  
+      .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+  
+      .hero-section p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+  
+      .hero-section .btn-primary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+  
+      .hero-section p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+  
+  <section class="hero-section">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-10 text-center">
+          <h1>Exciting Event at Roha: Celebrating Record-Breaking Coffee Exports</h1>
+          <p>“The celebration was attended by key stakeholders, including farmers, suppliers, and international clients, who have been integral to the company’s success. The highlight of the event was a keynote speech by the CEO, who emphasized the company’s commitment to quality, sustainability, and innovation in the coffee industry...”</p>
+          <a href="{% url 'blog_page' %}" class="btn btn-primary">READ FULL BLOG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="container-fluid">
+    <div class="container">
+        <div class="row p-4 my-4 ms-auto">
+            <div class="col-lg-12 col-12 mb-4">
+                <h2 class="catalog-title">{{ catalog_section.title }}</h2>
+                <p class="catalog-description">{{ catalog_section.description }}</p>
+            </div>
+
+            {% for item in catalog_section.items.all %}
+            <div class="col-lg-4 col-12 mb-4">
+                <div class="catalog-item">
+                    <div class="item-icon-container text-center">
+                        <img src="{{ item.icon.url }}" alt="{{ item.title }} Icon" class="">
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">{{ item.title }}</h3>
+                        <p class="item-description">{{ item.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+  <div class="client_say">
+    <div class="container my-5">
+      <h2 class="text-center mb-4">What Our Clients Say</h2>
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/Dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel Items/Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Mr. Ayalew Beyene</h5>
+                <p class="position">CEO at Marketing Digital Ltd.</p>
+                <p>"I recently had the pleasure of experiencing your coffee, and I must say, it exceeded my
+                  expectations. The rich aroma and smooth taste truly reflect the high quality and care put into your
+                  products."</p>
+              </div>
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Gelila Million</h5>
+                <p class="position">Marketing at Apple Inc.</p>
+                <p>"Your commitment to sustainable and ethical sourcing is commendable and adds significant value to
+                  your brand. Truly a delightful experience!"</p>
+              </div>
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Loza Teferi</h5>
+                <p class="position">CFO at Apple PLC</p>
+                <p>"The rich aroma and smooth taste reflect the high quality and care put into your products. I highly
+                  appreciate your sustainable and ethical approach."</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Mr. Ayalew Beyene</h5>
+                <p class="position">CEO at Marketing Digital Ltd.</p>
+                <p>"I recently had the pleasure of experiencing your coffee, and I must say, it exceeded my
+                  expectations. The rich aroma and smooth taste truly reflect the high quality and care put into your
+                  products."</p>
+              </div>
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Gelila Million</h5>
+                <p class="position">Marketing at Apple Inc.</p>
+                <p>"Your commitment to sustainable and ethical sourcing is commendable and adds significant value to
+                  your brand. Truly a delightful experience!"</p>
+              </div>
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Loza Teferi</h5>
+                <p class="position">CFO at Apple PLC</p>
+                <p>"The rich aroma and smooth taste reflect the high quality and care put into your products. I highly
+                  appreciate your sustainable and ethical approach."</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Mr. Ayalew Beyene</h5>
+                <p class="position">CEO at Marketing Digital Ltd.</p>
+                <p>"I recently had the pleasure of experiencing your coffee, and I must say, it exceeded my
+                  expectations. The rich aroma and smooth taste truly reflect the high quality and care put into your
+                  products."</p>
+              </div>
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Gelila Million</h5>
+                <p class="position">Marketing at Apple Inc.</p>
+                <p>"Your commitment to sustainable and ethical sourcing is commendable and adds significant value to
+                  your brand. Truly a delightful experience!"</p>
+              </div>
+              <div class="col-md-8 col-lg-4 testimonial">
+                <img src="{% static 'assets/img/icons/icons/testimony.png' %}" alt="Client Image">
+                <h5>Loza Teferi</h5>
+                <p class="position">CFO at Apple PLC</p>
+                <p>"The rich aroma and smooth taste reflect the high quality and care put into your products. I highly
+                  appreciate your sustainable and ethical approach."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev"
+          style="left: -50px; ">
+          <span class="bi bi-arrow-left-circle" aria-hidden="true" style="font-size: 3rem; color: #000;"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next"
+          style="right: -50px;">
+          <span class="bi bi-arrow-right-circle" aria-hidden="true" style="font-size: 3rem; color: #000;"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  {% endblock %}

@@ -1,0 +1,510 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<!-- Export Section -->
+<section class="import-section position-relative" style="
+    margin-bottom: 60px;
+    background-image: url('{% static 'assets/img/gallery-4.png' %}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    height:70vh;
+    ">
+
+    <!-- Apply a filter to blur and lighten the background -->
+    <div class="overlay" style=" position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(238, 253, 242, 0.7); /* Lighten the background */
+      backdrop-filter: blur(3px); /* Blur effect */"></div>
+
+    <div class="container export-content" style="position: relative; z-index: 1;">
+        <h5 style="color:#1D1D35">EXPLORE</h5>
+        <h1 style="color:#1D1D35; font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">
+            OUR EXPORTS
+        </h1>
+
+        <p style="color:#343434; margin-bottom: 40px;">
+            With a commitment to sustainability and fair trade practices, we support over a million local farmers,<br />
+            ensuring that our products not only meet the highest standards of quality but also contribute to the
+            well-<br />being of our communities.
+        </p>
+
+        <!-- Button Group -->
+        <div class="d-flex flex-wrap justify-content-center" style="max-width: 600px; margin: 0 auto;">
+            <a href="{% url 'export_page' %}">
+                <button class="btn btn-tag btn-active" style="background-color: #008000;
+        color: white;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        transition: all 0.3s ease;">
+                    Coffee
+                </button>
+
+            </a>
+            <a href="{% url 'sesame_page' %}">
+                <button class="btn btn-tag" style="color: #1D6F3F;
+        border: 1px solid #008000;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 150px;
+        background-color: transparent;
+        transition: all 0.3s ease;">
+                    Sesame
+                </button>
+
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Export Content Section -->
+<section>
+    <div class="container">
+        <div class="row gx-5">
+            <!-- Text Section -->
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <h1 class="text-primary text-sm-center text-md-center mt-4">Harari Coffee</h1>
+                <p class="py-4">
+                    We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup
+                    embodies the rich, diverse flavors of their origin. Our commitment extends beyond quality; it
+                    empowers over 1 million farmers through sustainable practices and community support. This endeavor
+                    is more than a business—it’s a dedication to preserving Ethiopia’s coffee legacy and promoting
+                    unrivaled quality.
+                </p>
+            </div>
+
+            <!-- First Pair of Images -->
+            <div class="col-lg-6 col-md-6 col-sm-12 d-md-flex align-items-center">
+                <img src="{% static 'assets/img/coffee1.png' %}" alt="Coffee Farmer" class="img-fluid w-100" style="height: 40vh; object-fit: cover;">
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 d-md-flex align-items-center">
+                <img src="{% static 'assets/img/coffee2.png' %}" alt="Coffee Farmer" class="img-fluid w-100" style="height: 40vh; object-fit: cover;">
+            </div>
+
+            <!-- Additional Text Section -->
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <p class="py-4">
+                    We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup
+                    embodies the rich, diverse flavors of their origin.
+                    <br>
+                    Our commitment extends beyond quality; it empowers over 1 million farmers through sustainable
+                    practices and community support. This endeavor is more than a business—it’s a dedication to
+                    preserving Ethiopia’s coffee legacy and promoting unparalleled quality.
+                </p>
+            </div>
+
+            <!-- Second Pair of Images -->
+            <div class="row gx-4 p-3 my-3">
+                <div class="col-6">
+                    <img src="{% static 'assets/img/coffee3.png' %}" alt="Coffee Beans" class="img-fluid w-100" style="object-fit: cover; height: 200px;">
+                </div>
+                <div class="col-6">
+                    <img src="{% static 'assets/img/coffee4.png' %}" alt="Cup of Coffee" class="img-fluid w-100" style="object-fit: cover; height: 200px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Explore By Category Section -->
+<section class="container my-5">
+    <h2 class="section-title text-center mb-4">Explore By Category</h2>
+    <div class="row">
+        <div id="categoryCarousel" class="carousel slide col-lg-10 col-md-10 col-sm-10 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active bg-dark">
+                    <div class="row g-0 justify-content-center text-center">
+                        <div class="col-3 category-item">
+                            <a href="{% url 'coffee_detail_page' %}" style="text-decoration: none;">
+                                <img src="{% static 'assets/img/roha-illustrations-06.svg' %}" alt="Kaffa"
+                                    class="category-image img-fluid" style="filter: brightness(0) invert(1);">
+                                <p class="text-white fs-5">Kaffa</p>
+                            </a>
+                        </div>
+                        <div class="col-3 category-item">
+                            <a href="{% url 'coffee_detail_page' %}" style="text-decoration: none;">
+                                <img src="{% static 'assets/img/roha-illustrations-07.svg' %}" alt="Genika"
+                                    class="category-image img-fluid" style="filter: brightness(0) invert(1);">
+                                <p class="text-white fs-5">Genika</p>
+                            </a>
+                        </div>
+                        <div class="col-3 category-item bg-success">
+                            <a href="{% url 'coffee_detail_page' %}" style="text-decoration: none;">
+                                <img src="{% static 'assets/img/roha-illustrations-08.svg' %}" alt="Harari"
+                                    class="category-image img-fluid" style="filter: brightness(0) invert(1);">
+                                <p class="text-white fs-5">Harari</p>
+                            </a>
+                        </div>
+                        <div class="col-3 category-item">
+                            <a href="{% url 'coffee_detail_page' %}" style="text-decoration: none;">
+                                <img src="{% static 'assets/img/roha-illustrations-09.svg' %}" alt="Sidama"
+                                    class="category-image img-fluid" style="filter: brightness(0) invert(1);">
+                                <p class="text-white fs-5">Sidama</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
+                <span class="bi bi-arrow-left-circle fs-2" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
+                <span class="bi bi-arrow-right-circle fs-2" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<style>
+    .category-item {
+        transition: background-color 0.3s ease;
+    }
+
+    .category-item:hover {
+        background-color: var(--bs-secondary);
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-inner {
+        max-height: 80vh;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        z-index: 1;
+    }
+
+    .carousel-control-prev :hover,
+    .carousel-control-next :hover{
+        color: #1d6f3f;
+    }
+
+    .carousel-control-next{
+        right: -100px;
+        color:#000;
+    }
+
+    .carousel-control-prev{
+        left: -100px;
+        color:#000;
+    }
+
+</style>
+
+<div class="stats-section">
+    <div class="stat-item">
+        <img src="{% static 'assets/img/employee.png' %}" alt="Employees Icon">
+        <p class="stat-number">200+</p>
+        <p class="stat-label">Employees</p>
+    </div>
+    <div class="stat-item">
+        <img src="{% static 'assets/img/client.png' %}" alt="Clients Icon">
+        <p class="stat-number">120+</p>
+        <p class="stat-label">Clients</p>
+    </div>
+    <div class="stat-item">
+        <img src="{% static 'assets/img/business.png' %}" alt="Businesses Icon">
+        <p class="stat-number">75+</p>
+        <p class="stat-label">Businesses</p>
+    </div>
+</div>
+
+</section>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    .highlight {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #2e7d32;
+
+    }
+
+    /* Export Section */
+    .export-section {
+        background-image: url("{% static 'assets/img/sesame.webp' %}");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .content-container {
+        background: rgba(255, 255, 255, 0.8);
+        height: 100%;
+        width: 100%;
+        margin-top: 0vh;
+    }
+
+    .explore-title {
+        font-size: 2rem;
+        color: #666;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        margin-top: 25vh;
+    }
+
+    .exports-title {
+        font-size: 3rem;
+        color: #333;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .exports-description {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .coffee-btn {
+        background-color: #228b22;
+        color: white;
+    }
+
+    .coffee-btn:hover {
+        background-color: #196f19;
+    }
+
+    .sesame-btn {
+        background-color: #ccc;
+        color: #333;
+    }
+
+    .sesame-btn:hover {
+        background-color: #999;
+    }
+
+    /* Export Content Section */
+    .export-content-section {
+        padding: 60px 20px;
+        background-color: #fff;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2e7d32;
+
+    }
+
+    .description-1 {
+        margin-right: 7%;
+
+    }
+
+    .description-2 {
+        margin-left: 7%;
+
+    }
+
+    .image-text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+        color: #1D1D35;
+
+    }
+
+    .export-img,
+    .gallery-img {
+        width: 100%;
+        max-width: 45%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .image-gallery {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .gallery-img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Explore Origins Section */
+    .origins-section {
+        padding: 60px 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .carousel {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .carousel-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .carousel-btn {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #000;
+    }
+
+    .prev-btn {
+        margin-right: 10px;
+    }
+
+    .next-btn {
+        margin-left: 10px;
+    }
+
+
+
+    .stats-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-item img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #778452;
+
+        margin: 5px 0;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+        color: #778452;
+
+        text-transform: uppercase;
+    }
+
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1024px) {
+        .image-text {
+            flex-direction: column;
+        }
+
+        .export-img,
+        .description {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .carousel-content {
+            gap: 15px;
+        }
+
+        .gallery-img {
+            width: 48%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .button-group {
+            flex-direction: column;
+        }
+
+        .gallery-img {
+            width: 100%;
+        }
+
+        .carousel-item {
+            font-size: 1.2rem;
+        }
+
+        .prev-btn,
+        .next-btn {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+{% endblock %}

@@ -1,0 +1,319 @@
+
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+ 
+<style>
+    .dropdown-content {
+        display: none;
+        padding-left: 20px;
+        display: block;
+    }
+ 
+    .dropdown-toggle {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .dropdown-toggle::before {
+        
+        margin-left: 8px;
+    }
+</style>
+
+<section class="import-section position-relative" 
+style="
+margin-bottom: 60px;
+background-image: url('{% static 'assets/img/edible-oil.png' %}');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 100px 0;
+color: #fff;
+text-align: center;
+position: relative;">
+
+<div class="overlay" style=" position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.5); /* Lighten the background */
+backdrop-filter: blur(3px); /* Blur effect */"></div>
+
+<div class="container import-content" style="position: relative; z-index: 1;">
+    <h1 style="color:#1D1D35">EDIBLE OILS</h1>
+</div>
+
+</section>
+
+
+<div >
+    <h4 style="text-align: center;">All Our Oils</h4>
+</div>
+<div class="container my-5">
+    <div class="row d-flex">
+        <!-- Filter Sidebar -->
+        <div class="col-md-3 filter-container">
+            <h5 class="fw-bold">Filter By Keyword</h5>
+            <div class="input-group mb-3 position-relative">  
+                <input type="text" class="form-control" placeholder="Search By">  
+                <button class="btn btn-secondary dropdown-toggle position-absolute end-0 top-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">  
+                    <i class="bi bi-chevron-down"></i>  
+                </button>  
+                <ul class="dropdown-menu dropdown-menu-end">  
+                    <li><a class="dropdown-item" href="#">Name</a></li>  
+                    <li><a class="dropdown-item" href="#">Price</a></li>  
+                   
+                </ul>  
+            </div>
+           
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                   Liter
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter1">
+                        <label class="form-check-label" for="liter1">1 Liter</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter2">
+                        <label class="form-check-label" for="liter2">2 Liters</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter3">
+                        <label class="form-check-label" for="liter3">3 Liters</label>
+                        <span class="float-end">10</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter5">
+                        <label class="form-check-label" for="liter5">5 Liters</label>
+                        <span class="float-end">6</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter10">
+                        <label class="form-check-label" for="liter10">10 Liters</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-success">Show More Ingredients</a>
+                    </div>
+                </div>
+            </div>
+
+
+<div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Base Ingredients
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="olive">
+                        <label class="form-check-label" for="olive">Olive</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="mustard">
+                        <label class="form-check-label" for="mustard">Mustard</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="coconut">
+                        <label class="form-check-label" for="coconut">Coconut</label>
+                        <span class="float-end">10</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sesame">
+                        <label class="form-check-label" for="sesame">Sesame</label>
+                        <span class="float-end">6</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="groundnut">
+                        <label class="form-check-label" for="groundnut">Groundnut</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-success">Show More Ingredients</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Location
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="germany">
+                        <label class="form-check-label" for="germany">Germany</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">US</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="belgium">
+                        <label class="form-check-label" for="belgium">Belgium</label>
+                        <span class="float-end">10</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="poland">
+                        <label class="form-check-label" for="poland">Poland</label>
+                        <span class="float-end">6</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="netherlands">
+                        <label class="form-check-label" for="netherlands">Netherlands</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-success">Show More Ingredients</a>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Additional Filters -->
+            
+          
+            
+            <div class="text-center mt-4">  
+                <button id="clearAllButton" class="btn btn-danger w-100" style="background-color: #1D6F3F;">Clear All</button>
+
+
+</div>  
+        </div>
+
+        <!-- Product Listing -->
+        <div class="col-md-9">
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/oil.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mazola Corn Oil</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>Mazola Oil is 100% vegetarian and natural cooking oil is physically refined from the finest quality sunflower seeds...</p>
+                            <p><strong>Size:</strong> 5L</p>
+                            <a href="{% url "edible_oil_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more products -->
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/oil.png' %}" class="card-img-top" alt="Mazola Corn Oil"style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mazola Corn Oil</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>Mazola Oil is 100% vegetarian and natural cooking oil is physically refined from the finest quality sunflower seeds...</p>
+                            <p><strong>Size:</strong> 5L</p>
+                            <a href="{% url "edible_oil_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/oil.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mazola Corn Oil</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>Mazola Oil is 100% vegetarian and natural cooking oil is physically refined from the finest quality sunflower seeds...</p>
+                            <p><strong>Size:</strong> 5L</p>
+                            <a href="{% url "edible_oil_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more products -->
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/oil.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="width: 100%; height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mazola Corn Oil</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>Mazola Oil is 100% vegetarian and natural cooking oil is physically refined from the finest quality sunflower seeds...</p>
+                            <p><strong>Size:</strong> 5L</p>
+                            <a href="{% url "edible_oil_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col">
+                    <div class="card">
+
+
+<img src="{% static 'assets/img/oil.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mazola Corn Oil</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>Mazola Oil is 100% vegetarian and natural cooking oil is physically refined from the finest quality sunflower seeds...</p>
+                            <p><strong>Size:</strong> 5L</p>
+                            <a href="{% url "edible_oil_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more products -->
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/oil.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mazola Corn Oil</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>Mazola Oil is 100% vegetarian and natural cooking oil is physically refined from the finest quality sunflower seeds...</p>
+                            <p><strong>Size:</strong> 5L</p>
+                            <a href="{% url "edible_oil_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/oil.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mazola Corn Oil</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>Mazola Oil is 100% vegetarian and natural cooking oil is physically refined from the finest quality sunflower seeds...</p>
+                            <p><strong>Size:</strong> 5L</p>
+                            <a href="{% url "edible_oil_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for more products -->
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'assets/img/oil.png' %}" class="card-img-top" alt="Mazola Corn Oil" style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mazola Corn Oil</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>Mazola Oil is 100% vegetarian and natural cooking oil is physically refined from the finest quality sunflower seeds...</p>
+                            <p><strong>Size:</strong> 5L</p>
+                            <a href="{% url "edible_oil_detail_page" %}" class="btn btn-outline-success w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,382 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+<section class="container-fluid" style="background-color:#D7D7D7;">
+    <div class="container p-0">
+        <div class="row my-0 mx-auto text-center">
+            <div class="col-12 mx-auto text-center p-3 my-3 mt-5">
+                <h6 class="text-center text-md" style='font-family: "Rubik Mono One", monospace;'><b>ROHA COFFEE</b>
+                </h6>
+                <h1 class="fw-bold text-center"
+                    style='color:#FEA940; font-family: "Rubik Mono One", sans;font-weight: 400; font-size:50px;'>Sip The
+                    Essence Of Ethiopia</h1>
+                <p class="fs-5 text-dark">We source the finest beans from around the globe, meticulously roasted and
+                    expertly brewed to deliver a coffee experience unlike any other. From the first aromatic whiff to
+                    the last satisfying sip, Escape the ordinary with our handcrafted coffee creations. Whether you're
+                    seeking a moment of quiet contemplation or a vibrant social connection, we elevate the everyday into
+                    something extraordinary</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid p-0">
+    <img src="{% static 'assets/img/roha-explore-banner.png' %}" 
+         class="img-fluid w-100" 
+         alt="Roha Banner" 
+         style="height: auto; max-height: 100vh; object-fit: cover;">
+</section>
+
+
+
+<section class="container-fluid">
+    <div class="row my-4 p-4">
+        <div class="col-12 mx-auto text-center">
+            <h3 style='font-weight:900; font-family: "Rubik Mono One", monospace;'><b>OUR DELICIOUS PACKAGES</b></h3>
+        </div>
+    </div>
+    <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Inner -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center my-4">
+                        <img src="{% static 'assets/img/coffee-package.png' %}" alt="Package 1" class="img-fluid">
+                        <h6>Roha Coffee Package</h6>
+                        <p class='text-center'>100% Arabica beans, medium roast, sourced from Ethiopia.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center my-4">
+                        <img src="{% static 'assets/img/coffee-package.png' %}" alt="Package 2" class="img-fluid">
+                        <h6>Roha Coffee Package</h6>
+                        <p class='text-center'>100% Arabica beans, medium roast, sourced from Ethiopia.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center my-4">
+                        <img src="{% static 'assets/img/coffee-package.png' %}" alt="Package 3" class="img-fluid">
+                        <h6>Roha Coffee Package</h6>
+                        <p class='text-center'>100% Arabica beans, medium roast, sourced from Ethiopia.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center my-4">
+                        <img src="{% static 'assets/img/coffee-package.png' %}" alt="Package 4" class="img-fluid">
+                        <h6>Roha Coffee Package</h6>
+                        <p class='text-center'>100% Arabica beans, medium roast, sourced from Ethiopia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center my-4">
+                        <img src="{% static 'assets/img/coffee-package.png' %}" alt="Package 5" class="img-fluid">
+                        <h6>Roha Coffee Package</h6>
+                        <p class='text-center'>100% Arabica beans, medium roast, sourced from Ethiopia.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center my-4">
+                        <img src="{% static 'assets/img/coffee-package.png' %}" alt="Package 6" class="img-fluid">
+                        <h6>Roha Coffee Package</h6>
+                        <p class='text-center'>100% Arabica beans, medium roast, sourced from Ethiopia.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center my-4">
+                        <img src="{% static 'assets/img/coffee-package.png' %}" alt="Package 7" class="img-fluid">
+                        <h6>Roha Coffee Package</h6>
+                        <p class='text-center'>100% Arabica beans, medium roast, sourced from Ethiopia.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center my-4">
+                        <img src="{% static 'assets/img/coffee-package.png' %}" alt="Package 8" class="img-fluid">
+                        <h6>Roha Coffee Package</h6>
+                        <p class='text-center'>100% Arabica beans, medium roast, sourced from Ethiopia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ol class="carousel-indicators">
+            <li data-bs-target="#packageCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#packageCarousel" data-bs-slide-to="1"></li>
+        </ol>
+    </div>
+</section>
+
+<style>
+    /* Style for circular dots */
+    .carousel-indicators li {
+        background-color: #000;
+        width: 12px;
+        height: 12px;
+    }
+
+    .carousel-indicators .active {
+        background-color: #FEA940;
+        /* Color for active dot */
+    }
+</style>
+
+
+<section class="container-fluid bg-gray-300">
+    <div class="container">
+        <div class="row my-5 p-5 section-content">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-auto text-start">
+                <h4 class="section-title"><b>WHAT MAKES OUR COFFEE SPECIAL?</b></h4>
+                <div class="row p-3 my-3">
+                    <div class="col-12 my-auto text-start">
+                        <h6 class="text-primary">Roha Coffee Package</h6>
+                        <p class="text-dark">Our coffee is grown in the heart of Ethiopia, where the perfect climate and rich soil produce the finest Arabica beans. We work closely with smallholder farmers using sustainable practices to ensure the highest quality beans are carefully handpicked and sun-dried.</p>
+                    </div>
+                    <div class="col-12 my-auto text-start">
+                        <h6 class="text-primary">Roha Coffee Package</h6>
+                        <p class="text-dark">Each batch is expertly roasted to enhance the unique flavors of Ethiopian coffee—floral notes, vibrant citrus, and a rich, chocolate finish. This attention to detail ensures a truly exceptional cup every time.</p>
+                    </div>
+                    <div class="col-12 my-auto text-start">
+                        <h6 class="text-primary">Roha Coffee Package</h6>
+                        <p class="text-dark">What sets our coffee apart is not just its remarkable taste, but our dedication to supporting farmers and their communities, ensuring fair trade and ethical sourcing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-auto text-start align-items-center justify-content-center position-relative">
+                <img src="{% static 'assets/img/coffe-special-banner.png' %}" alt="coffee-banner" class="img-fluid banner-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid">
+    <div id="coffeePackageCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="container">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <img src="{% static 'assets/img/coffee-package.png' %}" alt="Roha Coffee Package"
+                                class="img-fluid w-100 carousel-image"
+                                style="height: auto; min-height: 50vh; max-height: 80vh; object-fit: cover;">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
+                            <h2 class="text-dark fs-5 fs-md-4 fs-lg-2">Roha Coffee Package</h2>
+                            <p class="text-primary text-sm">COFFEE ORIGIN</p>
+                            <p class="text-dark">We source premium Arabica beans from the renowned regions of Guji to Kaffa, ensuring each cup embodies the rich, diverse flavors of their origin</p>
+                            <div class="row text-primary">
+                                <div class="col-6">
+                                    <p>SIZE:</p>
+                                </div>
+                                <div class="col-6 text-start">
+                                    <p>1000g/35.3 OZ</p>
+                                </div>
+                            </div>
+                            <div class="row text-primary">
+                                <div class="col-6">
+                                    <p>GRIND:</p>
+                                </div>
+                                <div class="col-6 text-start">
+                                    <p>WHOLE BEAN</p>
+                                </div>
+                            </div>
+                            <div class="row text-primary">
+                                <div class="col-6">
+                                    <p>ROAST:</p>
+                                </div>
+                                <div class="col-6 text-start">
+                                    <p>LIGHT ROAST</p>
+                                </div>
+                            </div>
+                            <div class="text-start mt-4">
+                                <button class="btn btn-link p-0 me-2" type="button" data-bs-target="#coffeePackageCarousel" data-bs-slide="prev">
+                                    <i class="bi bi-arrow-left-circle fs-3"></i>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                
+                                <button class="btn btn-link p-0" type="button" data-bs-target="#coffeePackageCarousel" data-bs-slide="next">
+                                    <i class="bi bi-arrow-right-circle fs-3"></i>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <img src="{% static 'assets/img/coffee-package.png' %}" alt="Another Coffee Package"
+                            class="img-fluid w-100 carousel-image"
+                            style="height: auto; min-height: 50vh; max-height: 80vh; object-fit: cover;">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
+                            <h2 class="text-dark fs-5 fs-md-4 fs-lg-2">Another Roha Coffee Package</h2>
+                            <p class="text-primary text-sm">COFFEE ORIGIN</p>
+                            <p class="text-dark">This selection features beans from Sidamo, bringing out bright and fruity notes for a unique experience.</p>
+                            <div class="row text-primary">
+                                <div class="col-6">
+                                    <p>SIZE:</p>
+                                </div>
+                                <div class="col-6 text-start">
+                                    <p>500g/17.6 OZ</p>
+                                </div>
+                            </div>
+                            <div class="row text-primary">
+                                <div class="col-6">
+                                    <p>GRIND:</p>
+                                </div>
+                                <div class="col-6 text-start">
+                                    <p>GROUND</p>
+                                </div>
+                            </div>
+                            <div class="row text-primary">
+                                <div class="col-6">
+                                    <p>ROAST:</p>
+                                </div>
+                                <div class="col-6 text-start">
+                                    <p>DARK ROAST</p>
+                                </div>
+                            </div>
+                            <div class="text-start mt-4">
+                                <button class="btn btn-link p-0 me-2" type="button" data-bs-target="#coffeePackageCarousel" data-bs-slide="prev">
+                                    <i class="bi bi-arrow-left-circle fs-3"></i>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                
+                                <button class="btn btn-link p-0" type="button" data-bs-target="#coffeePackageCarousel" data-bs-slide="next">
+                                    <i class="bi bi-arrow-right-circle fs-3"></i>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<style>
+    /* General Section Styles */
+    .section-content {
+        margin-bottom: 2rem;
+    }
+    .section-title {
+        font-weight: 700;
+        font-family: "Rubik Mono One", monospace;
+    }
+    
+    /* Banner Image */
+    .banner-image {
+        position: absolute;
+        top: -80px;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Carousel Image */
+    .carousel-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    #coffeePackageCarousel .carousel-controls {
+        display: flex;
+        justify-content: center;
+    }
+
+    #coffeePackageCarousel .carousel-controls .carousel-control-prev,
+    #coffeePackageCarousel .carousel-controls .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        padding: 0.5rem;
+    }
+
+    #coffeePackageCarousel .carousel-controls .carousel-control-prev i,
+    #coffeePackageCarousel .carousel-controls .carousel-control-next i {
+        color: black;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .section-content {
+            padding: 3rem 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .banner-image {
+            position: static;
+            margin-top: 1.5rem;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .section-content {
+            padding: 4rem 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+</style>
+
+
+<section>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="text-xl-start text-lg-center text-md-center text-dark" style="font-family: 'Rubik Mono One', sans;">
+                    Sourcing & Procurement:
+                </h2>
+            </div>
+            <div class="container my-5">
+                <div class="row g-4">
+                    <!-- First Card -->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="card h-100 bg-light text-center">
+                            <div class="card-body p-4">
+                                <h6 class="card-title">Direct Trade Relationships</h6>
+                                <p class="card-text">Highlight your direct relationships with coffee farmers, emphasizing fair prices,
+                                    ethical sourcing, and long-term partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Second Card -->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="card h-100 bg-light text-center">
+                            <div class="card-body p-4">
+                                <h6 class="card-title">Quality Control & Selection</h6>
+                                <p class="card-text">Detail your rigorous quality control processes, from bean selection at origin to final
+                                    inspection before export.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Third Card -->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="card h-100 bg-light text-center">
+                            <div class="card-body p-4">
+                                <h6 class="card-title">Customized Sourcing</h6>
+                                <p class="card-text">Offer the ability for clients to specify their desired coffee profiles (e.g., specific
+                                    origins, flavor notes, processing methods).</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Fourth Card -->
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="card h-100 bg-light text-center">
+                            <div class="card-body p-4">
+                                <h6 class="card-title">Volume Flexibility</h6>
+                                <p class="card-text">Cater to a range of order sizes, from small batches to large-scale shipments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<!-- Include Bootstrap JS and CSS in your template -->
+
+
+{% endblock %}

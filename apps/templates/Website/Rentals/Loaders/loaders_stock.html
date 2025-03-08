@@ -1,0 +1,457 @@
+{% extends 'Website/index.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<style>
+    .dropdown-content {
+        display: none;
+        padding-left: 20px;
+        display: block;
+    }
+
+    .dropdown-toggle {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown-toggle::before {
+
+        margin-left: 8px;
+    }
+</style>
+
+<section class="import-section position-relative" style="
+margin-bottom: 60px;
+background-image: url('{% static 'assets/img/iveco_hero.png' %}');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 100px 0;
+color: #fff;
+text-align: center;
+position: relative;">
+
+    <div class="overlay" style=" position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.5); /* Lighten the background */
+backdrop-filter: blur(3px); /* Blur effect */"></div>
+
+    <div class="container import-content" style="position: relative; z-index: 1;">
+        <h1 style="color:#1D1D35">LOADERS STOCK</h1>
+    </div>
+
+</section>
+<style>
+    /* Media query to decrease padding on mobile devices */
+    @media (max-width: 576px) {
+        .import-section {
+            padding: 30px 0 !important;
+            margin-bottom: 30px !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .row-cols-md-2 .col {
+            flex: 0 0 100%;
+            /* Make each column take full width */
+            max-width: 100%;
+            /* Prevent any width limitations */
+        }
+
+        .extra-card {
+            display: none;
+            /* Hide extra cards */
+        }
+
+    }
+</style>
+<div>
+    <h4 style="text-align: center;">All Our Loaders</h4>
+</div>
+
+<div class="container my-5">
+    <div class="row d-flex">
+        <!-- Filter Sidebar -->
+        <div class="col-lg-4 col-md-5 col-sm-12 filter-container d-none d-md-block">
+            <h5 class="fw-bold">Filter By Keyword</h5>
+            <div class="input-group mb-3 position-relative">
+                <input type="text" class="form-control" placeholder="Search By">
+                <button class="btn btn-primary dropdown-toggle position-absolute end-0 top-0" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end bg-primary text-white">
+                    <li><a class="dropdown-item text-white" href="#">Name</a></li>
+                    <li><a class="dropdown-item text-white" href="#">Price</a></li>
+                    <li><a class="dropdown-item text-white" href="#">Year</a></li>
+                    <li><a class="dropdown-item text-white" href="#">Mileage Km</a></li>
+
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Truck Type
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter1">
+                        <label class="form-check-label" for="liter1">Trippers</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter2">
+                        <label class="form-check-label" for="liter2">Refrigerator Trucks</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter3">
+                        <label class="form-check-label" for="liter3">Box Trucks</label>
+                        <span class="float-end">10</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter5">
+                        <label class="form-check-label" for="liter5">Isothermal Trucks</label>
+                        <span class="float-end">6</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="liter10">
+                        <label class="form-check-label" for="liter10">Tank Trucks</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-primary">Show More Types</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Location
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="olive">
+                        <label class="form-check-label" for="olive">Germany</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="mustard">
+                        <label class="form-check-label" for="mustard">US</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="coconut">
+                        <label class="form-check-label" for="coconut">Belgium</label>
+                        <span class="float-end">10</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sesame">
+                        <label class="form-check-label" for="sesame">Poland</label>
+                        <span class="float-end">6</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="groundnut">
+                        <label class="form-check-label" for="groundnut">Netherlands</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-primary">Show More Locations</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Condition
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="germany">
+                        <label class="form-check-label" for="germany">New</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">Used</label>
+                        <span class="float-end">12</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Axle Configutation
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="germany">
+                        <label class="form-check-label" for="germany">4x2</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">4x4</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="netherlands">
+                        <label class="form-check-label" for="netherlands">6x2</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">6x4</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">8x4</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-primary">Show More configurations</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Suspension
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="germany">
+                        <label class="form-check-label" for="germany">Spring</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">Air</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="netherlands">
+                        <label class="form-check-label" for="netherlands">Hydraulic</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-primary">Show More Suspensions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Emission Class
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="germany">
+                        <label class="form-check-label" for="germany">Euro 2</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">Euro 3</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="netherlands">
+                        <label class="form-check-label" for="netherlands">Euro 4</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="netherlands">
+                        <label class="form-check-label" for="netherlands">Euro 4\5</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="netherlands">
+                        <label class="form-check-label" for="netherlands">Euro 6</label>
+                        <span class="float-end">3</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-primary">Show More Class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Fuel
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="germany">
+                        <label class="form-check-label" for="germany">Diesel</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">LPG</label>
+                        <span class="float-end">12</span>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-primary">Show More Fuel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-toggle fw-bold" id="literDropdown">
+                    Gear Box
+                </div>
+                <div class="dropdown-content ms-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="germany">
+                        <label class="form-check-label" for="germany">Manual</label>
+                        <span class="float-end">20</span>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="us">
+                        <label class="form-check-label" for="us">Automatic</label>
+                        <span class="float-end">12</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="text-center mt-4">
+                <button id="clearAllButton" class="btn btn-danger w-100" style="background-color: #1D6F3F;">Clear
+                    All</button>
+
+
+            </div>
+        </div>
+        <div class="col-lg-8 col-sm-12 col-md-7">
+            <div class="row row-cols-1 row-cols-md-2 g-5 " style="margin-bottom: 30px;">
+                <div class="col card-item">
+                    <div class="card">
+                        <img src="{% static 'assets/img/rentals-loader-2.png' %}" class="card-img-top" alt="Truck Name"
+                            style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Truck Name</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>2022 | 80000km | 4x4 | 233 hp | Gross Weight: 18000 Kg</p>
+                            <a href="{% url "rentals_loaders_detail_page" %}"
+                                class="btn btn-outline-primary w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col card-item">
+                    <div class="card">
+                        <img src="{% static 'assets/img/rentals-loader-2.png' %}" class="card-img-top" alt="Truck Name"
+                            style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Truck Name</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>2022 | 80000km | 4x4 | 233 hp | Gross Weight: 18000 Kg</p>
+                            <a href="{% url "rentals_loaders_detail_page" %}"
+                                class="btn btn-outline-primary w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5 d-none d-md-flex" style="margin-bottom: 30px;">
+                <div class="col card-item">
+                    <div class="card">
+                        <img src="{% static 'assets/img/rentals-loader-2.png' %}" class="card-img-top" alt="Truck Name"
+                            style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Truck Name</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>2022 | 80000km | 4x4 | 233 hp | Gross Weight: 18000 Kg</p>
+                            <a href="{% url "rentals_loaders_detail_page" %}"
+                                class="btn btn-outline-primary w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col card-item">
+                    <div class="card">
+                        <img src="{% static 'assets/img/rentals-loader-2.png' %}" class="card-img-top" alt="Truck Name"
+                            style="width: 100%; height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Truck Name</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>2022 | 80000km | 4x4 | 233 hp | Gross Weight: 18000 Kg</p>
+                            <a href="{% url "rentals_loaders_detail_page" %}"
+                                class="btn btn-outline-primary w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5 d-none d-md-flex" style="margin-bottom: 30px;">
+                <div class="col card-item extra-card">
+                    <div class="card">
+
+
+                        <img src="{% static 'assets/img/rentals-loader-2.png' %}" class="card-img-top" alt="Truck Name"
+                            style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Truck Name</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>2022 | 80000km | 4x4 | 233 hp | Gross Weight: 18000 Kg</p>
+                            <a href="{% url "rentals_loaders_detail_page" %}"
+                                class="btn btn-outline-primary w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col card-item extra-card">
+                    <div class="card">
+                        <img src="{% static 'assets/img/rentals-loader-2.png' %}" class="card-img-top" alt="Truck Name"
+                            style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Truck Name</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>2022 | 80000km | 4x4 | 233 hp | Gross Weight: 18000 Kg</p>
+                            <a href="{% url "rentals_loaders_detail_page" %}"
+                                class="btn btn-outline-primary w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-5" style="margin-bottom: 30px;">
+                <div class="col card-item extra-card">
+                    <div class="card">
+                        <img src="{% static 'assets/img/rentals-loader-2.png' %}" class="card-img-top" alt="Truck Name"
+                            style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Truck Name</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>2022 | 80000km | 4x4 | 233 hp | Gross Weight: 18000 Kg</p>
+                            <a href="{% url "rentals_loaders_detail_page" %}"
+                                class="btn btn-outline-primary w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col card-item extra-card">
+                    <div class="card">
+                        <img src="{% static 'assets/img/rentals-loader-2.png' %}" class="card-img-top" alt="Truck Name"
+                            style="height: 200px;
+            object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Truck Name</h5>
+                            <p class="card-text">Lithuania, Kirtimu street 17A, Vilnius</p>
+                            <p>2022 | 80000km | 4x4 | 233 hp | Gross Weight: 18000 Kg</p>
+                            <a href="{% url "rentals_loaders_detail_page" %}"
+                                class="btn btn-outline-primary w-100">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}

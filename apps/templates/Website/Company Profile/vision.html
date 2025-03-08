@@ -1,0 +1,334 @@
+{% extends 'Website/index.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Top Section with Vision and Mission -->
+<div class="top-section" style="position: relative; min-height: 90vh; width: 100%; background-image: url('{% static "assets/img/vision-coffee.png" %}'); background-size: cover; background-position: center; display: flex; justify-content: center; padding-bottom: 60px;">
+  
+  <!-- Green overlay -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 77, 58, 0.7);"></div>
+
+  <!-- Content inside overlay -->
+  <div class="overlay-content" style="position: relative; z-index: 2; padding: 40px; color: white; text-align: left; display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+    
+    <!-- Vision Section - Top Right -->
+    <div class="vision-section" style="position: absolute; top: 15%; right: 10%; max-width: 500px;">
+      <h1 style="font-size: 48px; font-weight: bold; color: #ffffff;">VISION</h1>
+      <p style="font-size: 18px; line-height: 1.8;">WE AIM TO BE THE GLOBAL FACE OF ETHIOPIAN COFFEE, KNOWN FOR OUR RICH FLAVOR AND LEADERSHIP IN SUSTAINABILITY. BY PROMOTING ECO-FRIENDLY FARMING WE DELIVER EXCEPTIONAL QUALITY COFFEE.</p>
+    </div>
+
+    <!-- Mission Section - Bottom Left -->
+    <div class="mission-section" style="position: absolute; bottom: 15%; left: 10%; max-width: 500px;">
+      <h1 style="font-size: 48px; font-weight: bold; color: #ffffff;">MISSION</h1>
+      <p style="font-size: 18px; line-height: 1.8;">OUR MISSION IS TO SHARE ETHIOPIA’S FINEST COFFEE WITH THE WORLD, ETHICALLY SOURCED AND SUSTAINABLY GROWN. EVERY CUP SUPPORTS OUR FARMERS AND PROTECTS THE ENVIRONMENT.</p>
+    </div>
+    <!-- Angled Lines -->
+    <!-- Vision Line (angled) -->
+    <img class="vision-line" src="{% static 'assets/img/lines.svg' %}" alt="hi" style="position: absolute; top: 200px; left: 0px; width: 130px;">
+    
+    <!-- Mission Line (angled) -->
+    <img class="mission-line" src="{% static 'assets/img/lines.svg' %}" alt="hi" style="position: absolute; top: 100px; right: 0px; transform: rotate(180deg); width: 130px;">
+  </div>
+</div>
+
+<!-- Core Values Section -->
+<div style="padding: 60px 0; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; background-color: #F4F9F4; flex-wrap: wrap;">
+  <!-- Core Values Title -->
+  <div style="flex: 1; text-align: left; padding-left: 40px;">
+    <h1 style="font-size: 48px; font-weight: bold; color: #1D2238; padding-left: 200px;">CORE</h1>
+    <h1 style="font-size: 48px; font-weight: bold; color: #1D2238; padding-left: 160px;">VALUES</h1>
+  </div>
+
+  <!-- Core Values Items -->
+  <div style="flex: 3; display: flex; justify-content: space-around; flex-wrap: wrap;">
+    
+    <!-- Fair Trade -->
+    <div style="flex: 1; background-color: #ECF5EC; padding: 40px; text-align: center; border-radius: 8px; max-width: 400px; margin: 0 10px;">
+      <i class="fas fa-handshake" style="font-size: 50px; color: #1D2238; margin-bottom: 20px;"></i>
+      <h3 style="font-size: 20px; font-weight: bold; color: #1D2238;">FAIR TRADE</h3>
+      <p style="font-size: 16px; color: #1D2238;">We believe in fair trade principles that ensure our farmers receive fair compensation for their hard work.</p>
+    </div>
+
+    <!-- Sustainability -->
+    <div style="flex: 1; background-color: #ECF5EC; padding: 40px; text-align: center; border-radius: 8px; max-width: 400px; margin: 0 10px;">
+      <i class="fas fa-leaf" style="font-size: 50px; color: #1D2238; margin-bottom: 20px;"></i>
+      <h3 style="font-size: 20px; font-weight: bold; color: #1D2238;">SUSTAINABILITY</h3>
+      <p style="font-size: 16px; color: #1D2238;">Our operations are grounded in sustainable practices that protect the environment and support the well-being of our communities.</p>
+    </div>
+<!-- Quality Excellence -->
+<div style="flex: 1; background-color: #ECF5EC; padding: 40px; text-align: center; border-radius: 8px; width: 300px; margin: 0 10px;">
+  <i class="fas fa-gem" style="font-size: 50px; color: #1D2238; margin-bottom: 20px;"></i>
+  <h3 style="font-size: 20px; font-weight: bold; color: #1D2238;">QUALITY EXCELLENCE</h3>
+  <p style="font-size: 16px; color: #1D2238;"> We are dedicated to provide and maintain the highest quality standards Coffee across our entire product range.</p>
+</div>
+
+<!-- Heritage Preservation -->
+<div style="flex: 1; background-color: #ECF5EC; padding: 40px; text-align: center; border-radius: 8px; width: 300px; margin: 0 10px;">
+  <i class="fas fa-lightbulb" style="font-size: 50px; color: #1D2238; margin-bottom: 20px;"></i>
+  <h3 style="font-size: 20px; font-weight: bold; color: #1D2238;">COMMUNITY SUPPORT</h3>
+  <p style="font-size: 16px; color: #1D2238;">We are committed to supporting the communities we serve, ensuring that our success translates into positive social and economic impact.</p>
+</div>
+
+</div>
+</div>
+
+<!-- Middle Section with Vision and Mission -->
+<div style="position: relative; height: 500px; width: 100%; background-image: url('{% static "assets/img/capuccino.png" %}'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; padding-bottom: 60px;">
+
+<!-- Updated Overlay color -->
+<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(29, 29, 53, 0.6);"></div>
+
+<!-- Content inside overlay -->
+<div style="position: relative; z-index: 2; padding: 40px; color: white; text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
+
+  <!-- Vision Section - Center -->
+  <div style="max-width: 800px;">
+      <h1 style="font-size: 40px; font-weight: bold; color: #ffffff;">OUR COMMITMENT TO THE COMMUNITY</h1>
+      <p style="font-size: 16px; line-height: 1.8;">We understand the importance of giving back to the communities in which we operate. Ethio Binamer Trading PLC is committed to social responsibility and actively engages in initiatives that promote education, environmental sustainability, and economic empowerment. By investing in our communities, we aim to create a positive impact that extends beyond business.</p>
+  </div>
+
+</div>
+</div>
+<!-- Section -->
+<div style="padding: 60px 0; padding-left: 100px; display: flex; justify-content: space-between; align-items: flex-start; width: 100%; background-color: white; flex-wrap: wrap;">
+
+<!-- JOIN US Section -->
+<div class="join-us-section" style="flex: 1; text-align: left; padding-left: 100px;">
+<h1 style="font-size: 48px; font-weight: bold; color: #1D2238;">JOIN US</h1>
+<p style="font-size: 16px; line-height: 1.8; width: 400px;">
+  We invite you to explore our extensive range of products and services. Whether you are a business looking for reliable imports, a farmer seeking to export your coffee, or an individual in need of real estate solutions, Ethio Biamer Trading PLC is here to support you. Together, let’s build a prosperous future and drive positive change in our communities.
+  <br><br>
+  Thank you for choosing Ethio Biamer Trading PLC—where quality meets trust.
+</p>
+</div>
+<!-- Testimonial Cards -->
+<div class="testimonial-section" style="flex: 1; display: flex; flex-direction: column; align-items: flex-end; padding-right: 150px;">
+    
+  <!-- Testimonial Card 1 -->
+  <div class="testimonial-card" style="display: flex; align-items: center; justify-content: flex-end; max-width: 500px; margin-bottom: 30px; transition: all 0.3s ease;">
+    <!-- Green Line -->
+    <div style="width: 15px; height: 100px; background-color: #006837; margin-right: 20px;"></div>
+    
+    <!-- Logo and Content -->
+    <div style="display: flex; align-items: center;">
+      <!-- Logo -->
+      <div style="border-radius: 50%; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-right: 20px;">
+        <img src="{% static 'assets/img/coffee-care.png' %}" alt="Coffee Care Logo" style="width: 80px; height: 80px; border-radius: 50%;">
+      </div>
+      <!-- Text Content -->
+      <div style="text-align: left;">
+        <h4 style="font-weight: bold; color: #2B2E50; margin-bottom: 5px;">CLIENT NAME</h4>
+        <p style="font-size: 14px; color: #555555;">
+          "I recently had the pleasure of experiencing your coffee, and I must say, it exceeded my expectations. The rich aroma and smooth taste truly reflect the high quality and care put into your products."
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Card 2 -->
+  <div class="testimonial-card" style="display: flex; align-items: center; justify-content: flex-end; max-width: 500px; margin-right: 100px; margin-bottom: 30px; transition: all 0.3s ease;">
+    <!-- Green Line -->
+    <div style="width: 15px; height: 100px; background-color: #006837; margin-right: 20px;"></div>
+    
+    <!-- Logo and Content -->
+    <div style="display: flex; align-items: center;">
+      <!-- Logo -->
+      <div style="border-radius: 50%; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-right: 20px;">
+        <img src="{% static 'assets/img/coffee-care.png' %}" alt="Coffee Care Logo" style="width: 80px; height: 80px; border-radius: 50%;">
+      </div>
+      <!-- Text Content -->
+      <div style="text-align: left;">
+        <h4 style="font-weight: bold; color: #2B2E50; margin-bottom: 5px;">CLIENT NAME</h4>
+        <p style="font-size: 14px; color: #555555;">
+          "I recently had the pleasure of experiencing your coffee, and I must say, it exceeded my expectations. The rich aroma and smooth taste truly reflect the high quality and care put into your products."
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Card 3 -->
+  <div class="testimonial-card" style="display: flex; align-items: center; justify-content: flex-end; max-width: 500px; transition: all 0.3s ease;">
+    <!-- Green Line -->
+    <div style="width: 15px; height: 100px; background-color: #006837; margin-right: 20px;"></div>
+    
+    <!-- Logo and Content -->
+    <div style="display: flex; align-items: center;">
+      <!-- Logo -->
+      <div style="border-radius: 50%; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-right: 20px;">
+        <img src="{% static 'assets/img/coffee-care.png' %}" alt="Coffee Care Logo" style="width: 80px; height: 80px; border-radius: 50%;">
+      </div>
+      <!-- Text Content -->
+      <div style="text-align: left;">
+        <h4 style="font-weight: bold; color: #2B2E50; margin-bottom: 5px;">CLIENT NAME</h4>
+        <p style="font-size: 14px; color: #555555;">
+          "I recently had the pleasure of experiencing your coffee, and I must say, it exceeded my expectations. The rich aroma and smooth taste truly reflect the high quality and care put into your products."
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<style>
+  //.testimonial-card:hover {
+  //  transform: translateX(-40px);
+  //}
+  @media (max-width: 768px) {
+  /* Top Section */
+  .top-section {
+    min-height: 70vh; /* Reduce height for mobile */
+    padding-bottom: 10px; /* Reduce bottom padding */
+  }
+
+  /* Vision Section */
+  .vision-section {
+    position: static;
+    text-align: center;
+    max-width: 90%; /* More compact for smaller screens */
+    margin: 10px auto; /* Center the section */
+  }
+  .vision-section h1 {
+    font-size: 16px; /* Smaller heading for mobile */
+  }
+  .vision-section p {
+    font-size: 12px; /* Smaller paragraph text */
+  }
+
+  /* Mission Section */
+  .mission-section {
+    position: static;
+    text-align: center;
+    max-width: 90%; /* More compact for smaller screens */
+    margin: 40px auto 20px auto; /* Add margin to create space */
+  }
+  .mission-section h1 {
+    font-size: 16px; /* Smaller heading for mobile */
+  }
+  .mission-section p {
+    font-size: 12px; /* Smaller paragraph text */
+  }
+
+  /* Overlay content adjustments */
+  .overlay-content {
+    padding: 20px; /* Less padding on mobile */
+    text-align: center; /* Center-align the text for mobile */
+  }
+
+  /* Hide angled lines for mobile */
+  .vision-line, .mission-line {
+    display: none;
+  }
+}
+
+/* Tablet view */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .top-section {
+    min-height: 80vh;
+    padding-bottom: 40px;
+  }
+  .vision-section,
+  .mission-section {
+    font-size: 90%;
+    text-align: center;
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  .vision-section h1,
+  .mission-section h1 {
+    font-size: 36px;
+  }
+  .vision-section p,
+  .mission-section p {
+    font-size: 16px;
+  }
+  .overlay-content {
+    padding: 30px;
+    text-align: center;
+  }
+  .vision-line, .mission-line {
+    width: 100px;
+  }
+}
+  @media (max-width: 1024px) and (min-width: 768px) {
+    /* Center the title */
+    div[style*="flex: 1; text-align: left; padding-left: 40px;"] {
+      text-align: center !important;
+      padding-left: 0 !important;
+    }
+
+    h1 {
+      font-size: 30px !important;
+      padding: 0 !important;
+    }
+
+    /* Arrange the cards in 2x2 grid */
+    div[style*="flex: 3; display: flex; justify-content: space-around;"] {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      grid-gap: 20px !important;
+      justify-items: center !important;
+    }
+
+    div[style*="flex: 1; background-color: #ECF5EC;"] {
+      width: 90% !important;
+    }
+
+    /* Adjust icon size */
+    .fas {
+      font-size: 40px !important;
+    }
+
+    /* Adjust heading and paragraph size */
+    h3 {
+      font-size: 18px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
+
+    /* Center JOIN US section */
+    .join-us-section {
+      text-align: center !important;
+      padding-left: 0 !important;
+    }
+
+    .join-us-section h1 {
+      font-size: 30px !important;
+      padding: 0 !important;
+    }
+
+    .join-us-section p {
+      width: 100% !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+    }
+
+    /* Move JOIN US section to the top and stack testimonials below */
+    .testimonial-section {
+      padding-right: 0 !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+
+    .testimonial-card {
+      justify-content: center !important;
+      margin-right: 0 !important;
+      width: 90% !important;
+    }
+
+    /* Adjust testimonial text size */
+    .testimonial-card h4 {
+      font-size: 16px !important;
+    }
+
+    .testimonial-card p {
+      font-size: 13px !important;
+    }
+  }
+  }
+</style>
+
+
+
+{% endblock %}

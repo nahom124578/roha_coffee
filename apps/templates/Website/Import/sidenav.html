@@ -1,0 +1,200 @@
+{% load static %}
+
+<aside class="sidenav bg-white border rounded shadow-sm p-3" id="sidenav-main" style="border-radius: 10px; max-width: 300px; margin-left: 30px;">
+
+    <!-- Filter Header -->
+<div class="sidenav-header mb-4">
+    <h5 class="mb-3" style="font-weight: bold;">Filter By Keyword</h5>
+</div>
+
+<!-- Search Input -->
+<div class="search-bar mb-4 d-flex align-items-center" style="position: relative;">
+    <input type="text" class="form-control" placeholder="Search By" aria-label="Search by keyword"
+           style="border-radius: 25px; border: 1px solid #28a745; padding-left: 35px;">
+    <i class="fa fa-search" 
+       style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #28a745;"></i>
+</div>
+
+<div class="d-flex justify-content-end mb-4 position-relative">
+    <!-- Filter Button -->
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#searchOptions" aria-expanded="false" aria-controls="searchOptions"
+            style="background-color: #1D6F3F; border-radius: 12px; color: white; border: none;">
+        <i class="fa fa-filter"></i> Filter Options
+    </button>
+
+    <!-- Collapsible Dropdown Menu (Overlapping Other Content) -->
+    <ul id="searchOptions" class="collapse list-unstyled mt-2 p-2"
+        style="background-color: #1D6F3F; border-radius: 5px; width: 100%; position: absolute; 
+               top: 100%; left: 0; z-index: 1050;">
+        <li><a class="dropdown-item text-white" href="#">Name</a></li>
+        <li><a class="dropdown-item text-white" href="#">Price</a></li>
+        <li><a class="dropdown-item text-white" href="#">Year</a></li>
+        <li><a class="dropdown-item text-white" href="#">Mileage Km</a></li>
+    </ul>
+</div>
+
+<!-- Truck Type Filter -->
+<div class="filter-section mb-4">
+    <h6 class="d-flex justify-content-between align-items-center">
+        <span style="font-weight: bold;">Truck Type</span>
+        <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#truckTypeCollapse" role="button" aria-expanded="false" aria-controls="truckTypeCollapse"></i>
+    </h6>
+    <div class="collapse show" id="truckTypeCollapse">
+        <ul class="list-unstyled mt-2">
+            <li class="form-check">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label">Tippers</label>
+            </li>
+            <li class="form-check">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label">Refrigerator Trucks</label>
+            </li>
+            <li class="form-check d-flex justify-content-between">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label">Box Trucks</label>
+                <span class="badge bg-light text-success">10</span>
+            </li>
+            <li class="form-check d-flex justify-content-between">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label">Isothermal Trucks</label>
+                <span class="badge bg-light text-success">6</span>
+            </li>
+            <li class="form-check d-flex justify-content-between">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label">Tank Trucks</label>
+                <span class="badge bg-light text-success">3</span>
+            </li>
+        </ul>
+        <a href="#" class="text-success small">Show More Types</a>
+    </div>
+</div>
+
+<!-- Location Filter -->
+<div class="filter-section mb-4">
+    <h6 class="d-flex justify-content-between align-items-center">
+        <span style="font-weight: bold;">Location</span>
+        <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#locationCollapse" role="button" aria-expanded="false" aria-controls="locationCollapse"></i>
+    </h6>
+    <div class="collapse" id="locationCollapse">
+        <ul class="list-unstyled mt-2">
+            <li class="form-check">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label">Germany</label>
+                <span class="badge bg-light text-success">20</span>
+            </li>
+            <li class="form-check">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label">US</label>
+                <span class="badge bg-light text-success">12</span>
+            </li>
+            <li class="form-check">
+                <input class="form-check-input" type="checkbox" value="">
+                <label class="form-check-label">Belgium</label>
+                <span class="badge bg-light text-success">10</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <!-- Condition Filter -->
+    <div class="filter-section mb-4">
+        <h6 class="d-flex justify-content-between align-items-center">
+            <span style="font-weight: bold;">Condition</span>
+            <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#conditionCollapse" role="button" aria-expanded="false" aria-controls="conditionCollapse"></i>
+        </h6>
+        <div class="collapse" id="conditionCollapse">
+            <ul class="list-unstyled mt-2">
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">New</label>
+                </li>
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">Used</label>
+                </li>
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">For Parts</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Axle Config Filter -->
+    <div class="filter-section mb-4">
+        <h6 class="d-flex justify-content-between align-items-center">
+            <span style="font-weight: bold;">Axle Config</span>
+            <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#axleCollapse" role="button" aria-expanded="false" aria-controls="axleCollapse"></i>
+        </h6>
+        <div class="collapse" id="axleCollapse">
+            <ul class="list-unstyled mt-2">
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">4x2</label>
+                </li>
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">6x2</label>
+                </li>
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">8x4</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Suspension Filter -->
+    <div class="filter-section mb-4">
+        <h6 class="d-flex justify-content-between align-items-center">
+            <span style="font-weight: bold;">Suspension</span>
+            <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#suspensionCollapse" role="button" aria-expanded="false" aria-controls="suspensionCollapse"></i>
+        </h6>
+        <div class="collapse" id="suspensionCollapse">
+            <ul class="list-unstyled mt-2">
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">Leaf</label>
+                </li>
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">Air</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Emission Class Filter -->
+    <div class="filter-section mb-4">
+        <h6 class="d-flex justify-content-between align-items-center">
+            <span style="font-weight: bold;">Emission Class</span>
+            <i class="fa fa-chevron-down" data-bs-toggle="collapse" href="#emissionCollapse" role="button" aria-expanded="false" aria-controls="emissionCollapse"></i>
+        </h6>
+        <div class="collapse" id="emissionCollapse">
+            <ul class="list-unstyled mt-2">
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">Euro 3</label>
+                </li>
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">Euro 4</label>
+                </li>
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">Euro 5</label>
+                </li>
+                <li class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label">Euro 6</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Clear All Button -->
+    <div class="text-center">
+        <button class="btn w-100" style="background-color: #1D6F3F; color: white; border-radius: 5px;">Clear All</button>
+    </div>
+</aside>
